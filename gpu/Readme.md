@@ -30,9 +30,9 @@ import time
 d in ['/gpu:2', '/gpu:3']: is using  gpu devices 2  and 3 to perform append task a 
 addition is done in cpu device.
 
+![image](https://user-images.githubusercontent.com/58679469/229200632-3468741f-802f-4a96-9015-b7dbbd8bc2f0.png)
 
 
- file:///home/jk/dev/OnlineSource/py/tst4pic.jpg
  
 # 2. C++ code to use GPU device
   
