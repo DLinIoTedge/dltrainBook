@@ -34,11 +34,15 @@ addition is done in cpu device.
   
  ##  2.1  addincpu.cpp
   g++ is used to run above given c++ file in cpu. 
-  
- ##  2.2  addingpu.cu
  
-
-
+ g++ addincpu.cpp -o add <br>
+ ./add  <br>
+ 
+ Above ode  runs on  CPU  and it is called as  host code
+ 
+  
+ ##  2.2  addingpu.cu  <br>
+  .
   CUDA code is used to run above given file in gpu device.   <br>
   nvcc is used to create executable file from .cu file
   
@@ -86,3 +90,5 @@ addBT<<<numBlocks, blockSize>>>(N, x, y); <br>
   
   
   
+  # Reference
+  1. https://developer.nvidia.com/blog/even-easier-introduction-cuda/ <br> 
