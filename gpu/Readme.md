@@ -37,6 +37,9 @@ addition is done in cpu device.
   
  ##  2.2  addingpu.cu
  
+ 
+ ![image](https://user-images.githubusercontent.com/58679469/229171538-cc2a6003-f07d-4e29-8128-603b3c0267da.png)
+
   CUDA code is used to run above given file in gpu device.   <br>
   nvcc is used to create executable file from .cu file
   
