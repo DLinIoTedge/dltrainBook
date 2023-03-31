@@ -69,8 +69,8 @@ Max error: 0 <br>
 ==3023== Profiling application: ./add <br>
 ==3023== Profiling result:  <br>
 |
-        |	Type    |       Time(%)  	 |      Time | 	Calls  |	Avg   	|      Min |  	Max   |                       Name | <br>
-       | GPU activities: |     100.00%  |     68.815ms |     1   |     68.815ms | 68.815ms | 68.815ms    |           add(int, float*, float*) |<br>
+        |	Type           | Time(%) | Time     | 	Calls  |	Avg   	  |      Min |  	Max   | Name                     | <br>
+       | GPU activities: | 100.00% | 68.815ms |     1   | 68.815ms | 68.815ms | 68.815ms| add(int, float*, float*) |<br>
 
 
   
