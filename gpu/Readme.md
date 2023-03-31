@@ -174,8 +174,8 @@ There are cu files and two header files. CMakeLists.txt is created and cmake is 
 
  This issue need to be resolved.  Though cmake worked well ( apparently) but that did not create good make file. Thus need to find a issue in  CMakeLists.txt and  fided as well. Mentioned effort is discussed in the following slides. .bashrc fie edited and CUDA path related infra is added.  After all these, successfully  worked with
 
-    mat/bd$ cmake  .. <br>
-    mat/bd$ make  .. <br>
+    mat/bd$ cmake  .. 
+    mat/bd$ make  .. 
  
    Then executed matrix multiplication in GPU . things went well and all these dicsuccsued in upcoming slides.
 
