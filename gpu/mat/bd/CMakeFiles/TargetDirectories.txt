@@ -1,0 +1,3 @@
+/home/jk/dev/C++NNFast/mat/bd/CMakeFiles/rebuild_cache.dir
+/home/jk/dev/C++NNFast/mat/bd/CMakeFiles/MatMul.dir
+/home/jk/dev/C++NNFast/mat/bd/CMakeFiles/edit_cache.dir
