@@ -37,11 +37,20 @@ addition is done in cpu device.
   
  ##  2.2  addingpu.cu
  
- 
- ![image](https://user-images.githubusercontent.com/58679469/229171538-cc2a6003-f07d-4e29-8128-603b3c0267da.png)
+
 
   CUDA code is used to run above given file in gpu device.   <br>
   nvcc is used to create executable file from .cu file
+  
+   ![image](https://user-images.githubusercontent.com/58679469/229171538-cc2a6003-f07d-4e29-8128-603b3c0267da.png)
+   
+Using a multi-dimensional block means that we have to be careful about distributing this number of threads among all the dimensions. In a 1D block, we can set 1024 threads at most in the x axis, but in a 2D block, if you set 2 as the size of y, you cannot exceed 512 for the x
+
+For example, 
+dim3 threadsPerBlock(1024, 1, 1) is allowed,  <br>
+as well as dim3 threadsPerBlock(512, 2, 1),  <br>
+but not dim3 threadsPerBlock(256, 3, 2).<br>
+
   
   
   ## 2.2.1  add
@@ -59,6 +68,14 @@ addition is done in cpu device.
   
    ## 2.2.3  addBT
   Kernel function add is used to perform vector addition in gpu.  <br>
+  
+  ![image](https://user-images.githubusercontent.com/58679469/229173375-a1c4ba72-9d7e-4cfd-8dc1-8f2cfed69986.png)
+
+int blockSize = 256; <br> 
+int numBlocks = (N + blockSize - 1) / blockSize; <br> 
+addBT<<<numBlocks, blockSize>>>(N, x, y); <br> 
+
+
   
   int blockSize = 32;  <br>
    int numBlocks = (N + blockSize - 1) / blockSize;  <br> 
