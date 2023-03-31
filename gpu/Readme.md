@@ -1,6 +1,7 @@
 
+# 1. Python code  use GPU device
  
- # File Name:  tst1.py 
+ ## File Name:  tst1.py 
   
 import tensorflow as tf1
 import tensorflow as tf2
