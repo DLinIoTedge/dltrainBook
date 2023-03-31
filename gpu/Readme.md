@@ -36,7 +36,9 @@ addition is done in cpu device.
   g++ is used to run above given c++ file in cpu. 
   
  ##  2.2  addingpu.cu
-  CUDA code is used to run above given file in gpu device. 
+ 
+  CUDA code is used to run above given file in gpu device.   <br>
+  nvcc is used to create executable file from .cu file
   
   
   ## 2.2.1  add
