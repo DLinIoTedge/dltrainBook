@@ -88,8 +88,6 @@ dim3 threadsPerBlock(1024, 1, 1) is allowed,  <br>
 as well as dim3 threadsPerBlock(512, 2, 1),  <br>
 but not dim3 threadsPerBlock(256, 3, 2).<br>
 
-  ![image](https://user-images.githubusercontent.com/58679469/229201051-6eabe0b5-3add-425e-bdd3-2ba96631b792.png)
-
   
   ## 2.2.1  add
   Kernel function add is used to perform vector addition in gpu.  <br>
@@ -187,12 +185,41 @@ There are cu files and two header files. CMakeLists.txt is created and cmake is 
  
    Then executed matrix multiplication in GPU . things went well and all these dicsuccsued in upcoming slides.
 
+CMakeLists.txt <br>
+  ![image](https://user-images.githubusercontent.com/58679469/229201051-6eabe0b5-3add-425e-bdd3-2ba96631b792.png)
+
+Following to create make file by using cmake <br>
+![image](https://user-images.githubusercontent.com/58679469/229201415-923bd761-ca27-4b3d-ac61-02c854fa3c33.png)
+
+make <br>
+![image](https://user-images.githubusercontent.com/58679469/229201728-b64a8def-3f08-4e4d-9b2d-1cd81bb12379.png)
+
+run matmul <br>
+![image](https://user-images.githubusercontent.com/58679469/229201836-a971974e-7923-4ead-8718-7b493870bab3.png)
 
 
 Note cmake and make are put in use successfully 
 
   2.2.5 Matrix Multiplication
   
+  
+  CMakeLists.txt file is given below.  Following worked for Matrix multiplication
+
+  cmake_minimum_required(VERSION 3.10.2)
+  enable_language(CUDA)   // solution uncomment this line
+  #set(CMAKE_CUDA_COMPILER "/usr/local/cuda-10.2/")         // solution .. comment this libe
+  add_executable(DLtrain ../matsrc/jkernel.cu ../matsrc/jmatMul.cu)
+  set_target_properties(DLtrain PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+  set_property(TARGET DLtrain PROPERTY CUDA_STANDARD 11)
+
+
+I had added this by commenting one line earlier, but given a problem ..which is defined two page before .  Thus CUDA path is set in .bashrc and then commented this line and un commented earlier line.
+
+
+/usr/local/cuda-10.2/  
+
+CUDA SDK installed in this folder
+
   Objective is to create a function to multiply a Matrix in  GPU.  But call is made from CPU with data generated in CPU. This project include , kernel.cu, kernel.h, jmatArrau.h, jmatMul.h
   
    mat folter is having  CMakeLists.txt  <br>
