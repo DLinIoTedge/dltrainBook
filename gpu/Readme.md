@@ -153,6 +153,9 @@ addBT<<<numBlocks, blockSize>>>(N, x, y); <br>
   Where N is lenght of vector x and y. These N,x,y are inputs. <br>
   Ouput is stored in y vector ( y = x+y )
   
+  
+  2.2.4 Matrix Add
+  
    __global__  <br>
 void matadd(float *x, float *y) <br>
 { <br>
@@ -183,6 +186,16 @@ There are cu files and two header files. CMakeLists.txt is created and cmake is 
 
 Note cmake and make are put in use successfully 
 
+  2.2.5 Matrix Multiplication
   
+  Objective is to create a function to multiply a Matrix in  GPU.  But call is made from CPU with data generated in CPU. This project include , kernel.cu, kernel.h, jmatArrau.h, jmatMul.h
+  
+   mat folter is having  CMakeLists.txt  <br>
+   matsrc subfolder is having soruce  code for matrix multiplicaiton in gpu
+   
+     /mat/bd/cmake ..
+     /mat/bd/make ..
+     ./bin/MatMul
+     
   # Reference
   1. https://developer.nvidia.com/blog/even-easier-introduction-cuda/ <br> 
