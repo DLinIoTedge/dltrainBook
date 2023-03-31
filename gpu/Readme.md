@@ -27,7 +27,7 @@ time_matmul(x) is a function and it is forced to  use CPU and also after that GP
 import tensorflow as tf
 import time
 
-d in ['/gpu:2', '/gpu:3']: is using  gpu devices 2  and 3 to perform append task a
+d in ['/gpu:2', '/gpu:3']: is using  gpu devices 2  and 3 to perform append task a 
 addition is done in cpu device.
  
 # 2. C++ code to use GPU device
@@ -40,25 +40,25 @@ addition is done in cpu device.
   
   
   ## 2.2.1  add
-  Kernel function add is used to perform vector addition in gpu.
-  add<<<1, 256>>>(N, x, y);  is using 1 block and its size is 256 threads 
-  Where N is lenght of vector x and y. These N,x,y are inputs.
+  Kernel function add is used to perform vector addition in gpu.  <br>
+  add<<<1, 256>>>(N, x, y);  is using 1 block and its size is 256 threads   <br>
+  Where N is lenght of vector x and y. These N,x,y are inputs.  <br>
   Ouput is stored in y vector ( y = x+y )
   
   ## 2.2.2  addT
-  Kernel function addT is used to perform vector addition in gpu.
-  addT<<<2, 32>>>(N, x, y);  is using 2 blocks and blockSize is 32 threads 
-  Where N is lenght of vector x and y. These N,x,y are inputs.
+  Kernel function addT is used to perform vector addition in gpu.  <br>
+  addT<<<2, 32>>>(N, x, y);  is using 2 blocks and blockSize is 32 threads   <br>
+  Where N is lenght of vector x and y. These N,x,y are inputs.  <br>
   Ouput is stored in y vector ( y = x+y )
   
   
    ## 2.2.3  addBT
-  Kernel function add is used to perform vector addition in gpu.
+  Kernel function add is used to perform vector addition in gpu.  <br>
   
-  int blockSize = 32;
-   int numBlocks = (N + blockSize - 1) / blockSize;
-  addBT<<<numBlocks, blockSize>>>(N, x, y);  is using numBlocks1 and blockSize is 32 threads
-  Where N is lenght of vector x and y. These N,x,y are inputs.
+  int blockSize = 32;  <br>
+   int numBlocks = (N + blockSize - 1) / blockSize;  <br> 
+  addBT<<<numBlocks, blockSize>>>(N, x, y);  is using numBlocks1 and blockSize is 32 threads  <br>
+  Where N is lenght of vector x and y. These N,x,y are inputs. <br>
   Ouput is stored in y vector ( y = x+y )
   
   
