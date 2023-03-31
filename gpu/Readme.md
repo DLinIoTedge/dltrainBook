@@ -37,6 +37,16 @@ addition is done in cpu device.
  
  g++ addincpu.cpp -o add <br>
  ./add  <br>
+ hi...Max error: 0 <br>
+
+
+export PATH=/usr/local/cuda-10.2/bin:$PATH <br>
+Above provides access to nvcc which is tool to create excutable in gpu <br>
+
+ nvcc addincpu.cpp -o add <br>
+ ./add  <br>
+ hi...Max error: 0 <br>
+
  
  Above ode  runs on  CPU  and it is called as  host code
  
@@ -45,6 +55,24 @@ addition is done in cpu device.
   .
   CUDA code is used to run above given file in gpu device.   <br>
   nvcc is used to create executable file from .cu file
+  
+   nvcc addingpu.cu -o add <br>
+ ./add  <br>
+ hi...Max error: 0 <br>
+ 
+  
+  nvprof ./add <br>
+  Above provides profile information on excutable file
+  
+  ==3023== NVPROF is profiling process 3023, command: ./add <br>
+Max error: 0 <br>
+==3023== Profiling application: ./add <br>
+==3023== Profiling result:  <br>
+|
+        |	Type    |       Time(%)  	 |      Time | 	Calls  |	Avg   	|      Min |  	Max   |                       Name | <br>
+       | GPU activities: |     100.00%  |     68.815ms |     1   |     68.815ms | 68.815ms | 68.815ms    |           add(int, float*, float*) |<br>
+
+
   
    ![image](https://user-images.githubusercontent.com/58679469/229171538-cc2a6003-f07d-4e29-8128-603b3c0267da.png)
    
