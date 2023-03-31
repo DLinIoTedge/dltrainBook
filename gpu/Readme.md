@@ -205,12 +205,12 @@ Note cmake and make are put in use successfully
   
   CMakeLists.txt file is given below.  Following worked for Matrix multiplication
 
-  cmake_minimum_required(VERSION 3.10.2)
-  enable_language(CUDA)   // solution uncomment this line
-  #set(CMAKE_CUDA_COMPILER "/usr/local/cuda-10.2/")         // solution .. comment this libe
-  add_executable(DLtrain ../matsrc/jkernel.cu ../matsrc/jmatMul.cu)
-  set_target_properties(DLtrain PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
-  set_property(TARGET DLtrain PROPERTY CUDA_STANDARD 11)
+     cmake_minimum_required(VERSION 3.10.2)
+     enable_language(CUDA)   // solution uncomment this line
+     #set(CMAKE_CUDA_COMPILER "/usr/local/cuda-10.2/")         // solution .. comment this libe
+     add_executable(DLtrain ../matsrc/jkernel.cu ../matsrc/jmatMul.cu)
+     set_target_properties(DLtrain PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+     set_property(TARGET DLtrain PROPERTY CUDA_STANDARD 11)
 
 
 I had added this by commenting one line earlier, but given a problem ..which is defined two page before .  Thus CUDA path is set in .bashrc and then commented this line and un commented earlier line.
