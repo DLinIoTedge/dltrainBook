@@ -88,7 +88,8 @@ dim3 threadsPerBlock(1024, 1, 1) is allowed,  <br>
 as well as dim3 threadsPerBlock(512, 2, 1),  <br>
 but not dim3 threadsPerBlock(256, 3, 2).<br>
 
-  
+  ![image](https://user-images.githubusercontent.com/58679469/229201051-6eabe0b5-3add-425e-bdd3-2ba96631b792.png)
+
   
   ## 2.2.1  add
   Kernel function add is used to perform vector addition in gpu.  <br>
