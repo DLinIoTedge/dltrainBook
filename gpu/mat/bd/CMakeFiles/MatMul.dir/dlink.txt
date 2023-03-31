@@ -1,1 +1,0 @@
-/usr/local/cuda-10.2/bin/nvcc    -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/MatMul.dir/matsrc/jkernel.cu.o CMakeFiles/MatMul.dir/matsrc/jmatMul.cu.o -o CMakeFiles/MatMul.dir/cmake_device_link.o 
