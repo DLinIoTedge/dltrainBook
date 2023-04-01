@@ -1,5 +1,5 @@
 
-# 1. Python code to use GPU device
+# 1. Python code in GPU device
  
  ##  1.1  tst1.py 
   
@@ -34,7 +34,7 @@ addition is done in cpu device.
 
 
  
-# 2. C++ code to use GPU device
+# 2. C++ code in GPU device
   
  ##  2.1  addincpu.cpp
   g++ is used to run above given c++ file in cpu. 
