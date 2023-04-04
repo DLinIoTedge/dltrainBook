@@ -1,7 +1,52 @@
+# 1 Hardware Requirement 
+  
+    Account in Google Colab or local Machine with GPU device attached 
 
-# 1. Python code in GPU device
+##  1.1 Step 1
+    Clik to aaccess Colab  https://colab.research.google.com/  
+    Click on new notebook
+    
+##  1.2  Step 2
+      Switch  runtime from CPU to GPU. 
+       Click on Runtime > Change runtime type > Hardware Accelerator > GPU > Save.
+
+GPU  additional compute units
+
+##  1.3  Step 3
+   Check for availability of NVCC tool et to program CUDA cores in Nvidia GPU
+   
+     nvcc --version
+
+  nvcc: NVIDIA (R) Cuda compiler driver
+  Copyright (c) 2005-2022 NVIDIA Corporation
+  Built on Wed_Sep_21_10:33:58_PDT_2022
+  Cuda compilation tools, release 11.8, V11.8.89
+  Build cuda_11.8.r11.8/compiler.31833905_0
+
+## 1.4  Step 4
+ Use followin command to install a small extension to run nvcc from the Notebook cells.
+   
+     !pip install git+https://github.com/andreinechaev/nvcc4jupyter.git
+
+
+## 1.5  Step 5
+   Load the extension using the code given below
+
+  %load_ext nvcc_plugin
+  
+created output directory at /content/src
+Out bin /content/result.out
+
+##  1.6 Step 6
+
+Execute the code given below to check if CUDA is working or not.
+Now we are ready to run CUDA C/C++ code right in your Notebook.
+
+
+
+# 2. Python code in GPU device
  
- ##  1.1  tst1.py 
+ ##  2.1  tst1.py 
   
 import tensorflow as tf1
 import tensorflow as tf2
@@ -14,7 +59,7 @@ import tensorflow as tf2
  
  
  
- ##  1.2  tst3.py 
+ ##  2.2  tst3.py 
   
 import tensorflow as tf
 import time
@@ -22,7 +67,7 @@ import time
 time_matmul(x) is a function and it is forced to  use CPU and also after that GPU is used to compute matrix multiplication.  time package is used and this is help ful to print time taken by CPU and also GPU to multiply 1000 x 1000 matrix with another 1000 x 1000 matix. 
  
  
-  ##  1.3  tst4.py 
+  ##  2.3  tst4.py 
   
 import tensorflow as tf
 import time
@@ -34,9 +79,9 @@ addition is done in cpu device.
 
 
  
-# 2. C++ code in GPU device
+# 3. C++ code in GPU device
   
- ##  2.1  addincpu.cpp
+ ##  3.1  addincpu.cpp
   g++ is used to run above given c++ file in cpu. 
  
  g++ addincpu.cpp -o add <br>
@@ -55,7 +100,7 @@ Above provides access to nvcc which is tool to create excutable in gpu <br>
  Above ode  runs on  CPU  and it is called as  host code
  
   
- ##  2.2  addingpu.cu  <br>
+ ##  3.2  addingpu.cu  <br>
   .
   CUDA code is used to run above given file in gpu device.   <br>
   nvcc is used to create executable file from .cu file
@@ -89,7 +134,7 @@ as well as dim3 threadsPerBlock(512, 2, 1),  <br>
 but not dim3 threadsPerBlock(256, 3, 2).<br>
 
   
-  ## 2.2.1  add
+  ## 3.2.1  add
   Kernel function add is used to perform vector addition in gpu.  <br>
   
    add<<<1, 1>>>(N, x, y);
@@ -132,14 +177,14 @@ Max error: 0 <br>
        |GPU activities:|100.00% | 7.0370  |    1  |7.0370ms|7.0370ms|7.0370ms|add(int, float*, float*) | 
 
   
-  ## 2.2.2  addT
+  ## 3.2.2  addT
   Kernel function addT is used to perform vector addition in gpu.  <br>
   addT<<<2, 32>>>(N, x, y);  is using 2 blocks and blockSize is 32 threads   <br>
   Where N is lenght of vector x and y. These N,x,y are inputs.  <br>
   Ouput is stored in y vector ( y = x+y )
   
   
-   ## 2.2.3  addBT
+   ## 3.2.3  addBT
   Kernel function add is used to perform vector addition in gpu.  <br>
   
   ![image](https://user-images.githubusercontent.com/58679469/229173375-a1c4ba72-9d7e-4cfd-8dc1-8f2cfed69986.png)
@@ -157,7 +202,7 @@ addBT<<<numBlocks, blockSize>>>(N, x, y); <br>
   Ouput is stored in y vector ( y = x+y )
   
   
-  2.2.4 Matrix Add
+  3.2.4 Matrix Add
   
    __global__  <br>
 void matadd(float *x, float *y) <br>
@@ -200,7 +245,7 @@ run matmul <br>
 
 Note cmake and make are put in use successfully 
 
-  2.2.5 Matrix Multiplication
+  3.2.5 Matrix Multiplication
   
   
   CMakeLists.txt file is given below.  Following worked for Matrix multiplication
