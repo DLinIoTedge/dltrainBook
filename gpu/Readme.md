@@ -54,22 +54,32 @@ Now we are ready to run CUDA C/C++ code right in your Notebook.
     
     use ex2.cu in Notebook cell ( copy and past and run in cell)
 
-###  Example 3 ( python  file)
-    
-    use ex3.py in Notebook cell ( copy and past and run in cell)
-
-###  Example 4 ( python file )
-    
-    use ex4.py in Notebook cell ( copy and past and run in cell)
-
-###  Example 5 ( python file )
-    
-    use ex5.py in Notebook cell ( copy and past and run in cell)
 
 
 # 2. Python code in GPU device
  
- ##  2.1  tst1.py 
+## 2.1 Example 3 ( python  file)
+    
+     ( Note  ....  use following with TensrFlow version >= 2 )
+     
+    use ex3.py in Notebook cell ( copy and past and run in cell)
+
+## 2.2  Example 4 ( python file )
+    
+     ( Note  ....  use following with TensrFlow version >= 2 )
+     
+    use ex4.py in Notebook cell ( copy and past and run in cell)
+
+## 2.3  Example 5 ( python file )
+    
+     ( Note  ....  use following with TensrFlow version >= 2 )
+     
+    use ex5.py in Notebook cell ( copy and past and run in cell)
+
+
+ ##  2.4 tst1.py 
+  
+  ( Note  ....  use following with TensrFlow version < 2 )
   
 import tensorflow as tf1
 import tensorflow as tf2
@@ -82,16 +92,20 @@ import tensorflow as tf2
  
  
  
- ##  2.2  tst3.py 
+ ##  2.5  tst3.py 
   
+    ( Note  ....  use following with TensrFlow version < 2 )
+    
 import tensorflow as tf
 import time
 
 time_matmul(x) is a function and it is forced to  use CPU and also after that GPU is used to compute matrix multiplication.  time package is used and this is help ful to print time taken by CPU and also GPU to multiply 1000 x 1000 matrix with another 1000 x 1000 matix. 
  
  
-  ##  2.3  tst4.py 
+  ##  2.6  tst4.py 
   
+    ( Note  ....  use following with TensrFlow version < 2 )
+    
 import tensorflow as tf
 import time
 
