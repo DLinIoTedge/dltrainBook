@@ -121,12 +121,12 @@ import numpy as np
 path_to_files = "./images/"    
 vectorized_images = []
 
-for _, file in enumerate(os.listdir(path_to_files)):
-    image = Image.open(path_to_files + file)
-    image_array = np.array(image)
-    vectorized_images.append(image_array)        
-# save as DataX or any other name. But the same element name is to be used while loading it back. 
-np.savez("./mnistlikedataset.npz",DataX=vectorized_images)
+    for _, file in enumerate(os.listdir(path_to_files)):
+       image = Image.open(path_to_files + file)
+       image_array = np.array(image)
+      vectorized_images.append(image_array)        
+      # save as DataX or any other name. But the same element name is to be used while loading it back. 
+    np.savez("./mnistlikedataset.npz",DataX=vectorized_images)
 
 https://github.com/AxelThevenot/Python-Interface-to-Create-Handwritten-dataset/blob/master/README.md 
 
