@@ -32,7 +32,7 @@ GPU  additional compute units
 ## 1.5  Step 5
    Load the extension using the code given below
 
-  %load_ext nvcc_plugin
+    %load_ext nvcc_plugin
   
 created output directory at /content/src
 Out bin /content/result.out
@@ -42,6 +42,26 @@ Out bin /content/result.out
 Execute the code given below to check if CUDA is working or not.
 Now we are ready to run CUDA C/C++ code right in your Notebook.
 
+##  1.7 step 7
+###  Example 1 ( cu file )
+    
+    use ex1.cu in Notebook cell ( copy and past and run in cell)
+
+###  Example 2 ( cu file )
+    
+    use ex2.cu in Notebook cell ( copy and past and run in cell)
+
+###  Example 3 ( python  file)
+    
+    use ex3.py in Notebook cell ( copy and past and run in cell)
+
+###  Example 4 ( python file )
+    
+    use ex4.py in Notebook cell ( copy and past and run in cell)
+
+###  Example 5 ( python file )
+    
+    use ex5.py in Notebook cell ( copy and past and run in cell)
 
 
 # 2. Python code in GPU device
