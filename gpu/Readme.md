@@ -7,7 +7,7 @@
     Click on new notebook
     
     
-    ![image](https://user-images.githubusercontent.com/58679469/229681142-634ebd63-00c7-44bd-8c29-e85c8787296d.png)
+![image](https://user-images.githubusercontent.com/58679469/229681142-634ebd63-00c7-44bd-8c29-e85c8787296d.png)
 
 ##  1.2  Step 2
       Switch  runtime from CPU to GPU. 
