@@ -34,8 +34,13 @@ Inference by using  NN / CNN
     
     DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d absolute_path to images 
 
+
+# Workshop RGUKT 
+
 ## ap 06 Y 23
 
+  Get  files from follwoing link' ( from Janardha gDrie ) 
+  
           https://drive.google.com/drive/folders/15njaTKht8I9WN71JZOP4IA1m3M48HH5-?usp=share_link
 
 $$ this will be cloud or i PC side ( traning ) 
