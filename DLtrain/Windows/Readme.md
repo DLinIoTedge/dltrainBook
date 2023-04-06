@@ -39,7 +39,7 @@ Inference by using  NN / CNN
 
 ## ap 06 Y 23
 
-  Get  files from follwoing link' ( from Janardha gDrie ) 
+  Get  files from following link' ( thanks to  Janardha  for sharing his gDriive ) 
   
           https://drive.google.com/drive/folders/15njaTKht8I9WN71JZOP4IA1m3M48HH5-?usp=share_link
 
