@@ -43,11 +43,14 @@ Inference by using  NN / CNN
   
           https://drive.google.com/drive/folders/15njaTKht8I9WN71JZOP4IA1m3M48HH5-?usp=share_link
 
-$$ this will be cloud or i PC side (Train CNN  by using DLtrain  ) 
+##  Use  cloud or  PC side (Train CNN  by using DLtrain  ) 
 
          DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d absolute_path to images 
 
-##   Target will be Device  ( Perform inference by using DLtrain )
+##   Deploy CNN in Target will be Device  
+
+( in this case target device is  Windows PC )
+
          DLtrainv1  -m infer -s NewNetwork.dat -c network_prop.txt  -f img.raw
 
 
