@@ -37,11 +37,14 @@ Inference by using  NN / CNN
 
 # Workshop RGUKT 
 
-## ap 06 Y 23
+## April 06 Y 23
 
   Get  files from following link' ( thanks to  Janardha  for sharing his gDriive ) 
   
           https://drive.google.com/drive/folders/15njaTKht8I9WN71JZOP4IA1m3M48HH5-?usp=share_link
+          
+          Note :  File libwinpthread-1.dll  wsa missing and that is added to make DLtrainv1 to work in windows 10 machine.
+          
 
 ##  Use  cloud or  PC side (Train CNN  by using DLtrain  ) 
 
