@@ -47,7 +47,7 @@ Inference by using  NN / CNN
 
          DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d absolute_path to images 
 
-##   Deploy CNN in Target will be Device  
+##   Deploy CNN in Target which is a Device  
 
 ( in this case target device is  Windows PC )
 
