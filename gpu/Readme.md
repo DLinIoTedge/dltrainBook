@@ -3,7 +3,11 @@
     Account in Google Colab or local Machine with GPU device attached 
 
 ##  1.1 Step 1
-    Clik to aaccess Colab  https://colab.research.google.com/  
+ Colab account provides various account type and in that, user can create account of their choice.  
+ Use Following given link to reach Colab page.
+ 
+    [Get aaccess in Colab](https://colab.research.google.com/)
+    
     Click on new notebook
     
     
@@ -11,13 +15,28 @@
 
 ##  1.2  Step 2
       Switch  runtime from CPU to GPU. 
-       Click on Runtime > Change runtime type > Hardware Accelerator > GPU > Save.
+       Click on Runtime > 
+           Click on Change runtime type > 
+               Click on Hardware Accelerator > 
+                  Click on GPU GPU > 
+                      Click on Save.
 
-GPU  additional compute units
+Above process results in providing access to GPU device such that user can
+use GPU to run thier CUDA code. Where CUDA code can be in the form of *.cu file.
+Python also useful to program CUDA code. Following few steps provided  for user
+to verify presence of GPU for thier acccess and also add required software to use
+GPU device.
 
 ##  1.3  Step 3
-   Check for availability of NVCC tool et to program CUDA cores in Nvidia GPU
-   
+   Check for availability of NVCC tool et to program CUDA cores in Nvidia GPU. 
+   Where NVCC is  used in compilation trajectory  which involves several splitting, compilation, preprocessing, and merging steps for each CUDA source file. It is the purpose of nvcc, the CUDA compiler driver, to hide the intricate details of CUDA compilation from developers. It accepts a range of conventional compiler options, such as for defining macros and include/library paths, and for steering the compilation process. All non-CUDA compilation steps are forwarded to a C++ host compiler that is supported by nvcc, and nvcc translates its options to appropriate host compiler command line options
+  
+ Use following link to know more about NVCC.
+ 
+ [More details on NVCC](https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/)
+ 
+ Use following step to check nvcc version which will confirm presence of NVCC for use.
+ 
      nvcc --version
 
   nvcc: NVIDIA (R) Cuda compiler driver
@@ -27,7 +46,7 @@ GPU  additional compute units
   Build cuda_11.8.r11.8/compiler.31833905_0
 
 ## 1.4  Step 4
- Use followin command to install a small extension to run nvcc from the Notebook cells.
+ Use following command is used to install a small extension to run nvcc from the Notebook cells.
    
      !pip install git+https://github.com/andreinechaev/nvcc4jupyter.git
 
@@ -109,14 +128,14 @@ time_matmul(x) is a function and it is forced to  use CPU and also after that GP
 import tensorflow as tf
 import time
 
-d in ['/gpu:2', '/gpu:3']: is using  gpu devices 2  and 3 to perform append task a 
+device in ['/gpu:2', '/gpu:3']: is using  gpu devices 2  and 3 to perform append task a 
 addition is done in cpu device.
 
 ![image](https://user-images.githubusercontent.com/58679469/229200632-3468741f-802f-4a96-9015-b7dbbd8bc2f0.png)
 
 
  
-# 3. C++ code in GPU device
+# 3.CUDA  code for GPU device
   
  ##  3.1  addincpu.cpp
   g++ is used to run above given c++ file in cpu. 
