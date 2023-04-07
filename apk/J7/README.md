@@ -52,6 +52,8 @@ Start AS and open project again
 
 # Step 3: J7app Source Code
 
+[J7app Source code ](https://github.com/DLinIoTedge/dltrainBook/tree/jk/apk/J7)
+
 [Download Link 2](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FDLinIoTedge%2FNN&sa=D&sntz=1&usg=AOvVaw39mUyqi-UnVKxQLtHye_mx)
 
 # Step 4: Credential Update
