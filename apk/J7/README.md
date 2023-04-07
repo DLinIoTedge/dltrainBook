@@ -71,13 +71,30 @@ Download Ready to install APK (from github  and it is recommended )
 
 ![Get uit from gDrive](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FDLinIoTedge%2FdltrainBook%2Ftree%2Fjk%2Fapk&sa=D&sntz=1&usg=AOvVaw3ZleYK0i8mpOwbqROjiVj4)
 
-![]()
+# Step 8: Using J7app
 
+Following provides guide line to use J7 successfully
 
-Where DLtrain take input from user via hand writing on phone touch screen and perform Inference to detect numbers.
+Local: trained model from local storage of Android phone can be loaded in to application
 
-Inference APP (  NN engine )
-![GitHub Logo](https://github.com/DLinIoTedge/J7/blob/master/j7may29th.png) 
+Go: Use button to perform inference after user enter their choice of number ins a given scripting window
+
+Network : use Network button to load "successfully trained network". 
+Wi-Fi link is used to load trained model. 
+In host application is given and same required to used along with network button. 
+More in detail on this is given in the following page
+
+Previous: Use previous button to move to inference earlier image sample in a given list
+
+Next : Use Next button to move to inference next image sample in a given list
+
+Clear: Press clear button to clear Inference details given in a display
+
+# Setp 9 : User Input via Phone Touch Panel
+
+Where DLtrain take input from user via hand writing on phone touch 
+screen and perform Inference to detect numbers.
+
 
 
 
