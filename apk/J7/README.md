@@ -71,24 +71,32 @@ Download Ready to install APK (from github  and it is recommended )
 
 ![Get uit from gDrive](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FDLinIoTedge%2FdltrainBook%2Ftree%2Fjk%2Fapk&sa=D&sntz=1&usg=AOvVaw3ZleYK0i8mpOwbqROjiVj4)
 
+![Ready to Download](https://drive.google.com/file/d/1AXxpjkwTVgaFhdr2TPC7Fwx05KA5T8ps/view)
+
 # Step 8: Using J7app
 
 Following provides guide line to use J7 successfully
 
-Local: trained model from local storage of Android phone can be loaded in to application
+## 8.1 Local
+trained model from local storage of Android phone can be loaded in to application
 
-Go: Use button to perform inference after user enter their choice of number ins a given scripting window
+## 8.2 Go
+Use button to perform inference after user enter their choice of number ins a given scripting window
 
-Network : use Network button to load "successfully trained network". 
+## 8.3 Network 
+use Network button to load "successfully trained network". 
 Wi-Fi link is used to load trained model. 
 In host application is given and same required to used along with network button. 
 More in detail on this is given in the following page
 
-Previous: Use previous button to move to inference earlier image sample in a given list
+## 8.4  Previous
+Use previous button to move to inference earlier image sample in a given list
 
-Next : Use Next button to move to inference next image sample in a given list
+## 9.5 Next
+Use Next button to move to inference next image sample in a given list
 
-Clear: Press clear button to clear Inference details given in a display
+## 8.6 Clear
+Press clear button to clear Inference details given in a display
 
 # Setp 9 : User Input via Phone Touch Panel
 
