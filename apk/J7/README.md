@@ -48,7 +48,7 @@ Quit from Android Studio
 
 Start AS and open project again
 
-![select android sdk](https://stackoverflow.com/questions/34353220/how-do-i-select-android-sdk-in-android-studio)
+[select android sdk](https://stackoverflow.com/questions/34353220/how-do-i-select-android-sdk-in-android-studio)
 
 # Step 3: J7app Source Code
 
