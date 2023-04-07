@@ -140,39 +140,40 @@ addition is done in cpu device.
  ##  3.1  addincpu.cpp
   g++ is used to run above given c++ file in cpu. 
  
- g++ addincpu.cpp -o add <br>
- ./add  <br>
- hi...Max error: 0 <br>
+        g++ addincpu.cpp -o add <
+        ./add  
+        
+        hi...Max error: 0 
 
 
 export PATH=/usr/local/cuda-10.2/bin:$PATH <br>
 Above provides access to nvcc which is tool to create excutable in gpu <br>
 
- nvcc addincpu.cpp -o add <br>
- ./add  <br>
- hi...Max error: 0 <br>
+    nvcc addincpu.cpp -o add <br>
+    ./add  <br>
+     hi...Max error: 0 <br>
 
  
  Above ode  runs on  CPU  and it is called as  host code
  
   
  ##  3.2  addingpu.cu  <br>
-  .
+  
   CUDA code is used to run above given file in gpu device.   <br>
   nvcc is used to create executable file from .cu file
   
-   nvcc addingpu.cu -o add <br>
- ./add  <br>
- hi...Max error: 0 <br>
+      nvcc addingpu.cu -o add 
+      ./add  
+      hi...Max error: 0 
  
+  Perform profile  of given CUDA code by using  nvprof tool from NVIDIA. 
   
-  nvprof ./add <br>
-  Above provides profile information on excutable file
-  
-  ==3023== NVPROF is profiling process 3023, command: ./add <br>
-Max error: 0 <br>
-==3023== Profiling application: ./add <br>
-==3023== Profiling result:  <br>
+         nvprof ./add 
+ 
+        ==3023== NVPROF is profiling process 3023, command: ./add 
+         Max error: 0 
+         ==3023== Profiling application: ./add 
+          ==3023== Profiling result:  
 
        |Type           |Time(%) |Time     |Calls  |Avg     |Min     |  Max   |Name                     | 
        |---------------|------- |-------- |-------|--------|--------|--------|------------------------ | 
@@ -191,9 +192,9 @@ but not dim3 threadsPerBlock(256, 3, 2).<br>
 
   
   ## 3.2.1  add
-  Kernel function add is used to perform vector addition in gpu.  <br>
+  Kernel function add is used to perform vector addition in gpu.  
   
-   add<<<1, 1>>>(N, x, y);
+        add<<<1, 1>>>(N, x, y);
 
 Now that you’ve run a kernel with one thread that does some computation, how do you make it parallel? The key is in CUDA’s <<<1, 1>>>syntax. This is called the execution configuration, and it tells the CUDA runtime how many parallel threads to use for the launch on the GPU. There are two parameters here, but let’s start by changing the second one: the number of threads in a thread block. CUDA GPUs run kernels using blocks of threads that are a multiple of 32 in size, so 256 threads is a reasonable size to choose.
 
@@ -202,31 +203,30 @@ Now that you’ve run a kernel with one thread that does some computation, how d
   Where N is lenght of vector x and y. These N,x,y are inputs.  <br>
   Ouput is stored in y vector ( y = x+y )
   
-  __global__  <br>
-void add(float *x, float *y) <br>
-{ <br>
-  int i= threadIdx.x; <br>
-  y[i] = x[i] + y[i]; <br>
-}  <br>
+       __global__  
+        void add(float *x, float *y) 
+        { 
+          int i= threadIdx.x; 
+           y[i] = x[i] + y[i]; 
+        }  
 
-Following is using above add inside main. <br>
- add<<<1, 256>>>(x, y);
+Following is using above add inside main. 
+
+       add<<<1, 256>>>(x, y);
  
-   nvcc addingpu.cu -o add <br>
- ./add  <br>
- hi...Max error: 0 <br>
+       nvcc addingpu.cu -o add 
+      ./add  
+       hi...Max error: 0 
  
-  
-  nvprof ./add <br>
-  Above provides profile information on excutable file
-  
-=3181== NVPROF is profiling process 3181, command: ./add <br>
-Max error: 0 <br>
-==3181== Profiling application: ./jaddg <br>
-==3181== Profiling result: <br>
 
-
-
+Perform profile  of given CUDA code by using  nvprof tool from NVIDIA. 
+    
+       nvprof ./add 
+       
+       =3181== NVPROF is profiling process 3181, command: ./add 
+        Max error: 0 
+        ==3181== Profiling application: ./jaddg <br>
+        ==3181== Profiling result: <br>
 
        |Type           |Time(%) |Time     |Calls  |Avg     |Min     |  Max   |Name                     | 
        |---------------|------- |-------- |-------|--------|--------|--------|------------------------ | 
@@ -252,7 +252,7 @@ addBT<<<numBlocks, blockSize>>>(N, x, y); <br>
 
   
   int blockSize = 32;  <br>
-   int numBlocks = (N + blockSize - 1) / blockSize;  <br> 
+  int numBlocks = (N + blockSize - 1) / blockSize;  <br> 
   addBT<<<numBlocks, blockSize>>>(N, x, y);  is using numBlocks1 and blockSize is 32 threads  <br>
   Where N is lenght of vector x and y. These N,x,y are inputs. <br>
   Ouput is stored in y vector ( y = x+y )
@@ -260,29 +260,29 @@ addBT<<<numBlocks, blockSize>>>(N, x, y); <br>
   
   3.2.4 Matrix Add
   
-   __global__  <br>
-void matadd(float *x, float *y) <br>
-{ <br>
-  int i= threadIdx.x; <br>
-  int j= threadIdx.x; <br>
-  y[i][j] = x[i][j] + y[i][j]; <br>
-}  <br>
+      __global__  
+      void matadd(float *x, float *y) 
+      { 
+        int i= threadIdx.x; 
+        int j= threadIdx.x; 
+        y[i][j] = x[i][j] + y[i][j]; 
+      }   
   
- Following code inside main gto call above add
+ Following code inside main is making  call above to "add"  which is defined as kernel.
   
-int numBlocks = 1; <br> 
-dim3  threadsperBlock(256,256) ; <br> 
-matadd<<<numBlocks, threadsperBlock>>>(N, x, y); <br> 
+    int numBlocks = 1;  
+    dim3  threadsperBlock(256,256) ; 
+    matadd<<<numBlocks, threadsperBlock>>>(N, x, y); 
 
 
-hreadIdx is a 3-component vector, so that threads can be identified using a one-dimensional, two-dimensional, or three-dimensional thread index, forming a one-dimensional, two-dimensional, or three-dimensional block of threads, called a thread block
+ThreadIdx is a 3-component vector, so that threads can be identified using a one-dimensional, two-dimensional, or three-dimensional thread index, forming a one-dimensional, two-dimensional, or three-dimensional block of threads, called a thread block
 
 There are cu files and two header files. CMakeLists.txt is created and cmake is used.  Cmake could able to create make successfully   . but make did not run and that had put error in permission side to use cuda compiler.
 
  This issue need to be resolved.  Though cmake worked well ( apparently) but that did not create good make file. Thus need to find a issue in  CMakeLists.txt and  fided as well. Mentioned effort is discussed in the following slides. .bashrc fie edited and CUDA path related infra is added.  After all these, successfully  worked with
 
-    mat/bd$ cmake  .. 
-    mat/bd$ make  .. 
+       mat/bd$ cmake  .. 
+       mat/bd$ make  .. 
  
    Then executed matrix multiplication in GPU . things went well and all these dicsuccsued in upcoming slides.
 
@@ -299,32 +299,31 @@ run matmul <br>
 ![image](https://user-images.githubusercontent.com/58679469/229201836-a971974e-7923-4ead-8718-7b493870bab3.png)
 
 
-Note cmake and make are put in use successfully 
+Note cmake and make are used successfully 
 
   3.2.5 Matrix Multiplication
   
   
   CMakeLists.txt file is given below.  Following worked for Matrix multiplication
 
-     cmake_minimum_required(VERSION 3.10.2)
-     enable_language(CUDA)   // solution uncomment this line
-     #set(CMAKE_CUDA_COMPILER "/usr/local/cuda-10.2/")         // solution .. comment this libe
-     add_executable(DLtrain ../matsrc/jkernel.cu ../matsrc/jmatMul.cu)
-     set_target_properties(DLtrain PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
-     set_property(TARGET DLtrain PROPERTY CUDA_STANDARD 11)
+        cmake_minimum_required(VERSION 3.10.2)
+        enable_language(CUDA)   // solution uncomment this line
+        #set(CMAKE_CUDA_COMPILER "/usr/local/cuda-10.2/")         // solution .. comment this libe
+        add_executable(DLtrain ../matsrc/jkernel.cu ../matsrc/jmatMul.cu)
+        set_target_properties(DLtrain PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+        set_property(TARGET DLtrain PROPERTY CUDA_STANDARD 11)
 
 
-I had added this by commenting one line earlier, but given a problem ..which is defined two page before .  Thus CUDA path is set in .bashrc and then commented this line and un commented earlier line.
-
+CUDA path is set in .bashrc and then commented this line and un commented earlier line.
 
 /usr/local/cuda-10.2/  
 
 CUDA SDK installed in this folder
 
-  Objective is to create a function to multiply a Matrix in  GPU.  But call is made from CPU with data generated in CPU. This project include , kernel.cu, kernel.h, jmatArrau.h, jmatMul.h
+Objective is to create a function to multiply a Matrix in  GPU.  But call is made from CPU with data generated in CPU. This project include, kernel.cu, kernel.h, jmatArrau.h, jmatMul.h
   
-   mat folter is having  CMakeLists.txt  <br>
-   matsrc subfolder is having soruce  code for matrix multiplicaiton in gpu
+mat folter is having  CMakeLists.txt  <br>
+matsrc subfolder is having soruce  code for matrix multiplicaiton in gpu
    
      /mat/bd/cmake ..
      /mat/bd/make ..
