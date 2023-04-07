@@ -328,6 +328,37 @@ matsrc subfolder is having soruce  code for matrix multiplicaiton in gpu
      /mat/bd/cmake ..
      /mat/bd/make ..
      ./bin/MatMul
-     
+ 
+ # 4. Handling CUDA core in Jetson Nano
+ 
+How to run TensorFlow Object Detection model on Jetson Nano?
+
+What are Freezing Tensorflow models? 
+
+[CFreezing Tricks!](https://cv-tricks.com/how-to/freeze-tensorflow-models/)
+
+
+ 
+[Optimization Tricks](http://news.mit.edu/2015/optimizing-optimization-algorithms-0121)
+
+[Optimizing optimization algorithms ](http://news.mit.edu/2011/convexity-0715)
+
+About loss functions, regularization and joint losses : multinomial logistic, cross entropy, square errors, euclidian, hinge, Crammer and Singer, one versus all, squared hinge, absolute value, infogain, L1 / L2 - Frobenius / L2,1 norms, connectionist temporal classification loss Loss Functions and Optimization Algorithms. 
+
+[Loss functions 1](http://christopher5106.github.io/deep/learning/2016/09/16/about-loss-functions-multinomial-logistic-logarithm-cross-entropy-square-errors-euclidian-absolute-frobenius-hinge.html)
+
+
+[Loss function in Optimization](https://medium.com/data-science-group-iitr/loss-functions-and-optimization-algorithms-demystified-bb92daff331c)
+
+[CUDA Tool Kit 12.1](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1404&target_type=clusterlocal)
+
+[ CUDA download](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1404&target_type=runfilelocal)
+
+[Keras model and Jetson Nano](https://www.dlology.com/blog/how-to-run-keras-model-on-jetson-nano/)
+
+[Keras model in Jetson Nano](https://medium.com/swlh/how-to-run-tensorflow-object-detection-model-on-jetson-nano-8f8c6d4352e8)
+
+
+ 
   # Reference
   1. https://developer.nvidia.com/blog/even-easier-introduction-cuda/ <br> 
