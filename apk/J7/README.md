@@ -6,7 +6,7 @@ J7app is designed to perform real time inference by using trained CNN and user i
 
 Android Studio installation
 
-![Download Link](https://linuxize.com/post/how-to-install-android-studio-on-ubuntu-18-04/)
+[Download Link](https://linuxize.com/post/how-to-install-android-studio-on-ubuntu-18-04/)
 
 
 Android Studio requires OpenJDK version 8 or above to be installed to your system 
@@ -52,7 +52,7 @@ Start AS and open project again
 
 # Step 3: J7app Source Code
 
-![Download Link 2](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FDLinIoTedge%2FNN&sa=D&sntz=1&usg=AOvVaw39mUyqi-UnVKxQLtHye_mx)
+[Download Link 2](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FDLinIoTedge%2FNN&sa=D&sntz=1&usg=AOvVaw39mUyqi-UnVKxQLtHye_mx)
 
 # Step 4: Credential Update
 
