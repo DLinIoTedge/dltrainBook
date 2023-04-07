@@ -68,14 +68,14 @@ Build work is given in the following picture
 
 # Step 6: Generate APK
 
-## Chose APK option
+## 6.1 Chose APK option
 
 [image](https://user-images.githubusercontent.com/58679469/230653837-fcf9037a-9d7b-4c8c-bf61-50640e2e4c6c.png)
 
-## Chose Password
+## 6.2 Chose Password
 [image](https://user-images.githubusercontent.com/58679469/230653864-e23e0008-3a7a-4ae1-85e8-e93c0853f8b3.png)
 
-## Chose Release version
+## 6.3 Chose Release version
 [image](https://user-images.githubusercontent.com/58679469/230653884-13a6cdbc-5656-4c1e-a6be-2d16644f70c7.png)
 
 
