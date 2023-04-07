@@ -112,6 +112,8 @@ Press clear button to clear Inference details given in a display
 
 # Setp 9 : User Input via Phone Touch Panel
 
+![image](https://user-images.githubusercontent.com/58679469/230654303-d20c50f6-e0f2-4d70-810d-1d8bf5e19fd1.png)
+
 Where DLtrain take input from user via hand writing on phone touch 
 screen and perform Inference to detect numbers.
 
