@@ -12,6 +12,7 @@
 # Get Data-set
 
 Get  Data-Set from dDrive  by using link
+
 [Get it from gDrive ](https://drive.google.com/drive/folders/1h7ZhEVdkgElx2a-UNtE9DWQ9I-CddQ29?usp=share_link )
 
 in case above link do not work then following link can be used to get Data-Set
@@ -20,24 +21,28 @@ in case above link do not work then following link can be used to get Data-Set
  
   images-ubyte 
   labels-ubyte
-  
+
+# Issues with LibGCC runtime library
+
  Static link against LibGCC runtime library:
     -static-libgcc
     
   Static link against libstdC++ runtime library:
 -     static-libstdc++
 
-//run in windows  ( Interns try the following to train CNN) 
+ ## Run DLtrain in windows  
+ 
+### Traning NN / CNN
 
-Traning NN / CNN
-
+  
+    DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d use absolute_path to images 
     DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d C:\dev\test\Images\
     
-Inference by using  NN / CNN   
+### Inference by using  NN / CNN   
 
-    DLtrainv1  -m infer -s NewNetwork.dat -c network_prop.txt  -f img.raw
+     DLtrainv1  -m infer -s NewNetwork.dat -c network_prop.txt  -f img.raw
     
-    DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d absolute_path to images 
+   
 
 
 # Workshop RGUKT 
