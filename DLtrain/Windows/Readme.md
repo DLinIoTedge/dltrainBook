@@ -1,18 +1,23 @@
 
+# DLtrain  
+( CNN version which is designed to run in Windows Machine)
 
-
+# Required Files
 
  Get following from  above in to your windows machine .
-    DLtrain.exe
+    DLtrainv1.exe
     Network_prop.txt
     NewNetwork.dat
 
+# Get Data-set
+
 Get  Data-Set from dDrive  by using link
-  https://drive.google.com/drive/folders/1h7ZhEVdkgElx2a-UNtE9DWQ9I-CddQ29?usp=share_link 
-  or
-  https://drive.google.com/drive/folders/1uvXVt87UWqZVpLx8bjj0hy1EcXPj_llh?usp=sharing 
+[Get it from gDrive ](https://drive.google.com/drive/folders/1h7ZhEVdkgElx2a-UNtE9DWQ9I-CddQ29?usp=share_link )
 
+in case above link do not work then following link can be used to get Data-Set
 
+[Get it from gDrive ...  ]( https://drive.google.com/drive/folders/1uvXVt87UWqZVpLx8bjj0hy1EcXPj_llh?usp=sharing )
+ 
   images-ubyte 
   labels-ubyte
   
@@ -26,17 +31,16 @@ Get  Data-Set from dDrive  by using link
 
 Traning NN / CNN
 
-    DLtrain  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d C:\dev\test\Images\
+    DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d C:\dev\test\Images\
     
 Inference by using  NN / CNN   
 
-    DLtrain  -m infer -s NewNetwork.dat -c network_prop.txt  -f img.raw
+    DLtrainv1  -m infer -s NewNetwork.dat -c network_prop.txt  -f img.raw
     
     DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d absolute_path to images 
 
 
 # Workshop RGUKT 
-
 ## April 06 Y 23
 
   Get  files from following link' ( thanks to  Janardha  for sharing his gDriive ) 
