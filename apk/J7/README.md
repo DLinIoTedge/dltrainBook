@@ -118,6 +118,8 @@ Where DLtrain take input from user via hand writing on phone touch
 screen and perform Inference to detect numbers.
 
 
+# Step 10 : Demo
 
+![Demo ](https://youtube.com/shorts/wZ3P_CQm-F4)
 
 
