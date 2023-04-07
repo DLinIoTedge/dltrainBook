@@ -58,13 +58,14 @@ Start AS and open project again
 
 # Step 4: Credential Update
 
-API credentials can be set but in present version it is kept open. There is a provision to include credential for secure and paid use
+API credentials can be set but in present version it is kept open. 
+There is a provision to include credential for secure and paid use
 
 # Step 5: J7app Build 
 
 Build work is given in the following picture
 
-[image](https://user-images.githubusercontent.com/58679469/230653917-36960094-6329-4e81-a76a-71d7c618ce1c.png)
+![image](https://user-images.githubusercontent.com/58679469/230653917-36960094-6329-4e81-a76a-71d7c618ce1c.png)
 
 
 
@@ -72,13 +73,15 @@ Build work is given in the following picture
 
 ## 6.1 Chose APK option
 
-[image](https://user-images.githubusercontent.com/58679469/230653837-fcf9037a-9d7b-4c8c-bf61-50640e2e4c6c.png)
+![image](https://user-images.githubusercontent.com/58679469/230653837-fcf9037a-9d7b-4c8c-bf61-50640e2e4c6c.png)
 
 ## 6.2 Chose Password
-[image](https://user-images.githubusercontent.com/58679469/230653864-e23e0008-3a7a-4ae1-85e8-e93c0853f8b3.png)
+
+![image](https://user-images.githubusercontent.com/58679469/230653864-e23e0008-3a7a-4ae1-85e8-e93c0853f8b3.png)
 
 ## 6.3 Chose Release version
-[image](https://user-images.githubusercontent.com/58679469/230653884-13a6cdbc-5656-4c1e-a6be-2d16644f70c7.png)
+
+![image](https://user-images.githubusercontent.com/58679469/230653884-13a6cdbc-5656-4c1e-a6be-2d16644f70c7.png)
 
 
 # Step 7 : Install APK in Phone
