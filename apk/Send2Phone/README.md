@@ -18,6 +18,6 @@ Above will result in requesting " model name which is trained and stored in the 
 
 
  
-![GitHub Logo](https://github.com/DLinIoTedge/Send2Phone/blob/master/64.png)
+![GitHub Logo](https://github.com/DLinIoTedge/dltrainBook/blob/jk/apk/Send2Phone/64.png)
 
 
