@@ -4,10 +4,11 @@
 
 # Required Files
 
- Get following from  above in to your windows machine .
-    DLtrainv1.exe
-    Network_prop.txt
-    NewNetwork.dat
+ Get following from  above in to user windows machine.
+ 
+       DLtrainv1.exe
+       Network_prop.txt
+       NewNetwork.dat
 
 # Get Data-set
 
@@ -24,11 +25,9 @@ in case above link do not work then following link can be used to get Data-Set
 
 # Issues with LibGCC runtime library
 
- Static link against LibGCC runtime library:
-    -static-libgcc
-    
-  Static link against libstdC++ runtime library:
--     static-libstdc++
+ Static link against LibGCC runtime library:     -static-libgcc
+
+ Static link against libstdC++ runtime library: -     static-libstdc++
 
  ## Run DLtrain in windows  
  
