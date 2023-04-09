@@ -24,7 +24,25 @@ WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not in
       for layer in base_model.layers:
         layer.trainable=False
 
-## Step 2 :  Read Potato Leaves image from local PC
+
+## Step 2 : Download Potato leaves images from gDrive
+   
+  
+[Click](https://drive.google.com/drive/folders/1_tvKRq8S6N_Je3Lbhhr3kdBUwmH8Luet?usp=share_link) to download potato leaves files from gDrive of jk. 
+
+( these files are in /events/Belarus/potato folder of gDrive jkuse)
+
+##  Step 3:  Create Folder Configuration
+
+ Use downloded files and keep in the following folder configuration in your PC or Server
+ 
+      PotatoLeavesInference.ipynb
+      /data/eb1compress/   is having 80 image files
+      /data//healthyv1/    is having 152 image files
+      /data/lb1compress/   is having 94 image files
+      /data/smpl.JPG       is used for inference
+      
+## Step 4 :  Read Potato Leaves image from local PC
 
 Prepare the training dataset as a data generator object.
 
@@ -41,18 +59,18 @@ Prepare the training dataset as a data generator object.
                                                  
                                                  
                                                  
-## Step 3: Build Model with Adam optimizer
+## Step 5: Build Model with Adam optimizer
   
       model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accuracy'])
       model.summary()
       
- ## Step 4: Train DL Networks
+ ## Step 6: Train DL Networks
  
  
       tf.random.set_seed(1)
       model.fit(train_generator, epochs=5, batch_size=10)
 
- ## Step 5: Inference
+ ## Step 7: Inference
  
  Figure of Training Loss and Accuracy.
  
