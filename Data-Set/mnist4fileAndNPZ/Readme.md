@@ -1,6 +1,6 @@
 # 1. MNSIT Data set : 4 file version
 
-## Step 1 : Download Potato leaves images from gDrive
+## Step 1 : Download MNIST images from gDrive
    
   
 [Click](https://drive.google.com/drive/folders/1msPCMZA1mmH7ykjEHppeoJWeergQtsQD?usp=share_link) to download potato leaves files from gDrive of jk. 
@@ -156,8 +156,15 @@ Use  data read from Local file
               # the generator loops indefinitely
               print('Done')
               break
-  
-vvvvvvvvvvvv
+              
+              
+   ## 3.3 Testing Model 2
+   
+        _, acc = model2.evaluate(X_validation, y_validation, verbose=1)
+         print('> %.3f' % (acc * 100.0))
+
+# 4 MNSIT Data set : NPZ 1 file version
+
 mnist.npz file is having all 4 files of MNIST data set. 
 
 ( these files are in /events/Belarus/mnist/dataNPZ/ folder of gDrive)
@@ -165,3 +172,50 @@ mnist.npz file is having all 4 files of MNIST data set.
 [click](https://drive.google.com/drive/folders/1fr5hw1EZnJSDy-xhGekOZ_2-kTVSKC1C?usp=share_link) to down load mnist.npz file.
 
 
+
+         path="/localmachinefolder/mnist/dataNPZ/mnist.npz"
+         mnist_dataset = tf.keras.datasets.mnist.load_data(path)
+         (x_train, y_train), (x_test, y_test) = mnist_dataset
+ 
+         print(x_train.shape)
+         print(y_train.shape)
+ 
+         print(x_test.shape)
+         print(y_test.shape)
+         
+Following also same as the above in loading data from npz file. 
+         
+         path = '/home/jk/dev/OnlineSource/DataSet/mnist/dataNPZ/mnist.npz'
+         (X_train, y_train), (X_test, y_test) = tf.keras.datasets.mnist.load_data(path)
+
+# 5. Deep Learning Network Model  3
+
+  
+   ## 5.1 Model  3
+   input_shape shape is critical and its value is same as image size value. 
+   In this case image size is 28x28.
+   
+      model3 = tf.keras.models.Sequential([
+       tf.keras.layers.Flatten(input_shape=(28, 28)),  
+       tf.keras.layers.Dense(128, activation='relu'),
+      tf.keras.layers.Dense(10)
+      ])
+
+      model3.compile(
+         optimizer=tf.keras.optimizers.Adam(0.001),
+        loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+        metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
+      )
+      
+    
+ ## 5.2  Train Model 3
+ 
+      model3.fit(x_train, y_train,epochs=2)
+ 
+ ## 5.3  Test Model 3
+ 
+      _, acc = model3.evaluate(X_test, y_test, verbose=1)
+      print('> %.3f' % (acc * 100.0))
+
+    
+   
