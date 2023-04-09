@@ -3,6 +3,41 @@
 # MNIST(Modified National Institute of Standards and Technology)
 
 
+MNIST is a classic problem in machine learning. 
+
+The problem is to look at greyscale 28x28 pixel images of handwritten digits and determine which digit the image represents, for all the digits from zero to nine.
+
+##  Data for Traning Deep Learning Networks Model
+
+train-images-idx3-ubyte.gz training set images:
+  1. 55000 training images, 
+  2. 5000 validation images t
+   
+train-labels-idx1-ubyte.gz training set 
+   1. labels matching the images
+
+
+##  Data for Test Deep Learning Networks Model
+
+t10k-images-idx3-ubyte.gz test set images
+  1. 10000 images 
+  
+t10k-labels-idx1-ubyte.gz test set
+   1. labels matching the images
+
+Files themselves are not in any standard image format and are manually unpacked (following the instructions available at the website) by the extract_images() and extract_labels() functions in input_data.py.
+
+Image data is extracted into a 2d tensor of: [image index, pixel index] where each entry is the intensity value of a specific pixel in a specific image, rescaled from [0, 255] to [-0.5, 0.5]. 
+
+“image index” corresponds to an image in the dataset, counting up from zero to the size of the dataset. 
+
+And  “pixel index” corresponds to a specific pixel in that image, ranging from zero to the number of pixels in the image.
+
+The 60000 examples in the train-* files are then split into 55000 examples for training and 5000 examples for validation. For all of the 28x28 pixel greyscale images in the datasets the image size is 784 and so the output tensor for the training set images is of shape [55000, 784].
+
+The label data is extracted into a 1d tensor of: [image index] with the class identifier for each example as the value. For the training set labels, this would then be of shape [55000].
+
+
 Dataset of 60,000 28x28 grayscale images of the 10 digits, along with a test set of 10,000 images. The original black and white images of NIST had been converted to grayscale in dimensions of 28*28 pixels in width and height, making a total of 784 pixels. Pixel values range from 0 to 255, where higher numbers indicate darkness and lower as lightness.
 
         Pixel Value :   0 or 1   ( or 0 to 255 ?? )
