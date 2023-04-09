@@ -134,28 +134,28 @@ Use  data read from Local file
   
   It is more "manual" example in which training called for each batch of data set.
   
-   epochs = 2
-   kval2 =0
-   for e in range(epochs):
-      print('Epoch', e)
-      batches = 0
-      for x_batch, y_batch in datagen.flow(X_train, y_train, batch_size=32):
-          model2.fit(x_batch, y_batch,verbose=0)
-          batches += 1
-          kval =  batches % 20
-         if ( kval == 0 ):
-             print('.',end=" ")
+         epochs = 2
+         kval2 =0
+         for e in range(epochs):
+         print('Epoch', e)
+         batches = 0
+         for x_batch, y_batch in datagen.flow(X_train, y_train, batch_size=32):
+             model2.fit(x_batch, y_batch,verbose=0)
+             batches += 1
+            kval =  batches % 20
+            if ( kval == 0 ):
+               print('.',end=" ")
                kval2 +=1
             
-         if ( kval2 > 20 ):
-            print('just for time being ...Done')
-            break
+           if ( kval2 > 20 ):
+              print('just for time being ...Done')
+              break
             
-         if batches >= len(X_train) / 32:
-            # we need to break the loop by hand because
-            # the generator loops indefinitely
-            print('Done')
-            break
+           if batches >= len(X_train) / 32:
+              # we need to break the loop by hand because
+              # the generator loops indefinitely
+              print('Done')
+              break
   
 vvvvvvvvvvvv
 mnist.npz file is having all 4 files of MNIST data set. 
