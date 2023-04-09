@@ -6,7 +6,9 @@
 ## Step 1 : Download Potato leaves images from gDrive
    
   
-[Click](https://drive.google.com/drive/folders/1_tvKRq8S6N_Je3Lbhhr3kdBUwmH8Luet?usp=share_link) to download potato leaves files from gDrive of jk.  ( these files are in /events/Belarus/potato folder of gDrive jkuse)
+[Click](https://drive.google.com/drive/folders/1_tvKRq8S6N_Je3Lbhhr3kdBUwmH8Luet?usp=share_link) to download potato leaves files from gDrive of jk. 
+
+( these files are in /events/Belarus/potato folder of gDrive jkuse)
 
 ##  Step 2:  Create Folder Configuration
 
@@ -109,11 +111,11 @@ Output layer contains the label which is in the form of one-hot encoded.
       batch_size = 20
       epochs = 3
  
-## Step 8 :  Train Deep Learning Networks
+## Step 8: Train Deep Learning Networks
 
       model5.fit(train_generator, epochs=3, batch_size=10)
 
-## Inference by using Deep Learning Networks 
+## Step 9: Inference by using Deep Learning Networks 
 
  Folowing is used for  inference.  
 
