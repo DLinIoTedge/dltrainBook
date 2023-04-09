@@ -4,7 +4,8 @@
 
 ## Download Potato leaves images from gDrive
    
-[Click](https://drive.google.com/drive/folders/1_tvKRq8S6N_Je3Lbhhr3kdBUwmH8Luet?usp=share_link)
+  
+[Click](https://drive.google.com/drive/folders/1_tvKRq8S6N_Je3Lbhhr3kdBUwmH8Luet?usp=share_link) to download potato leaves files from gDrive of jk.  ( these files are in /events/Belarus/potato folder of gDrive jkuse)
 
 ##  Folder Configuration
 
