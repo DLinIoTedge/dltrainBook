@@ -15,6 +15,8 @@ a Dataset from data in memory, you can use tf.data.Dataset.from_tensors() or
 tf.data.Dataset.from_tensor_slices(). Alternatively, if your input data is stored in 
 a file in the recommended TFRecord format, you can use tf.data.TFRecordDataset().
 
+Following 5 steps are handled in a file readMNISTdataAp9Y23.ipynb, User can 
+download readMNISTdataAp9Y23.ipynb and run it in their local machine.
 
  ## Step 1:  Datasets
  Following provides train, validation and test options in a Data set. Part of them used
