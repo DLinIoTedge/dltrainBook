@@ -20,3 +20,8 @@
 
 
 
+mnist.npz file is having all 4 files of MNIST data set.
+
+[click](https://drive.google.com/drive/folders/1fr5hw1EZnJSDy-xhGekOZ_2-kTVSKC1C?usp=share_link) to down load mnist.npz file.
+
+
