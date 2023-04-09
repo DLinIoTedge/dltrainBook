@@ -15,7 +15,7 @@ a Dataset from data in memory, you can use tf.data.Dataset.from_tensors() or
 tf.data.Dataset.from_tensor_slices(). Alternatively, if your input data is stored in 
 a file in the recommended TFRecord format, you can use tf.data.TFRecordDataset().
 
-Following 5 steps are handled in a file readMNISTdataAp9Y23.ipynb, User can 
+Following 7 steps are handled in a file readMNISTdataAp9Y23.ipynb, User can 
 download readMNISTdataAp9Y23.ipynb and run it in their local machine.
 
 
@@ -38,13 +38,13 @@ download readMNISTdataAp9Y23.ipynb and run it in their local machine.
       /data/img.raw                     is used for inference
 
 
- ## Step 3:  Datasets
+ ###   Datasets
  Following provides train, validation and test options in a Data set. Part of them used
  in testing and others in traning and validations.
  
     _Datasets = collections.namedtuple('_Datasets', ['train', 'validation', 'test'])
  
- ## Step 4: MNIST data from Local PC
+ ## Step 3: MNIST data from Local PC
  
           path = '/home/jk/dev/OnlineSource/DataSet/mnist/data/'
           jdata = read_data_sets(path, 
@@ -57,7 +57,7 @@ download readMNISTdataAp9Y23.ipynb and run it in their local machine.
       
    Funciton read_data_sets is implemented in the above and assocaited functions are listed in a  file readMNISTdataAp9Y23.ipynb
    
-  ## Step 5: Get Traning and Testing Data from Datasets
+  ## Step 4: Get Traning and Testing Data from Datasets
   
       x_train, y_train = jdata.train.next_batch(5000) 
       # just get 5000 images for tranining ..total is 55000 images
@@ -69,7 +69,7 @@ download readMNISTdataAp9Y23.ipynb and run it in their local machine.
       print(a.shape)   #  784 x 1 need to be used in Flatten model
       
  
- ## Step 6:  Create  Deep Learning Network Model 
+ ## Step 5:  Create  Deep Learning Network Model 
    
     Deep Learning Network Model  is  Neural Network
     
@@ -87,11 +87,11 @@ download readMNISTdataAp9Y23.ipynb and run it in their local machine.
        metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
       )
   
-## Step 7 : Train Deep Learning Network Model 
+## Step 6 : Train Deep Learning Network Model 
   
       model5.fit(x_train, y_train,epochs=2)
 
-## Step 8:  Test Deep Learning Network Model
+## Step 7:  Test Deep Learning Network Model
 
       x_test, y_test = jdata.test.next_batch(50) # 50 files used in testing
       
