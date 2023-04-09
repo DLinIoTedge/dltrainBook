@@ -3,7 +3,9 @@
 # Deep Learning Networks to Monitor Potato leaves 
 
 Following example is using Image files that are local to machine in which training is happening.  But, to get these files link is given to user in Step 1.  User need to arrange folders in their local machine as given in Step 2.
-From Step 3 to Step 9, user required to use  "PotatoLeavesInference.ipynb" file is included in above file list.
+From Step 3 to Step 9, user required to use  "PotatoLeavesInference.ipynb" file is included in above file list. 
+
+Step 5 provides CNN model and user can revise it and enhance quality of inference.
 
 
 ## Step 1 : Download Potato leaves images from gDrive
