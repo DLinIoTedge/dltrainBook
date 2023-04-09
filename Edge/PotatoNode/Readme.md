@@ -67,32 +67,75 @@ Softmax or Logistic layer is the last layer of CNN. It resides at the end of FC 
 ### Output layer
 Output layer contains the label which is in the form of one-hot encoded.
 
-def createModel():
-    model = Sequential()
-    # The first two layers with 32 filters of window size 3x3
-    model.add(Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=input_shape))
-    model.add(Conv2D(32, (3, 3), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
+      def createModel():
+        model = Sequential()
+        # The first two layers with 32 filters of window size 3x3
+        model.add(Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=input_shape))
+        model.add(Conv2D(32, (3, 3), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.25))
 
-    model.add(Conv2D(64, (3, 3), padding='same', activation='relu'))
-    model.add(Conv2D(64, (3, 3), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
+        model.add(Conv2D(64, (3, 3), padding='same', activation='relu'))
+        model.add(Conv2D(64, (3, 3), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.25))
 
-    model.add(Conv2D(64, (3, 3), padding='same', activation='relu'))
-    model.add(Conv2D(64, (3, 3), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
+        model.add(Conv2D(64, (3, 3), padding='same', activation='relu'))
+        model.add(Conv2D(64, (3, 3), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.25))
 
-    model.add(Flatten())
-    model.add(Dense(512, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(nClasses, activation='softmax'))
+        model.add(Flatten())
+        model.add(Dense(512, activation='relu'))
+        model.add(Dropout(0.5))
+        model.add(Dense(nClasses, activation='softmax'))
+      
+       return model
+
+##  Step 6  Optimization Algorithms
+    1. adam, 
+    2. SGD, 
+    3. GradientDescent, 
+    4. Adagrad, 
+    5. Adadelta 
+    6. Adamax
+    7. rmsprop
+
+      model5 = createModel()
+      model5.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
+
+## Step 7 : Hyper Parameter
+ 
+      batch_size = 20
+      epochs = 3
+ 
+## Step 8 :  Train Deep Learning Networks
+
+      model5.fit(train_generator, epochs=3, batch_size=10)
+
+## Inference by using Deep Learning Networks 
+
+ Folowing is used for  inference.  
+
+      def prediction(image_path, model):
+         img = tf.keras.preprocessing.image.load_img(image_path, target_size=(224, 224))
+         x = tf.keras.preprocessing.image.img_to_array(img)
+         x = np.expand_dims(x, axis=0)
+         x = tf.keras.applications.mobilenet_v2.preprocess_input(x)
+          preds = model.predict(x)
+         #print('Predictions', preds)
     
-    return model
+         for pred, value in label_map.items():    
+            if value == np.argmax(preds):
+               print('Predicted class is:', pred)
+               print('With a confidence score of: ', np.max(preds))
+    
+         return np.argmax(preds)
+    
 
-
- 
- 
+      image = Image.open("data/smpl.JPG")  # provide file with path
+      image  # display image 
+      
+      #performing inference on above image
+      prediction('data/smpl.JPG', model5)
  
