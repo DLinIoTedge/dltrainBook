@@ -36,7 +36,7 @@ WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not in
 
  Use downloded files and keep in the following folder configuration in your PC or Server
  
-      PotatoLeavesInference.ipynb
+      PotatoLocalPretrained.ipynb
       /data/eb1compress/   is having 80 image files
       /data//healthyv1/    is having 152 image files
       /data/lb1compress/   is having 94 image files
