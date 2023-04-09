@@ -19,7 +19,7 @@ Following 7 steps are handled in a file readMNISTdataAp9Y23.ipynb, User can
 download readMNISTdataAp9Y23.ipynb and run it in their local machine.
 
 
-## Step 1 : Download Potato leaves images from gDrive
+## Step 1 : Download MNIST images from gDrive
    
   
 [Click](https://drive.google.com/drive/folders/1msPCMZA1mmH7ykjEHppeoJWeergQtsQD?usp=share_link) to download potato leaves files from gDrive of jk. 
