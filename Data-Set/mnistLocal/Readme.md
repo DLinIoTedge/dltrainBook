@@ -31,6 +31,47 @@ a file in the recommended TFRecord format, you can use tf.data.TFRecordDataset()
                        dtype=dtypes.float32,
                        reshape=True,
                        validation_size=5000,
-                       seed=None,
-                       source_url=DEFAULT_SOURCE_URL)
+                       seed=Nonel)
+      
+   Funciton read_data_sets is implemented in the above and assocaited functions are listed in a  file readMNISTdataAp9Y23.ipynb
+   
+  ## Step 2: Get Traning and Testing Data from Datasets
+  
+      x_train, y_train = jdata.train.next_batch(5000) 
+      # just get 5000 images for tranining ..total is 55000 images
+      
+      total_batch = x_train.shape  # numpy  ndarray ..it is not tensor
+      print(total_batch)
+      
+      a = x_train[1]
+      print(a.shape)   #  784 x 1 need to be used in Flatten model
+      
+ 
+ ## Step 3 :  Create  Deep Learning Network Model 
+   
+    Deep Learning Network Model  is  Neural Network
+    
+   Input_shape  need to be equal to to image size in MNIST data.
+   
+      model5 = tf.keras.models.Sequential([
+        tf.keras.layers.Flatten(input_shape=(784, 1)),
+        tf.keras.layers.Dense(128, activation='relu'),
+        tf.keras.layers.Dense(10)
+      ])
 
+      model5.compile(
+       optimizer=tf.keras.optimizers.Adam(0.001),
+       loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+       metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
+      )
+  
+ ## Step 4 : Train Deep Learning Network Model 
+  
+      model5.fit(x_train, y_train,epochs=2)
+
+## Step 5:  Test Deep Learning Network Model
+
+      x_test, y_test = jdata.test.next_batch(50) # 50 files used in testing
+      
+      _, acc = model5.evaluate(x_test, y_test, verbose=1)
+      print('> %.3f' % (acc * 100.0))
