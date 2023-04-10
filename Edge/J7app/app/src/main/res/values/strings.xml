@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">J7</string>
+
+    <string-array name="ops">
+        <item>Internet</item>
+        <item>Local</item>
+    </string-array>
+</resources>
