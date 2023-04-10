@@ -128,7 +128,7 @@ Where DLtrain take input from user via hand writing on phone touch
 screen and perform Inference to detect numbers.
 
 
-# Step 10 : Demo
+# Step 10 :  Students Using J7app to learn writing
 
 [Demo ](https://youtube.com/shorts/wZ3P_CQm-F4 ) is showing how nursery student is using J7app to learn writing.
 
