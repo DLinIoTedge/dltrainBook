@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10.2)
+enable_language(CUDA)
+add_executable(MatMul ../matsrc/jkernel.cu ../matsrc/jmatMul.cu)
+set_target_properties(MatMul PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+set_property(TARGET MatMul PROPERTY CUDA_STANDARD 11)
