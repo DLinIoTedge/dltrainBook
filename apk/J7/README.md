@@ -130,6 +130,6 @@ screen and perform Inference to detect numbers.
 
 # Step 10 : Demo
 
-![Demo ]( https://youtube.com/shorts/wZ3P_CQm-F4 )
+[Demo ](https://youtube.com/shorts/wZ3P_CQm-F4 )
 
 
