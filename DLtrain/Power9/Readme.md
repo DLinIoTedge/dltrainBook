@@ -64,7 +64,7 @@ eonf file is having Deep Learning Network model parameters <br>
     ./bin/DLtrain conf train
     java -jar  toPhone/SndModel.jar
 
-1. Start J22 andriod app in phone. 
+1. Start J22 app in Android  phone. 
 2. Press Load in J722 android application and also make Android phone in WiFi (not in phone mode)  
 3. Get IP address from Settigs -> WiFi 192.168.1.6
 4. Give file name jjnet.dat
