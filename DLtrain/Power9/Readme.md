@@ -2,20 +2,20 @@
 
 
 
-  sudo apt install software-properties-common
-  sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 
   For power 9
 
-  sudo apt install software-properties-common
-  sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-  sudo apt install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
-  sudo apt install gcc-9 g++-9
-  g++-9 FastTest.cpp Network_Fast.cpp MNISTRead.cpp FastSave.cpp -o Test.o
-  cmake -D CMAKE_CXX_COMPILER=cd bin g++-9 ..
-  cmake -D CMAKE_C_COMPILER=gcc-9 -D CMAKE_CXX_COMPILER=g++-9 ..
-  cmake -D CMAKE_C_COMPILER=gcc-5 -D CMAKE_CXX_COMPILER=g++-5 ..
-  ./bin/DLtrin jjnet train o
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    sudo apt install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
+    sudo apt install gcc-9 g++-9
+    g++-9 FastTest.cpp Network_Fast.cpp MNISTRead.cpp FastSave.cpp -o Test.o
+    cmake -D CMAKE_CXX_COMPILER=cd bin g++-9 ..
+    cmake -D CMAKE_C_COMPILER=gcc-9 -D CMAKE_CXX_COMPILER=g++-9 ..
+    cmake -D CMAKE_C_COMPILER=gcc-5 -D CMAKE_CXX_COMPILER=g++-5 ..
+    ./bin/DLtrin jjnet train o
 
 // over write rxisting network' DLtrin jjnet train  <br>
 // No over write rxisting network' DLtrin jjnet infer   <br>
