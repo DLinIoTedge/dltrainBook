@@ -28,4 +28,5 @@ from Host machine via Wireless Wi-Fi communication.  Enter IP addres.
 
 Now, applicaiton J722 is loaded with revised model and same  is used for inference.
 
-![image](https://user-images.githubusercontent.com/58679469/231184990-e1ea6b9c-d508-469f-abcf-beb4ad049af8.png)
+
+![image](https://user-images.githubusercontent.com/58679469/231185341-14f32a69-229d-424b-bf80-a80d8cd5d8dc.png)
