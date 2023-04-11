@@ -17,7 +17,7 @@ Although Docker has been a very popular technology for some time, until recently
 7. How to create Container with Docker image?
 8. How to deploy container? 
 
- [Click](https://docs.google.com/document/d/1j3BrdxtS4ne8wsYICOKkjbRu08Lu96gOa0_0bl5vbmE/edit?usp=sharing) to aacess  document on "Docker Image,  Docker Container and Kubernetes Cluster
+ [Click](https://docs.google.com/document/d/1j3BrdxtS4ne8wsYICOKkjbRu08Lu96gOa0_0bl5vbmE/edit?usp=sharing) to access  document on "Docker Image,  Docker Container and Kubernetes Cluster
 Creation and Deployment".
 
  
