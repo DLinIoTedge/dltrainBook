@@ -72,3 +72,7 @@ eonf file is having Deep Learning Network model parameters <br>
 6. Press Next in Phone
         
         
+# Reference
+
+1. HDID003/May202020B/Dev/DeepLearning/oct16
+
