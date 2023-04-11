@@ -8,8 +8,8 @@ Watson Machine Learning Accelerator runs on IBM Power accelerated servers HPC, a
 
 
 # TalosTM II  
-Above machine is having IBM Power 9 CPU  and  had  Ubuntu 18.04 OS
-DLtrain workload
+Above machine is having IBM Power 9 CPU  and  had  Ubuntu 18.04 OS. <br>
+alosTM II   is used to build DLtrain and also train Deep Learning Networks by using DLtrain.
 
 # gcc in Power 9 CPU
 
