@@ -23,25 +23,23 @@
 // only all 3 from data set DLtrin jjnet infer filename   <br>
 // only raw ...768 byts... binary value   <br>
 
-  ./bin/DLtrin jjnet infer img.raw
-  cd  C++NNFast
-  rm -rf build
-  mkdir build
-  cd build
-  cmake  -D CMAKE_C_COMPILER=gcc-9 -D CMAKE_CXX_COMPILER=g++-9 ..
-  make
-  cd ..
+    ./bin/DLtrin jjnet infer img.raw
+    cd  C++NNFast
+    rm -rf build
+    mkdir build
+    cd build
+    cmake  -D CMAKE_C_COMPILER=gcc-9 -D CMAKE_CXX_COMPILER=g++-9 ..
+    make
+    cd ..
 
  
 
 /// edit conf file which is having model parameter and keep this file in  C++NNFast root folder
 
-./bin/DLtrain conf train
+    ./bin/DLtrain conf train
+    java -jar  toPhone/SndModel.jar
 
-java -jar  toPhone/SndModel.jar
-
-start J22 andriod app in phone
-Press Load in J722 android ap
+start J22 andriod app in phone. Press Load in J722 android ap
 make Android phone in WiFi ( not in phone mode)
 get IP address from Settigs -> WiFi 192.168.1.6
  Give file name jjnet.dat
