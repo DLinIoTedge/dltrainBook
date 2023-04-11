@@ -23,6 +23,7 @@ alosTM II   is used to build DLtrain and also train Deep Learning Networks by us
     
 # Build DLtrain in Power  9 CPU
 
+ CMakeLists.txt is having required lines to build DLtrain.
  
     g++-9 FastTest.cpp Network_Fast.cpp MNISTRead.cpp FastSave.cpp -o Test.o
     cmake -D CMAKE_CXX_COMPILER=cd bin g++-9 ..
