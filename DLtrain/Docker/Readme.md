@@ -102,6 +102,80 @@ Mentioned above process is worked well
        /dev/app$   sudo docker build . -t dltrain:1.0.0
 
 
-# Use Docker Image of dltrain
+# Use Docker Image of Dltrain
 
         dev/app$    docker run --rm -it dltrain:1.0.0 -m train -s NewNetwork.dat -c  network_prop.txt -n 2000 -e 3
+
+Train Deep learning Networks by using  DLtrain with CNN Model  (via Docker )
+
+//////sudo docker pull jkhome/dltrain:1.0.0
+
+       /tst1$ sudo docker pull jkhome/dltrain:1.0.0
+
+       1.0.0: Pulling from jkhome/dltrain
+
+171857c49d0f: Already exists <br>
+419640447d26: Already exists <br>
+61e52f862619: Already exists <br>
+4ac9b033c679: Pull complete <br>
+bf21ea76f89b: Pull complete <br>
+fcf360b180ac: Pull complete <br>
+043a8708b6d2: Pull complete <br>
+138c09806188: Pull complete <br>
+5e15a5a3d6b4: Pull complete <br>
+0978d35d7bc5: Pull complete <br>
+2cd4d5cea17d: Pull complete <br> 
+Digest: sha256:94d71c05c716e7d234e66cfa51f58120d47b209aaf31b64676eff04b3e975868 <br>
+Status: Downloaded newer image for jkhome/dltrain:1.0.0 <br>
+docker.io/jkhome/dltrain:1.0.0 <br>
+
+
+This image is pulled from docker hub and same used in the following ( worked well)
+
+         /tst1$  sudo docker run --rm -it jkhome/dltrain:1.0.0 -m train -s NewNetwork.dat -c  network_prop.txt -n 2000 -e 3
+
+ 
+
+Loaded 2000 image data!
+
+
+
+Constructed required matrices.
+
+Loaded network successfully!
+
+       1% | Epoch left: 2
+       2% | Epoch left: 2
+       3% | Epoch left: 2
+       4% | Epoch left: 2
+       5% | Epoch left: 2
+       6% | Epoch left: 2
+       7% | Epoch left: 2
+
+DLtrain used to infer given image
+
+      dev//app$  sudo docker run --rm -it dltrain:1.0.0 -m infer -s NewNetwork.dat -c  network_prop.txt -n 14
+
+      /tst1$  sudo docker run --rm -it jkhome/dltrain:1.0.0 -m infer -s NewNetwork.dat -c  network_prop.txt -n 14
+
+Loaded 14 image data!
+
+Constrcuted required matrices
+
+Loaded network successfully!
+       Running inference on 14 images.Number: 5 | Guessed: 7 | Accuracy: -nan
+       Number: 0 | Guessed: 0 | Accuracy: 100
+       Number: 4 | Guessed: 4 | Accuracy: 100
+       Number: 1 | Guessed: 1 | Accuracy: 100
+       Number: 9 | Guessed: 4 | Accuracy: 75
+       Number: 2 | Guessed: 4 | Accuracy: 60
+       Number: 1 | Guessed: 1 | Accuracy: 66.6667
+       Number: 3 | Guessed: 3 | Accuracy: 71.4286
+       Number: 1 | Guessed: 1 | Accuracy: 75
+       Number: 4 | Guessed: 4 | Accuracy: 77.7778
+       Number: 3 | Guessed: 3 | Accuracy: 80
+       Number: 5 | Guessed: 1 | Accuracy: 72.7273
+       Number: 3 | Guessed: 0 | Accuracy: 66.6667
+       Number: 6 | Guessed: 6 | Accuracy: 69.2308
+
+
