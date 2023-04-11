@@ -17,9 +17,9 @@
     cmake -D CMAKE_C_COMPILER=gcc-5 -D CMAKE_CXX_COMPILER=g++-5 ..
     ./bin/DLtrin jjnet train o
 
-// over write rxisting network' DLtrin jjnet train  <br>
+// Over write rxisting network' DLtrin jjnet train  <br>
 // No over write rxisting network' DLtrin jjnet infer   <br>
-// for data set for inference DLtrin jjnet infer 3   <br>
+// For data  to perform inference DLtrin jjnet infer 3   <br>
 // only all 3 from data set DLtrin jjnet infer filename   <br>
 // only raw ...768 byte... binary value   <br>
 
@@ -32,20 +32,19 @@
     make
     cd ..
 
- 
+conf file is located in in  Dltrain root folder <br>
+edit conf file <br>
+eonf file is having Deep Learning Network model parameters <br>
 
-/// edit conf file which is having model parameter and keep this file in  C++NNFast root folder
 
     ./bin/DLtrain conf train
     java -jar  toPhone/SndModel.jar
 
-start J22 andriod app in phone. Press Load in J722 android ap
-make Android phone in WiFi ( not in phone mode)
-get IP address from Settigs -> WiFi 192.168.1.6
- Give file name jjnet.dat
-
- Enter IP address 192.168.1.6
-
-        ||  Press Next in Phone
+1. Start J22 andriod app in phone. 
+2. Press Load in J722 android application and also make Android phone in WiFi (not in phone mode)  
+3. Get IP address from Settigs -> WiFi 192.168.1.6
+4. Give file name jjnet.dat
+5. Enter IP address 192.168.1.6
+6. Press Next in Phone
         
         
