@@ -1,4 +1,15 @@
 
+$ Create Docker Image of DL Networks
+
+1. How to create a docker file ?
+2. How to build docker image ?
+3. How to deploy docker image ?
+4. How to run docker image ?
+5. How to stop Docker image  running ?
+6. How to delete docker image  ?
+7. How to create Container with Docker image?
+8. How to deploy container? 
+
 
  Deployment of trained model on to cloud side  requires to  support  clients with varying languages.  REST API appears to be one such a method in which Client can communicate with Inference Engine which is performing inference for a given input data. Where, input data come from Client applications which are written in different language 
 
@@ -16,5 +27,71 @@ My Drive/events/DLbook/DataSet/ubyteMNIST/ is location following files in jk's g
     \Images\images-ubyte
     \Images\labels-ubyte
     
+# Useful commands to handle Docker  
+
+   List of Useful commands to handle Docker
+
+    sudo docker rmi  -f  << docker image ID>>   // delete docker image with  this ID
+    sudo docker rm   -f << docker  container ID>>   // delete docker container with  this ID
+    sudo docker image ls  //To see the image you just pulled, type the below command
+    sudo docker run hello-world
+    sudo docker run --rm -it  hello-world:latest  // runs latest and rm deletes after it runs 
     
-    
+
+# DLtrain working with CNN Model  (via Docker )
+
+A drawback with this multi-platform support is that one Docker image has to be built for each specific target platform, i.e. a specific operating system and hardware architecture. So, if you want to be able to run your Docker container on both Linux and Windows using Intel 64-bit hardware you must create two Docker images, one for Linux and one for Windows. You also have to create each Docker image using a Docker engine running on the specific target platform.
+
+
+A Dockerfile is a text document that contains the list of commands which can be invoked by a user using the command line in order to assemble an image  Docker Image read-only templates are nothing but the building blocks of a Docker Container  . A Docker Container is the running instance of a Docker Image.
+
+
+       /dev/app$ sudo docker login
+
+Authenticating with existing credentials... <br>
+WARNING! Your password will be stored unencrypted in /home/jk/.docker/config.json. <br>
+Configure a credential helper to remove this warning. See <br>
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store <br>
+
+
+Login Succeeded <br>
+appbuildforbbuntu  Build this first  (Base container)  <br>
+app container is  building need to taken up after Base Container build <br>
+
+      dltrain:1.0.0
+
+
+// following worked to push local image to docker hub
+
+
+     /dev/app$ sudo docker tag  dltrain:1.0.0 jkhome/dltrain:1.0.0
+     /dev/app$ sudo docker push jkhome/dltrain:1.0.0
+     /dev/app$ sudo docker push jkhome/dltrain:1.0.0
+
+The push refers to repository [docker.io/jkhome/dltrain]
+
+     d55ee02ea098: Pushed
+     6557b027d9ae: Pushed
+   
+      ....
+
+     .....
+
+      805802706667: Pushed
+
+       1.0.0: digest: sha256:94d71c05c731b64676eff04b3e975868 size: 2610
+
+       /dev/app$
+
+
+Build appbuildforbbuntu:0.1.0 and keep this is ready then build dltrain:1.0.0 
+Mentioned above process is worked well
+
+
+       /dev/app$sudo docker build . -t appbuildforbbuntu:0.1.0
+       /dev/app$   sudo docker build . -t dltrain:1.0.0
+
+
+# Use Docker Image of dltrain
+
+        dev/app$    docker run --rm -it dltrain:1.0.0 -m train -s NewNetwork.dat -c  network_prop.txt -n 2000 -e 3
