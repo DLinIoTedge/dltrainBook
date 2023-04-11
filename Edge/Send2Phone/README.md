@@ -30,6 +30,6 @@ Now, applicaiton J722 is loaded with revised model and same  is used for inferen
 
 
  
-[GitHub Logo](https://github.com/DLinIoTedge/dltrainBook/blob/jk/apk/Send2Phone/64.png)
+[GitHub Logo](https://github.com/DLinIoTedge/dltrainBook/tree/jk/Edge/Send2Phone/64.png)
 
 
