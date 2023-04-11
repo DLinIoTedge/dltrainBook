@@ -132,4 +132,11 @@ screen and perform Inference to detect numbers.
 
 [Demo ](https://youtube.com/shorts/wZ3P_CQm-F4 ) is showing how nursery student is using J7app to learn writing.
 
+# Step 11:  Update Deep Learning Networks Model in Android Device
+
+Send2Phone is an application in Host machine and also in Android phone. Mentioned Send2Phone
+is tranfer "tranined CNN or NN model from Host machine to Android Device.
+
+[click ](https://github.com/DLinIoTedge/dltrainBook/tree/jk/Edge/Send2Phone)
+
 
