@@ -21,7 +21,7 @@
 // No over write rxisting network' DLtrin jjnet infer   <br>
 // for data set for inference DLtrin jjnet infer 3   <br>
 // only all 3 from data set DLtrin jjnet infer filename   <br>
-// only raw ...768 byts... binary value   <br>
+// only raw ...768 byte... binary value   <br>
 
     ./bin/DLtrin jjnet infer img.raw
     cd  C++NNFast
