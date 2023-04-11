@@ -163,19 +163,20 @@ Loaded 14 image data!
 Constrcuted required matrices
 
 Loaded network successfully!
-       Running inference on 14 images.Number: 5 | Guessed: 7 | Accuracy: -nan
-       Number: 0 | Guessed: 0 | Accuracy: 100
-       Number: 4 | Guessed: 4 | Accuracy: 100
-       Number: 1 | Guessed: 1 | Accuracy: 100
-       Number: 9 | Guessed: 4 | Accuracy: 75
-       Number: 2 | Guessed: 4 | Accuracy: 60
-       Number: 1 | Guessed: 1 | Accuracy: 66.6667
-       Number: 3 | Guessed: 3 | Accuracy: 71.4286
-       Number: 1 | Guessed: 1 | Accuracy: 75
-       Number: 4 | Guessed: 4 | Accuracy: 77.7778
-       Number: 3 | Guessed: 3 | Accuracy: 80
-       Number: 5 | Guessed: 1 | Accuracy: 72.7273
-       Number: 3 | Guessed: 0 | Accuracy: 66.6667
-       Number: 6 | Guessed: 6 | Accuracy: 69.2308
+
+         Running inference on 14 images.Number: 5 | Guessed: 7 | Accuracy: -nan
+         Number: 0 | Guessed: 0 | Accuracy: 100
+         Number: 4 | Guessed: 4 | Accuracy: 100
+         Number: 1 | Guessed: 1 | Accuracy: 100
+         Number: 9 | Guessed: 4 | Accuracy: 75
+         Number: 2 | Guessed: 4 | Accuracy: 60
+         Number: 1 | Guessed: 1 | Accuracy: 66.6667
+         Number: 3 | Guessed: 3 | Accuracy: 71.4286
+         Number: 1 | Guessed: 1 | Accuracy: 75
+         Number: 4 | Guessed: 4 | Accuracy: 77.7778
+         Number: 3 | Guessed: 3 | Accuracy: 80
+         Number: 5 | Guessed: 1 | Accuracy: 72.7273
+         Number: 3 | Guessed: 0 | Accuracy: 66.6667
+         Number: 6 | Guessed: 6 | Accuracy: 69.2308
 
 
