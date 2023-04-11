@@ -1,5 +1,12 @@
 
-$ Create Docker Image of DL Networks
+Docker is an open-source container engine and a set of tools to compose, build, ship, and run distributed applications. The Docker container engine provides for the execution of applications composed as Docker images. Docker hub and Docker private registries are services that enable sharing of Docker images. The Docker command-line tool enables developers to build Docker images, to work with Docker hub and private registries, and to instantiate Docker images as containers in a Docker container engine. The relatively small size of Docker images—compared with VM images—and their portability enable developers to move applications seamlessly between test, quality assurance, and production environments, increasing the agility of application development and operations.
+
+Although Docker has been a very popular technology for some time, until recently its ecosystem has been primarily restricted to x86 architectures and the Linux operating system. Systems such as IBM POWER Linux, IBM z/Linux, and ARM Linux require a porting effort to support Docker. I  how to use Docker on the POWER Linux platform. We also illustrate the process of building Docker from scratch on the POWER platform, a process developers on other platforms can use as a template for enabling Docker on their own platforms.
+
+
+
+
+# Create Docker Image of DL Networks
 
 1. How to create a docker file ?
 2. How to build docker image ?
@@ -10,7 +17,10 @@ $ Create Docker Image of DL Networks
 7. How to create Container with Docker image?
 8. How to deploy container? 
 
+ [Click](https://docs.google.com/document/d/1j3BrdxtS4ne8wsYICOKkjbRu08Lu96gOa0_0bl5vbmE/edit?usp=sharing) to aacess  document on "Docker Image,  Docker Container and Kubernetes Cluster
+Creation and Deployment".
 
+ 
  Deployment of trained model on to cloud side  requires to  support  clients with varying languages.  REST API appears to be one such a method in which Client can communicate with Inference Engine which is performing inference for a given input data. Where, input data come from Client applications which are written in different language 
 
 # get Data Set  Files
