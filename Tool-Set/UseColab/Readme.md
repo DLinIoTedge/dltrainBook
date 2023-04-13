@@ -1,5 +1,5 @@
 
-# Download Data set
+# 1. Download Data set
 
 When you’re training a machine learning model on your local machine, you’re likely to have trouble with the storage and bandwidth costs that come with downloading and storing the dataset required for training a model.
 
@@ -10,7 +10,7 @@ The most efficient way to use datasets is to use a cloud interface to download t
 Thankfully, Colab gives us a variety of ways to download the dataset from common data hosting platforms.
 
 
-## Annotations.ai 
+## 1.1 Annotations.ai 
 
 Cloud Annotations focuses on the dataset creation aspect of the model development life cycle leaving the 
 training up to you. There are many ways to train your model, each with their own use cases and tradeoffs. 
@@ -27,12 +27,15 @@ previous boto 1.8 and is not accepted by boto3. you can refer the following boto
 Here is boto 1.8 documents that mentions the 
 use of botocore.session http://botocore.readthedocs.io/en/latest/tutorial/
 
-
 Build  Deep Learning Network Model
 We start with a MobileNetV2 architecture as the backbone pretrained feature extractor. 
 We then add a couple of dense layers and a softmax layer to perform the classification. 
 We freeze the MobileNetV2 backbone with weights trained on ImageNet dataset and only 
 train the dense layers and softmax layer that we have added.
+
+
+## 1.2 Upload data set from Local Drive to Colab
+   Use file  MNISTlocalColab.ipynb
 
 # Referen ce
 1. https://neptune.ai/blog/how-to-use-google-colab-for-deep-learning-complete-tutorial
