@@ -12,6 +12,8 @@ Thankfully, Colab gives us a variety of ways to download the dataset from common
 
 ## 1.1 Annotations.ai 
 
+Use file DLinColabv1.ipynb
+
 Cloud Annotations focuses on the dataset creation aspect of the model development life cycle leaving the 
 training up to you. There are many ways to train your model, each with their own use cases and tradeoffs. 
 You could train from scratch using a framework like TensorFlow or PyTorch, use a drag & drop tool like 
@@ -35,7 +37,22 @@ train the dense layers and softmax layer that we have added.
 
 
 ## 1.2 Upload data set from Local Drive to Colab
+
    Use file  MNISTlocalColab.ipynb
+   
+   Upload following files from Local PC
+   
+           t10k-images-idx3-ubyte.gz  
+           train-images-idx3-ubyte.gz
+           t10k-labels-idx1-ubyte.gz  
+           train-labels-idx1-ubyte.gz
+           
+    Use above files in colab to train CNN model or NN model.
+    
+
+
+   
+   
 
 # Referen ce
 1. https://neptune.ai/blog/how-to-use-google-colab-for-deep-learning-complete-tutorial
