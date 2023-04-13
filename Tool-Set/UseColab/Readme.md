@@ -34,4 +34,6 @@ We then add a couple of dense layers and a softmax layer to perform the classifi
 We freeze the MobileNetV2 backbone with weights trained on ImageNet dataset and only 
 train the dense layers and softmax layer that we have added.
 
-
+# Referen ce
+1. https://neptune.ai/blog/how-to-use-google-colab-for-deep-learning-complete-tutorial
+2. 
