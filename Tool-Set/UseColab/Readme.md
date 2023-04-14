@@ -52,10 +52,21 @@ train the dense layers and softmax layer that we have added.
     Use above files in colab to train CNN model or NN model.
     
 
-
+## 1.3 Upload data set from google Drive to Colab
    
+  Use file   MNISTgDriveColab (1).ipynb
+  
+  Get following files into colab from Google Drive
    
+           t10k-images-idx3-ubyte.gz  
+           train-images-idx3-ubyte.gz
+           t10k-labels-idx1-ubyte.gz  
+           train-labels-idx1-ubyte.gz
 
-# Referen ce
+# Reference
+
 1. https://neptune.ai/blog/how-to-use-google-colab-for-deep-learning-complete-tutorial
-2. 
+ 
+
+           
+    Use above files in colab to train CNN model or NN model.
