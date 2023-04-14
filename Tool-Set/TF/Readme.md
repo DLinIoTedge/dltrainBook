@@ -10,5 +10,9 @@ Machine is Ubuntu OS 22.04
  4. How to bring up Python 3 enabled Jupyter Notebook
  5. How to bring up Python 3  and TF in Docker 
  6. How to bring up Python 3 enabled  JupyterLab 
+  
+  
+  Use the [Link   ](https://mycartablog.com/2019/07/09/from-zero-to-jupyterlab-pro-on-windows-10/)  to install Jupyter-lab on your Windows 10 Machine
+  
  7. How to bring up Python 3 enabled jupyterlab-latex
  
