@@ -11,7 +11,7 @@ Machine is Ubuntu OS 22.04
 5. How to bring up Python 3  and TF in Docker 
 6. How to bring up Python 3 enabled  JupyterLab 
   
-  Step 1 – Download Anaconda . [Link](https://www.anaconda.com/products/distribution#Downloads0 
+      Step 1 – Download Anaconda . [Link](https://www.anaconda.com/products/distribution#Downloads) 
          Go to the Ananaconda website for the Windows distribution and download the Python 3.8 installer
          
       Step 2 – Install Anaconda
