@@ -63,10 +63,12 @@ train the dense layers and softmax layer that we have added.
            t10k-labels-idx1-ubyte.gz  
            train-labels-idx1-ubyte.gz
 
+Use above files in colab to train CNN model or NN model.
+
 # Reference
 
 1. https://neptune.ai/blog/how-to-use-google-colab-for-deep-learning-complete-tutorial
  
 
            
-    Use above files in colab to train CNN model or NN model.
+    
