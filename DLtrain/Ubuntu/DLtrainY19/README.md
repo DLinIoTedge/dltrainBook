@@ -1,5 +1,7 @@
 # DLtrain Y19
 
+before 2019 version
+
 ## Step 1:  Design NN model
 Build Model and give model file as argument to DLtrain
 
