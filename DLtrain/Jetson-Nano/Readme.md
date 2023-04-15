@@ -84,7 +84,6 @@ num_layers: 3
 
 # 4. Use DLtrain to Train DL Network
 
-```
 Execute the program with options as follows:
 ```
 ./<executable> [OPTIONS]
