@@ -76,3 +76,7 @@ The available options are:
 | -n | Number of images to use from dataset(optional default is 10000)|
 | -d | \< path to the folder containing images-ubyte and labels-ubyte \>(optional default looks in Images directory)|
 
+For example
+
+          /Dltrain -m infer  -s NewNetwork.dat  -c network_prof.txt -n 14
+          
