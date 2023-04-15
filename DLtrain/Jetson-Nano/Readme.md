@@ -1,6 +1,8 @@
 
 # 1. Design DL Network  
 
+ NN model is used
+ 
 ![june20v3](https://user-images.githubusercontent.com/58679469/232184462-d4f8a2b3-c8c6-4c8e-8cc7-83c55957e7e7.png)
 
 # 2.  Train DL Network
