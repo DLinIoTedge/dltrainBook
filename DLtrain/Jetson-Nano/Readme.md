@@ -100,7 +100,7 @@ The available options are:
 
 An example:
 ```
-./main.o -m train -s NewNetwork.dat -c network_config.txt -n 2000 -e 30 -d /home/user/datasets/mnist/Images/
+./DLtrain -m train -s NewNetwork.dat -c network_config.txt -n 2000 -e 30 -d /home/user/datasets/mnist/Images/
 ```
 In the above example the folder /home/user/datasets/mnist/Images/ would contain images-ubyte and labels-ubyte.
 
