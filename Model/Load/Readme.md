@@ -61,4 +61,18 @@ Deploy it for use in web browsers with JavaScript and TensorFlow.js
  DLtrain platform inference engine degined to load automatically and thus user no need
  to work ahrd to load Deep Learning Network Model.
  
+  
+  Execute the program with options as follows:
+```
+./<executable> [OPTIONS]
+```
+The available options are:
+| Alias | Expected Value |
+|--|--|
+| -m | train/infer |
+| -s |\< save-file name \>|
+| -c | \< config-file name \> |
+| -e | Number of epochs(optional, program will request it later on if not given) |
+| -n | Number of images to use from dataset(optional default is 10000)|
+| -d | \< path to the folder containing images-ubyte and labels-ubyte \>(optional default looks in Images directory)|
 
