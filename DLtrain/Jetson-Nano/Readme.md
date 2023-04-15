@@ -40,6 +40,38 @@
          set_target_properties(DLtrain PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
          set_property(TARGET DLtrain PROPERTY CUDA_STANDARD 10)
 
+  ## 3.3  Create DLtrain for Traning DL
+  
+    ### 3.3.1 cmake  
+    
+    for CPU
+    
+  ![june20v21](https://user-images.githubusercontent.com/58679469/232185413-dca3013f-3097-468a-baf3-e0bfd79b3db0.png)
+  
+   for GPU
+   
+   ![june20v25](https://user-images.githubusercontent.com/58679469/232185652-c80c738d-c554-4b90-8c7d-3a645dbdeed2.png)
+
+ make 
+![june20v26](https://user-images.githubusercontent.com/58679469/232185948-26e2f88f-33c5-47ed-93a0-e736c87c9a05.png)
+
+
+  ### 3.3.2 make
+  
+  ![june20v22](https://user-images.githubusercontent.com/58679469/232185474-2ac9c3aa-ace6-4b5f-8083-a24ce67921db.png)
+  
+  ![june20v23](https://user-images.githubusercontent.com/58679469/232185500-476a3df6-9fb4-4148-b1d6-27475c5296cf.png)
+
+
+  ## 3.4  cmake to create DLtrain for inference
+  ![june20v17](https://user-images.githubusercontent.com/58679469/232185390-d6a18f3c-4431-4538-8374-2449943c2a24.png)
+
+# 4. Use DLtrain to Train DL Network
+
+![june20v27](https://user-images.githubusercontent.com/58679469/232186353-1ff1ff82-f551-474f-94c0-76b7ecd1af4a.png)
+
+
+
 
 # Reference 
 HDID003/May202020B/Dev/DeepLearning/DLtrain/C-ConvJune20/gpu/
