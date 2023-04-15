@@ -4,7 +4,7 @@
 
 # 2. Train Deep Learning Model
 
-[click](https://github.com/DLinIoTedge/dltrainBook/tree/jk/DLtrain) to access DLtrain Workflow in detail to train NN and CNN model
+[click](https://github.com/DLinIoTedge/dltrainBook/tree/jk/DLtrain) to access train NN and CNN model in DLtrain
 
 
 # 3. Save Deep Learning Model
