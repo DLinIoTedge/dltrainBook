@@ -3,6 +3,20 @@ jk
 
 # Near Edge Machine in Local Network
 
+Deploy inference Service in Near Edge and run a inference client in local Machine N
+
+need to add this port along with the ip address of your localhost for ex: http://192.681.1.3:8765/
+
+One reason you may not be able to connect from another computer is if you have the web server l
+istening on 127.0.0.1 as opposed to 0.0.0.0 or your specific IP.  127.0.0.1 is the local loop
+back device and is only accesible to the device it is running on. 0.0.0.0 is used to make an
+application listen on all network devices.
+
+
+
+http://192.168.1.7:8000/  ( this url can be used from other machine to run client application ).
+
+
 Subject:  How to run (or use)  Jupyterlab in a Power9 machine ( nearEdge )?
 
 ![image](https://user-images.githubusercontent.com/58679469/232203176-6f2690a9-d199-494d-87ad-4247321175b4.png)
