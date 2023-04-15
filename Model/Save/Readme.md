@@ -1,5 +1,5 @@
 
-# 1. Save TF Model
+# 1. Save Model in TF AI Platform
 
 A Keras model consists of multiple components.
 
@@ -53,28 +53,34 @@ Revised file to train DL work load and also save model after training in *.h5 fi
  
 
 
-# 2. Save DLtrain Model
+# 2. Save Model in DLtrain  AI Platform
 
   DLtrain is to save tranined network in a user defined file.  ( this will happen automatically and user neo need to 
  save Deep Leaarning Network file as in TensorFlow AI Platform.
  
- DLtrain [OPTIONS]  
-
+ 
+  
+  Execute the program with options as follows:
+```
+./<executable> [OPTIONS]
+```
 The available options are:
-| Alias | Expected Value | 
+| Alias | Expected Value |
+|--|--|
+| -m | train/infer |
+| -s |\< save-file name \>|
+| -c | \< config-file name \> |
+| -e | Number of epochs(optional, program will request it later on if not given) |
+| -n | Number of images to use from dataset(optional default is 10000)|
+| -d | \< path to the folder containing images-ubyte and labels-ubyte \>(optional default looks in Images directory)|
 
- -m  train/infer 
- -s   save-file name   //output file
- -c  config-file name   //input file
--e  Number of epochs(optional, program will request it later on if not given) 
- -n  Number of images to use from dataset(optional default is 10000)
--d   path to the folder containing images-ubyte and labels-ubyte 
-        (optional default looks in Images directory)
 
 An example: 
-DLtrain  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d \Images\
+
+         DLtrain  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d \Images\
  
-In the above example the folder Images would contain images-ubyte and labels-ubyte.
+In the above example the folder Images would contain images-ubyte and labels-ubyte. <br>
+Trained DL Network is saved in NewNetwork.dat
 
 
  
