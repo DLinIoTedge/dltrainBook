@@ -43,7 +43,8 @@ model_new   which is loaded in the above is used in the following
 Deploy it for use in web browsers with JavaScript and TensorFlow.js 
 
                     pip install tensorflowjs   //  installation of tool to convert *.h5 model to  json  
-                    tensorflowjs_converter  --input_format=keras jj6Model.h5  jj7model_js  //Open the command line and run 
+                    tensorflowjs_converter  --input_format=keras jj6Model.h5  jj7model_js 
+                    //   Open the command line and run 
                     //  converted model in the jj7Model_js directory
 
                     /jj7model_js/
