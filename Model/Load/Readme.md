@@ -1,5 +1,5 @@
 
-# 1. Load Deep learning Network Model which is saved by TF AI Platforn
+# 1. Load DL Network which is saved by TF AI Platforn
 
 
           # Load the model
@@ -38,7 +38,7 @@ model_new   which is loaded in the above is used in the following
 
                     label_map = (train_generator.class_indices)
 
-# 2 . Conver Model (which is saved by TF AI Platforn)  to use with to use with JavaScript 
+# 2 . Convert DL Network (which is saved by TF AI Platforn)   to use with JavaScript 
 
 Deploy it for use in web browsers with JavaScript and TensorFlow.js 
 
@@ -56,4 +56,9 @@ Deploy it for use in web browsers with JavaScript and TensorFlow.js
 .json file is our web-enabled model, ready for use in JavaScript
 
 
+# 3.  Load DL Network which is saved by DLtrain AI platform
+
+ DLtrain platform inference engine degined to load automatically and thus user no need
+ to work ahrd to load Deep Learning Network Model.
+ 
 
