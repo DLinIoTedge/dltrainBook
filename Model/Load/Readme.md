@@ -1,5 +1,5 @@
 
-# 1. Load Deep learning Network Model
+# 1. Load Deep learning Network Model which is saved by TF AI Platforn
 
 
           # Load the model
@@ -34,11 +34,11 @@ model_new   which is loaded in the above is used in the following
 
                     model_new.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
 
-# Mapping labels
+## Mapping labels
 
                     label_map = (train_generator.class_indices)
 
-# 2 . Conver Model to use with to use with JavaScript 
+# 2 . Conver Model (which is saved by TF AI Platforn)  to use with to use with JavaScript 
 
 Deploy it for use in web browsers with JavaScript and TensorFlow.js 
 
