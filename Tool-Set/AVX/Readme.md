@@ -50,3 +50,4 @@ CPU  Brand String = Intel(R) core (TM) 15-7200U CPU 2.5 GHz <br>
 * CPU  SSE41  =  1
 * CPU  SSE42  =  1
 * CPU  AVX  =  1
+* CPU  AVX2  =  1
