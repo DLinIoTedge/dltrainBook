@@ -171,9 +171,39 @@ import keras :
 
   Note.. for current versions of TF will include keras as well ( thus it is easy) 
 
-6. How to bring up Python 3 enabled Jupyter Notebook
-7. How to bring up Python 3  and TF in Docker 
-8. How to bring up Python 3 enabled  JupyterLab 
+???????????. How to bring up Python 3 enabled Jupyter Notebook
+
+# TensorFlow via Docker
+How to bring up Python 3  and TF in Docker 
+
+Good to run TF in docker by using default tag: latest
+
+               docker pull tensorflow/tensorflow 
+               latest: Pulling from tensorflow/tensorflow 
+               Digest :    sha256 : 0 1 7 ccbb4f04054a4
+               Status :   Image   is  up   to   date   for  tensorflow/tensorflow : latest
+               
+               docker pull tensorflow/tensorflow :  devl -gpu
+               docker pull tensorflow/tensorflow  {latest -gpu-jupyter
+               
+               // following is used
+               docker pull tensorflow/tensorflow : latest -cpu-jupyter
+               
+               Error repsonse from daemon : manifest for
+               tensorflow/tensorflow :latest -cpu-jupyter not found
+               
+               // not worked , it is asking for user ID
+               docker run -1 t -p 8888:8888 tensorflow/tensorflow 
+               docker : error response from daemon : driver failed
+               programming external connectivity on end point gracious franklin 3cf9c25):
+               Error starting user land proxy: listen tcp 0.0.0.0:8888
+               bind : address already in use
+               
+               
+               
+
+
+10. How to bring up Python 3 enabled  JupyterLab 
   
       Setting up JupyterLab with virtual environments on Windows 10
   
