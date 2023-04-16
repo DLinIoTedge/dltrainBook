@@ -35,12 +35,52 @@ User required to use following command to  Activate   Virtual Environment
           pip    1.5.4   from
           /home/jj/model1/WorkDL/local/lib/python3.5/site −packages
           (python   3.5 )
+ 
+ Check version of Virtual Environment.
+ 
+          ./jj/model1$   virtualenv --version  
+        1.11.4
+
+Use following command inside Virtual Environment. pip and pip3 are used in the following.
+         pip list 
+           pip    (1.5.4)
+           setuptools    (2.2)
+           
+          pip3 list 
+           pip    (1.5.4)
+           setuptools    (2.2)
+
+Location of pip is obatined by using following command.
+            which pip
+            /home/jj/model1/WorkDL/bin/pip
+            
+
+List installed packages name.
+             pip freeze > requirments.txt 
+
+
       
 2. How to bring up Tensorflow 2.0 
-3. How to bring up Python 3 and Tensorflow 2.0  enabled Keras 
-4. How to bring up Python 3 enabled Jupyter Notebook
-5. How to bring up Python 3  and TF in Docker 
-6. How to bring up Python 3 enabled  JupyterLab 
+
+          sudo   apt   update
+          sudo   apt   upgrade
+          sudo   apt   install   python3−pip
+          sudo   apt   install    python3−venv
+          python3  −m  venv     WorkDL
+          cd   WorkDL
+          ls 
+          cd   //
+          source   WorkDL/bin/activate  
+          pip   install jupyter  
+          pip   install jupyterlab  
+          pip   install tensorflow    
+
+
+
+4. How to bring up Python 3 and Tensorflow 2.0  enabled Keras 
+5. How to bring up Python 3 enabled Jupyter Notebook
+6. How to bring up Python 3  and TF in Docker 
+7. How to bring up Python 3 enabled  JupyterLab 
   
       Setting up JupyterLab with virtual environments on Windows 10
   
