@@ -171,7 +171,20 @@ import keras :
 
   Note.. for current versions of TF will include keras as well ( thus it is easy) 
 
-???????????. How to bring up Python 3 enabled Jupyter Notebook
+# Jupyter Notebook
+How to bring up Python 3 enabled Jupyter Notebook
+
+upgrade  python  from   3.4 to 3.5 
+            sudo   apt−get    install    python3.5
+            python3  −−version 
+
+             //   How   to    install  a   jupyter r   notebook   i n
+             //   ubuntu   1 4 . 0 4?   Python   Prerequisites 
+              sudo   apt   install   python3−pip
+              sudo   apt    install    ipython3
+              pip3    install   jupyter
+
+
 
 # TensorFlow via Docker
 How to bring up Python 3  and TF in Docker 
