@@ -111,7 +111,7 @@ OR
   install TensorFlow 2.0 or higher versions.
   
               pip install tensorflow  ==  2.0.0-alpha
-              /WorDL/bib$ python3 -c 'import tensorflow as tf ; print(tf.version)'
+              /WorDL/bin$ python3 -c 'import tensorflow as tf ; print(tf.version)'
               2.0.0
 
 In case TF 2.0 not installed then following will be shown for above command
@@ -120,11 +120,60 @@ In case TF 2.0 not installed then following will be shown for above command
 
 
 
-
+# TensorFlow with Keras
 4. How to bring up Python 3 and Tensorflow 2.0  enabled Keras 
-5. How to bring up Python 3 enabled Jupyter Notebook
-6. How to bring up Python 3  and TF in Docker 
-7. How to bring up Python 3 enabled  JupyterLab 
+
+Manual mode installation
+( finally, back to NO automation) 
+
+              /WorkDL/jetson$ pip install h5py
+              /WorkDL/jetson$ pip install scikit-learn
+              /WorkDL/jetson$ pip install scipy
+              /WorkDL/jetson$ pip install jupyter
+              /WorkDL/jetson$ pip install Pillow
+              /WorkDL/jetson$ pip install grpcio-tools
+              /WorkDL/jetson$ pip install pyhocon
+              /WorkDL/jetson$ pip install dill
+              /WorkDL/jetson$ pip install typing
+              /WorkDL/jetson$ pip install overrides
+              /WorkDL/jetson$ pip install nltk
+              /WorkDL/jetson$ pip install spacy
+              /WorkDL/jetson$ pip install numpy
+              /WorkDL/jetson$ pip install matplotlib
+              /WorkDL/jetson$ pip install pylint==1.6.5
+              /WorkDL/jetson$ pip install ptest
+              /WorkDL/jetson$ pip install pytest -pythonpath
+              /WorkDL/jetson$ pip install pytest -cov
+              /WorkDL/jetson$ pip install flaky
+              /WorkDL/jetson$ pip install coverage
+              /WorkDL/jetson$ pip install codecov
+              /WorkDL/jetson$ pip install argparse
+              /WorkDL/jetson$ pip install pandas==0.19.2
+              /WorkDL/jetson$ pip install tqdm
+              /WorkDL/jetson$ pip install sphinx==1.6.5
+              /WorkDL/jetson$ pip install bleach==2.1.0
+              /WorkDL/jetson$ pip install spinx-autobuild
+              /WorkDL/jetson$ pip install numpydoc
+              /WorkDL/jetson$ pip install spinx rtd theme
+              /WorkDL/jetson$ pip install pypandoc
+
+
+
+ There is issue in dependency and may be this is not required for Linux
+ 
+              pip3 install wine
+              sudo pip3 install keras
+              numpy.distutils.system info.NotfoundError
+              no la[ck/blas resoruces found
+              
+User can conform "keras" installed correctly
+import keras :
+
+  Note.. for current versions of TF will include keras as well ( thus it is easy) 
+
+6. How to bring up Python 3 enabled Jupyter Notebook
+7. How to bring up Python 3  and TF in Docker 
+8. How to bring up Python 3 enabled  JupyterLab 
   
       Setting up JupyterLab with virtual environments on Windows 10
   
