@@ -7,13 +7,15 @@ Machine is Ubuntu OS 22.04
 How to bring up Virtual Environment ? ( Anaconda can be instead of Virtual Environment  )  <br>
        
       
-           /Work/model1$    sudo   apt−get  install python-virtualenv   
+           /jj/model1$    sudo   apt−get  install python-virtualenv   
 
-          // Check  version of  installed virtualenv  
+Check  version of  installed virtualenv  
+
           /jj/model1$ virtualenv  --version
            1.11.4
           
-          // Where WorkDL is name given to Virtual Environment  
+Where WorkDL is name given to Virtual Environment  
+
           /jj/model1$ virtualenv WorkDL
           
  User  can use python interpreter of their choice. For example, if user is keen on python 2.7 then 
