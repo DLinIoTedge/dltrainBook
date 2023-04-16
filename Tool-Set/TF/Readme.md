@@ -25,7 +25,7 @@ Where WorkDL is name given to Virtual Environment
 
 Or change the python interpreter globally  with an env variable in  /.bashrc 
 
-        ./jj/model1$   export   VIRTUALENVWRAPPER PYTHON=/usr / bin / python2 . 7   
+        ./jj/model1$   export   VIRTUALENVWRAPPER PYTHON=/usr/bin/python2 . 7   
 
 User required to use following command to  Activate   Virtual Environment
 
@@ -33,7 +33,7 @@ User required to use following command to  Activate   Virtual Environment
 
          ./jj/model1$ pip  −−version 
           pip    1.5.4   from
-          /home/jj/model1/WorkDL/local/lib/python3.5/site −packages
+          /home/jj/model1/WorkDL/local/lib/python3.5/site−packages
           (python   3.5 )
  
  Check version of Virtual Environment.
@@ -74,6 +74,49 @@ List installed packages name.
           pip   install jupyter  
           pip   install jupyterlab  
           pip   install tensorflow    
+
+OR
+    ## Step 1 :
+      check availability of  Python ( in not, install )
+               python3 --version 
+               python 3.5.2 or high
+
+
+
+    ## Step 2: 
+     Install PIP id not installed
+              pip3 --version
+              pip 7.1.2 from /usr/local/lib/python3.5/site−packages  
+              (python 3.5)
+   ## Step 3:  
+      Install  Virtual Environment.
+       
+             virtualenv --version  
+             1.11.4
+  
+  ## Step 4 :
+     This is to make python3 as default version in this virtual env 
+              virtualenv --system-site-packages -p python3 ./venv
+
+ ##  Step 5 :
+            source ./ venv/bin/activate 
+
+## Step 6: .  
+  Use pip3 and install necessary dependencies for TF 2.0 to work . May be 137 packages or more required 
+  for TensorFlow 2.0 to work  successfully. Huge list ( beware of issues on each dependency versions). 
+
+
+ ## Step 7 :
+  install TensorFlow 2.0 or higher versions.
+  
+              pip install tensorflow  ==  2.0.0-alpha
+              /WorDL/bib$ python3 -c 'import tensorflow as tf ; print(tf.version)'
+              2.0.0
+
+In case TF 2.0 not installed then following will be shown for above command
+
+           ImportError :   No   module   named   ’tensorflow’
+
 
 
 
