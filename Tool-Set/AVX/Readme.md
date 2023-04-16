@@ -38,3 +38,15 @@ Following  is another file to perform the above task in checking AVX capability 
         g++ −std=gnu++11     checkAVXv2 . cpp  −o   r2 . out      . 
         CPU  vendor  =   GenuineIntel
 
+
+CPU  Brand String = Intel(R) core (TM) 15-7200U CPU 2.5 GHz <br>
+
+* Number of Cores  =  2
+* Number of logical cores  =  4
+* CPU  Hyper   threaded   =  1
+* CPU  SSE  =  1
+* CPU  SSE2  =  1
+* CPU  SSE3  =  1
+* CPU  SSE41  =  1
+* CPU  SSE42  =  1
+* CPU  AVX  =  1
