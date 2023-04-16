@@ -1,10 +1,39 @@
 
 
-Following List provides TensorFlow and its associated tool set. 
-
+Following List provides TensorFlow and its associated tool set.  <br>
 Machine is Ubuntu OS 22.04
 
-1. How to bring up Virtual Environment ? ( Anaconda can be instead of Virtual Environment  ) 
+# Install Virtualenv 
+How to bring up Virtual Environment ? ( Anaconda can be instead of Virtual Environment  )  <br>
+       
+      
+           /Work/model1$    sudo   apt−get  install python-virtualenv   
+
+          // Check  version of  installed virtualenv  
+          /jj/model1$ virtualenv  --version
+           1.11.4
+          
+          // Where WorkDL is name given to Virtual Environment  
+          /jj/model1$ virtualenv WorkDL
+          
+ User  can use python interpreter of their choice. For example, if user is keen on python 2.7 then 
+ following command is useful. 
+ 
+        ./jj/model1$ virtualenv −p   /usr /bin /python2.7   WorkDL
+
+Or change the python interpreter globally  with an env variable in  /.bashrc 
+
+        ./jj/model1$   export   VIRTUALENVWRAPPER PYTHON=/usr / bin / python2 . 7   
+
+User required to use following command to  Activate   Virtual Environment
+
+        ./jj/model1$ source WorkDL/bin/activate  
+
+         ./jj/model1$ pip  −−version 
+          pip    1.5.4   from
+          /home/jj/model1/WorkDL/local/lib/python3.5/site −packages
+          (python   3.5 )
+      
 2. How to bring up Tensorflow 2.0 
 3. How to bring up Python 3 and Tensorflow 2.0  enabled Keras 
 4. How to bring up Python 3 enabled Jupyter Notebook
