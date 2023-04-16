@@ -193,14 +193,77 @@ Good to run TF in docker by using default tag: latest
                tensorflow/tensorflow :latest -cpu-jupyter not found
                
                // not worked , it is asking for user ID
-               docker run -1 t -p 8888:8888 tensorflow/tensorflow 
+               docker run -i t -p 8888:8888 tensorflow/tensorflow 
                docker : error response from daemon : driver failed
                programming external connectivity on end point gracious franklin 3cf9c25):
                Error starting user land proxy: listen tcp 0.0.0.0:8888
                bind : address already in use
                
                
+              // not good ..
+              // Mount source code ,and set workind dir
+              docker container run -rm -i t \\
+              -v $ (app): /app \
+              --workdir /app \
+              
+              
+              // Run as given user and build env image..make assets  ..not good
+              --user 1000:1000 \
+                      mydocker /my-build-environment : latest \ 
+                      
+              docker container run --rm -i t --workdir /home/jj/jetson --user $(ir-u): $(id-g)
+              
+              my−docker /my−build −environment : latest        make   assets
+              Unable   to  find  image    ’my−docker /my−build −environment : latest  ’
+              
+              locally docker : Error response from daemon : pull access denied for my-docker /my-build -environment
+              repository does not exist 
+              or
+              may requires 'docker login' see 'docker run --help'
+              
+              // following is not working 
+              //  it suppose to automatically locate UID and GID and use it
+              docker run -i t --user $(id -u) : $(id -g) -g 8888:8888 tensorflow/tensorflow
+              docker: error response from daemon : driver failed programming external connectivity on endpoint
+              eloquet 
+              bind: address already in use
+              
+              // following is used to check TF installation
+              docker run -i t --user $ (id -u) $(id-hg) --rm tensorflow/tensorflow python -c "import tensorflow as tf"
+              tf.enable eager execution();
+              print(tf.reduce sum(tf.random normal([1000,1000])))"
+              1019-05-18 
+              Your CPU supports instructions that this tensorflow binary was not compiled to use " AVX2 FMA
+              
+              I tensorflow/core/platform/profile utils/cpu utils.cc :94 
+              CPU frequency:   2711950000   Hz
+              
+              I tensorflow/compiler/xla/service/service.cc:150
+              XLA service 0 x3337b40   excuting   computations   on
+               platform   Host .    Devices :
+              
+               I tensorflow/compiler/xla/service/service.cc:158
+              StreamExecutor   device  ( 0 ) :   <undefined >,  <undefined>
+               t f . Tensor(542.5927 ,   shape =() ,   dtype=float32 )
+              
+               docker run -i t --user $(id -u) $(id -g) --rm tensorflow/tensorflow 
+               You are running this container as a user with this 1000 and group 1000
+               which   should   map   to   the   ID   
+               and   group   f o r   your
+               user to the docker host. Great!
+   
+               tf -docker / > python 
+               Python   2.7.12    ( defaultt  ,   Nov   12   2018 ,  14:36:30 )
+               [GCC   5 . 4 . 0    20160609]   on   linux2
+               Type "hel" "copyright" or "license" for more information
                
+               >> x =10
+               >> print(x)
+               10
+               >>quit()
+               tf =docker /> exit
+               /jj/jetson/$
+                 
 
 
 10. How to bring up Python 3 enabled  JupyterLab 
