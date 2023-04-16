@@ -1,9 +1,9 @@
 
-
+# TensorFlow in Virtual Environment
 Following List provides TensorFlow and its associated tool set.  <br>
 Machine is Ubuntu OS 22.04
 
-# Install Virtualenv 
+## Install Virtualenv 
 How to bring up Virtual Environment ? ( Anaconda can be instead of Virtual Environment  )  <br>
        
       
@@ -59,8 +59,9 @@ List installed packages name.
              pip freeze > requirments.txt 
 
 
+## Install Tensorflow 2.0 
       
-2. How to bring up Tensorflow 2.0 
+
 
           sudo   apt   update
           sudo   apt   upgrade
@@ -76,37 +77,37 @@ List installed packages name.
           pip   install tensorflow    
 
 OR
-    ## Step 1 :
+    ### Step 1 :
       check availability of  Python ( in not, install )
                python3 --version 
                python 3.5.2 or high
 
 
 
-    ## Step 2: 
+    ### Step 2: 
      Install PIP id not installed
               pip3 --version
               pip 7.1.2 from /usr/local/lib/python3.5/site−packages  
               (python 3.5)
-   ## Step 3:  
+   ### Step 3:  
       Install  Virtual Environment.
        
              virtualenv --version  
              1.11.4
   
-  ## Step 4 :
+  ### Step 4 :
      This is to make python3 as default version in this virtual env 
               virtualenv --system-site-packages -p python3 ./venv
 
- ##  Step 5 :
+ ###  Step 5 :
             source ./ venv/bin/activate 
 
-## Step 6: .  
+### Step 6: .  
   Use pip3 and install necessary dependencies for TF 2.0 to work . May be 137 packages or more required 
   for TensorFlow 2.0 to work  successfully. Huge list ( beware of issues on each dependency versions). 
 
 
- ## Step 7 :
+ ### Step 7 :
   install TensorFlow 2.0 or higher versions.
   
               pip install tensorflow  ==  2.0.0-alpha
