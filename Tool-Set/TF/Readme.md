@@ -298,3 +298,8 @@ Good to run TF in docker by using default tag: latest
   
  7. How to bring up Python 3 enabled jupyterlab-latex
  
+ How to bring up Python 3 enabled jupyterlab - latex ?
+
+              sudo   pip3   install jupyterlab latex
+
+ 
