@@ -187,7 +187,8 @@ upgrade  python  from   3.4 to 3.5
 
 
 # TensorFlow via Docker
-How to bring up Python 3  and TF in Docker 
+
+How to bring up Python 3  and TensorFlow in Docker 
 
 Good to run TF in docker by using default tag: latest
 
