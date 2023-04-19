@@ -64,6 +64,14 @@ Out bin /content/result.out
 Execute the code given below to check if CUDA is working or not.
 Now we are ready to run CUDA C/C++ code right in your Notebook.
 
+
+A kernel must be written to do the work of a single iteration of the loop.  
+Because the  kernel  will  ignore  other  running  kernels,  the  execution 
+configuration  must ensure  that  the  kernel  executes  the  correct  number 
+of  times,  for  example,  the number of times the loop would have iterated.
+
+
+
 ##  1.7 step 7
 ###  Example 1 ( cu file )
     
