@@ -1,2 +1,8 @@
-hh
-hh
+
+
+OS :           Ubuntu 18.04 ( server version) Processor:         Power 9 AC22
+GPU Board:     GeForce RTX 2070
+CUDA:          10.1 libcudnn:           7.5.1
+Driver :       NVIDIA 418.67
+
+
