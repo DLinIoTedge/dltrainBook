@@ -1,4 +1,4 @@
-# 1 Hardware Requirement 
+# 1 GPU via Colab 
   
     Account in Google Colab or local Machine with GPU device attached 
 
