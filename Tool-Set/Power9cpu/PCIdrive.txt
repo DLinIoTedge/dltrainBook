@@ -8,4 +8,128 @@ Driver :       NVIDIA 418.67
 sudo   rm  /etc/apt/sources. list  .d/cuda ∗
 sudo    apt    remove  −−autoremove  nvidia−cuda−toolkit
 
+Following  is  used  to  remove  NVIDIA  drivers  before  installing  new drivers.   
+Recently,  working  engineers  found  out  that  the  CUDA  in- stallation  works 
+with the graphics-drivers ppa so if you don’t have it added,  add  it  now
+
+sudo    apt    remove  −−autoremove    nvidia−∗
+sudo    apt    update
+apt    l i s t   −−upgradabl e
+sudo   add−apt−repository    ppa:graphics−drivers/ppa
+
+Use  .run  file  install
+
+sudo   add−apt−repository   ppa:graphics−drivers/ppa
+
+user  can install  the 430.26 newest  driver or  any that  
+suit  your  fancy. Next,  install  the  libcudnn7  by  following:
+
+Install  required  key:
+sudo    apt−key   adv  −−fetch−keys
+
+x86  version:    
+
+(issue  is  above  leading  to  x86-64  need  to  find  Power  9  version  ) 
+(Use  following  link  to  get  driver  for  Power  9  version  )
+
+ppc64el  version:    
+
+Following  URL  used  to  download  7fa2af80.pub  file
+
+sudo    apt−key   adv  −−fetch−keys
+ppc64el:    
+
+//Update      system
+sudo    apt    update
+
+//    I n s t a l l    l i b c u d n n 7 . 5 . 1 :
+sudo    apt   install libcudnn7 
+//    Reading    package   lists . . .    Done
+//    Building    dependency    tree
+//    Reading    state information  . . .    Done
+//   The  following  NEW   pac kage s    will   be    installed  :
+
+//   libcudnn7
+//   0   upgraded ,    1   newly   installed ,    0    to    remove   and   8 not    upgraded .
+//   Need   to    g e t    182  MB   o f    a r c h i v e s .
+//    After this operation  ,    432  MB   of additional disk space    be    used .
+ //   Get : 1    http://develope.download.nvidia.com/compute/machine-learning/repos/ubunt1004/ppc64el  libcudnn7 77.6.2.24 −1+ cuda10 . 1    //       [ 1 8 2   MB]
+//    Fetched    182  MB   i n    2min   46 s    ( 1 , 0 9 7   kB/ s )
+//    selecting previously unslected  package 77.6.2.24 −1+ cuda10 . 1 .
+//    ( Reading    database  . . .
+//    115506    files   and   directories currently installed)
+//    Pre pari ng    to    unpack    . . . /77.6.2.24 −1+ cuda10 . 1  7 .6.2.24 −1+cuda10 . 1  ppc64el . deb    . . .
+//   Unpacking    77.6.2.24 −1+ cuda10 . 1    (7.6.2.24 − 1+ cuda10 . 1 )     . . .
+//   Setting   up   77.6.2.24 −1+ cuda10 . 1   (7.6.2.24 − 1+ cuda10 . 1 )     . . .
+//    Processing   triggers for   libc-bin    (2.27 −3 ubuntu1 )
+. . .
+Support  :    
+
+Run  installer:
+Unselect  the  driver  and  then  choose  Install  by  using  the  arrow  keys
+and  space  bar  to  move  and  select  or  unselect:  Wait  for  the  install 
+to finish, it might say errors during, but not to worry.  Add the following lines 
+to  your   /.profile  file  for  CUDA  10.1
+
+// https://trch.amikelive.com/node −731/how−to−properly install -nvidia- graphics -driver   −on−ubuntu −16−04/
+
+jk@WorkDL : ˜ $nvidia−smi
+nvidiasmi :    command   not    found
+
+It  means  that  driver  truly  is  not  installed  yet  and  user  can  safely proceed  
+with  the  remaining  installation  steps.   Otherwise,  you  may check  the  driver  
+version  and  perform  version  upgrade  if  necessary.
+
+
+jk@WorkDL : ˜ $   lspci  |    grep   − i    nvidia
+0000:01:00 0   VGA  compatible controller :   NVIDIA Corporation   Device    1 f 0 7    ( rev    a1 )
+0000:01:00 1  Audio    device:   NVIDIA   Corporation Device    10 f 9    ( rev    a1 )
+0000:01:00 2  USB   Controller :   NVIDIA   Corporation Device    1 ada    ( rev    a1 )
+0000:01:00 3   Serial    bus    controller    [ 0 c80 ] :    NVIDIA CCorporation   Device    1adb    ( rev    a1 )
+
+Explanation:   From  the  output  above,  we  can  see  that  the  graphics card  from
+Nvidia  is  not  installed. driver:  pick  driver  from  above  URL
+
+Game  ready  Driver  vs  Studio  Driver If you are a gamer who prioritizes day of launch support 
+for the latest games,  patches,  and  DLCs,  choose  Game  Ready  Drivers.  If  you  are a  content
+creator  who  prioritizes  stability  and  quality  for  creative workflows  including  video 
+editing,  animation,  photography,  graphic design,  and  live  streaming,  choose  NVIDIA  Studio  Driver.
+
+In  the  following  search  ,  it  is  clear  that  there  is  no  release  of  Driver for  GeForce 
+RTX  2070  for  Power  9
+
+Views  from  IBM  :  
+
+Only the Tesla V100 GPU is supported for CUDA 10.1 on POWER9.
+Make  sure  that  the  latest  NVIDIA  driver  is  installed  and  running.
+
+
+
+sudo    apt−g e t    update
+sudo    apt−g e t    install   cuda−drivers
+
+sudo   dpkg   − i    nvidia −driver −local −repo−ubuntu1804−410.72   1 .0 −1   p p c 6 4 e l . deb
+
+more   /var/log/ cuda−installer.log
+[ INFO ] :    D r i v e r    not   intalled  .
+[ INFO ] :    Checking   compiler version . . .
+[ INFO ] :    gcc    location:    /usr/bin/gcc
+
+[ INFO ] :    gcc   version:    gcc    version    7 . 4 . 0    ( Ubuntu7.4.0 − 1 ubuntu1 ˜ 1 8 . 0 4 . 1 )
+[ INFO ] :     Initializing   menu
+[ INFO ] :    Setup    complete
+[ INFO ] :    Components    to    install :
+[ INFO ] :    Driver
+[ INFO ] :    4 1 8 . 8 7 . 0 0
+[ INFO ] :    Executing   NVIDIA−Linux−ppc64le  − 4 1 8 . 8 7 . 0 0 
+
+
+ 
+ 
+
+
+
+
+
+
 
