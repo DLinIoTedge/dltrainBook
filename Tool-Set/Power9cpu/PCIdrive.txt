@@ -125,11 +125,88 @@ more   /var/log/ cuda−installer.log
 
 
  
+ run  −−u i=none  −−no−questions   −−accept −
+18   license  −−ddisable−nouveau  −−no−cc−version−check   −−
+install −libglvnd      2>&1
+[ INFO ] :    Finished   with    code :    256
+[ERROR ] :    Install    o f    4 1 8 . 8 7 . 0 0   failed  ,   quiting
+
+
+
+Following  given  workflow  had  worked  well.
+
+Deb  File:
+cuda−repo−ubuntu1804−10−1−local−10.1.168−418.67  1.0−1  ppc64el. deb
+
+Above  file  downloaded
+
+File
+”  cuda−repo−ubuntu1804−10−1−local−10.1.168−418.67  1.0−1  ppc64el.deb  ”
+is  renamed  as    ”  cuda.deb  ”    and  that  is  moved  from  local  machine to  
+Power9  system   ”  (home/  jk/util)  ”   by  using  following  ”scp”
+
+scp  cuda−repo−ubuntu1804 −10−1−local− 10.1.168−418.671.0−1ppc64el.deb
+jk@192 . 1 6 8 . 1 . 1 4 :  /home/cuda/cuda.deb
+
+
+
+
+Following  given  workflow  had  worked  well.
+
+Deb  File:
+cuda−repo−ubuntu1804−10−1−local−10.1.168−418.67  1.0−1  ppc64el. deb
+
+Above  file  downloaded
+
+File
+”  cuda−repo−ubuntu1804−10−1−local−10.1.168−418.67  1.0−1  ppc64el
+.deb  ”
+is  renamed  as    ”  cuda.deb  ”    and  that  is  moved  from  local  machine 
+to  Power9  system   ”  (home/  jk/util)  ”   by  using  following  ”scp”
+
+
+run  −−u i=none  −−noquestion   −−accept −license   −−disable −nouveau  −−no−cc−version−check   −−install−l i b g l v n d      2>&1
+[ INFO ] :   Finished   with    code :    256
+[ERROR ] :     Install   of driver  component    f a i l e d  .
+[ERROR ] :   Install  o f    4 1 8 . 8 7 . 0 0   failed. quiting
+
+Following  given  workflow  had  worked  well.
+
+Deb  File:
+cuda−repo−ubuntu1804−10−1−local−10.1.168−418.67  1.0−1  ppc64el. deb
+
+Above  file  downloaded
+
+File
+”  cuda−repo−ubuntu1804−10−1−local−10.1.168−418.67  1.0−1  ppc64el
+.deb  ”
+is  renamed  as    ”  cuda.deb  ”    and  that  is  moved  from  local  machine to 
+Power9  system   ”  (home/  jk/util)  ”   by  using  following  ”scp”
+
+ scp      cuda−repo−ubuntu1804 −10−1−;ocal− 10.1.168 − 418.67   1 .0 −1ppc64eldeb
+ jk@192 . 1 6 8 . 1 . 1 4 : /home/cuda/cuda.eb
  
+ 
+ jk@WorkDL : ˜ /util$    nvidia−sm\
+ 
+ ppc64le:
 
+STR1=” http://developer.download.nvida.com/ compute /cuda /10.1/ Prod”
+	STR2=”/ ocal/installer/cuda   10 . 1 . 2 4 3   4 1 8 . 8 7 . 00linux ppc64rl.run ”
+ STR3=$STR1$STR2
+wget   STR3
 
+  sudo    sh    cuda   10 . 1 . 2 4 3   4 1 8 . 8 7 . 0 0   linux ppc64rl.run
 
+sudo    sh    cuda   10 . 1 . 2 4 3   4 1 8 . 8 7 . 0 0   linux ppc64rl.run
+[ sudo ]    password    f o r    j k
 
-
+ use  nvidia − smi  to  get  details  on  the  installed  driver.
+         
+jk@WorkDL : ˜ $    sudo    apt−cache  search nvidia |    grep enable  NVIDIA ’ 
+s    Prime
+nvidai-setting   −   Tool    for configuraing    the   NVIDIA graphics.driver
+libnvidia −common−390  −   Shared files   used   by   the NVIDIA    libraries 
+hashcat −nvidia  −    installs   h a s h c a t    and   its dependencies for users    with   NVIDIA  GPU
 
 
