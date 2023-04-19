@@ -210,3 +210,37 @@ libnvidia −common−390  −   Shared files   used   by   the NVIDIA    librar
 hashcat −nvidia  −    installs   h a s h c a t    and   its dependencies for users    with   NVIDIA  GPU
 
 
+ GPU
+
+nvidia−cg−doc   −   Cg   T o o l k i t   −  GPU   Shader    AuthoringLanguage    ( documentation )
+nvidia−cuda−dev   −   NVIDIA  CUDA   development    f i l e s
+vidia−cuda−doc   −   NVIDIA  CUDA  and   OpenCL documentation
+nvidia−cuda−gdb  −   NVIDIA  CUDA   Debugger    (GDB)
+nvidia−cuda−toolkit  −   NVIDIA  CUDA   development toolkit
+nvidia−modprobe   −    utility to load  NVIDIA kernel
+modules   and    create device   nodes
+nvidia−n s i g h t   −   NVIDIA   Nsight    E c l i p s e    E d i t i o n
+nvidia−opencl −dev   −   NVIDIA   OpenCL   development    files
+nvidia−profiles −   NVIDIA   profiles for  CUDA  and OpenCL
+nvidia−visual−profiler  −   NVIDIA   visual profile for  CUDA  and   OpenCL
+libnvidia−common−418  −    T r a n s i t i o n a l    package    f o r l i b n v i d i a −common−430
+libnvida−common−430  −   Shared    f i l e s    used   by   the NVIDIA    l i b r a r i e s
+nvida−machine−learning −repo−ubuntu1804   −nvidia −machine−learning  repo config files
+libnvidaia−common−410  −   Shared    f i l e s    used   by   theNVIDIA    libraries
+libnvidaia−−common−415  −   Shared    f i l e s    used   by   the NVIDIA    libraries
+
+File
+
+cuda−repo−ubuntu1804 −10−1− l o c a l  − 10.1.168 − 418.67   1.0 −1   p p c 6 4 e l . deb
+
+is  renamed  as  cuda.deb  and  same  file  is  moved  from  local  
+machine  to Power  9  system  (home/user/util)  by  using
+
+
+scp      cuda−repo−ubuntu1804 −10−1− l o c a l− 10.1.168 − 418.67   1 .0 −1   ppc54el.deb  
+jk@192. 1 6 8 . 1 . 1 4 : /home/cuda/uda . deb
+
+
+
+
+
