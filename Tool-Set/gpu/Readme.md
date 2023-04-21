@@ -264,8 +264,25 @@ matsrc subfolder is having soruce  code for matrix multiplicaiton in gpu
      /mat/bd/cmake ..
      /mat/bd/make ..
      ./bin/MatMul
+     
+ # 4. Handling PTX file creation for Run Time
  
- # 4. Handling CUDA core in Jetson Nano
+ Following command line instructions, 
+ 
+ make output “user2” from “ex1.cu” and run it as well.  <br>
+ Produce the PTX for the cuda kernel <br>
+
+
+	      nvcc -o ex1.ptx -ptx -arch=compute_32 ex1.cu
+	      nvcc -arch=sm_32 -o jk2 ex1.cu -run
+	
+	      //  sm_36  and  sm_34   has n issue with nvcc. 
+	      //  Thus   sm_32  is used. 
+
+  Use [Link](https://ulhpc-tutorials.readthedocs.io/en/latest/cuda/ ) to get tutorials on CUDA
+  
+  
+ # 5. Handling CUDA core in Jetson Nano
  
 How to run TensorFlow Object Detection model on Jetson Nano?
 
