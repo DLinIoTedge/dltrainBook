@@ -89,6 +89,10 @@ to  your   /.profile  file  for  CUDA  10.1
 It  means  that  driver  truly  is  not  installed  yet  and  user  can  safely proceed  
 with  the  remaining  installation  steps.   Otherwise,  you  may check  the  driver  
 version  and  perform  version  upgrade  if  necessary.
+Above shows that the driver for RTX 2070 truly is not installed yet. 
+As a next step, safely proceed with the remaining installation steps. 
+Otherwise, check the driver version and perform a version upgrade.
+
 
         	jk@WorkDL:~$ lspci | grep -i nvidia
 		0000:01:00.0 VGA compatible controller: NVIDIA Corporation Device 1f07 (rev a1)
