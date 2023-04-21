@@ -1,28 +1,7 @@
 
-
-               sudo apt install sofware -properties -common
-               sudo add-aptrepository ppa:ubuntu-toolchain -r /test 
-               sudo apt install  gcc -9 g++ -9
- 
-               cat /proc/cpuinfo
-               processor 
-               cpu : POWER9 altivec supported
-               clock 2154 MHz
-               
-               sudo  lshw
-               
-               WorkDL
-               descritption : PowerNV
-               product : T2P9S01 Rev 1.01 ( rcs, talos )
-               vendor : IBM
-               width 64 bits
-               capabilities smp   powernv   opal     ∗−core
-               description :   Motherboard
-               
-               cat /proc/scsi/scsi
-               cat /proc/cpuindo
-               lspci 
-                
-               
-
+1. cpuinfo.md  is providing command and its  use in getting CPU information.
+2. PCIdrive.md is providing list of commands and its  use in installing PCI driver for GPU
+3. cudaInstall.md is providing list of commands and its  use in installing CUDA SDK
+4. nbodyexample.md is providing  sample project to illustrate use of SM in GPU
+5. IBM-WML-CE.md  is providing list of commands and its  use in installing Conda to work with IBM Watson community edition.
 
