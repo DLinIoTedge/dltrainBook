@@ -1,6 +1,6 @@
 
 
-![lin](https://www.anaconda.com/distribution/#linux)  is used to get   Python 3.7 version  for ppc64le.
+[link]( https://www.anaconda.com/distribution/#linux )  is used to get   Python 3.7 version  for ppc64le.
 
 Download ppc64le version from the above
 
