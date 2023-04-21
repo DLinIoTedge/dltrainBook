@@ -281,6 +281,15 @@ matsrc subfolder is having soruce  code for matrix multiplicaiton in gpu
 
   Use [Link](https://ulhpc-tutorials.readthedocs.io/en/latest/cuda/ ) to get tutorials on CUDA
   
+  Build  Application  by  using  Make. File with  *.cu extension  is used  to build  application 
+  that runs  partly in  Power  9  cpu  and  rest  in  CUDA  core  of  GPU. 
+  For  GPU  nvcc  is  NVIDIA  (R)  Cuda  compiler  driver  and  its  version “Cuda  compilation  tools,  release  10.1, V 10.1.243  “
+
+For  Host  CPU  g++  (Ubuntu  7.4.0−1ubuntu1˜18.04.1)  7.4.0 <br>
+make  (  gnu  make  4.1  is  used)  is  used  to  build  applications.
+
+
+
   
  # 5. Handling CUDA core in Jetson Nano
  
