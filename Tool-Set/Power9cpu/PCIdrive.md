@@ -122,6 +122,11 @@ Nvidia  is  not  installed. driver:  pick  driver  from  above  URL
 	 	0005:01:00.0 PCI bridge: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 04) 
 	 	0005:02:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 41) 
 
+In  the  above  list  of  PCI  devices  and  associated  software  items  are present. 
+But , only VGA items are selected and given in the following.
+
+		0000:01:00.0  VGA  compatible  controller:  NVIDIA  Corpora- tion  Device  1f07  (rev  a1)
+		0005:02:00.0  VGA  compatible  controller:  ASPEED  Technol- ogy,  Inc.  ASPEED  Graphics  Family  (rev  41)
 
 
 Game  ready  Driver  vs  Studio  Driver If you are a gamer who prioritizes day of launch support 
