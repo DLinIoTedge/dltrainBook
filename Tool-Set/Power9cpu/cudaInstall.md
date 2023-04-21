@@ -109,7 +109,7 @@ To install the key, run this command:  <br>
 	
 		sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pub	
   
-    ## Step 2
+  ## Step 2
     
   		jk@WorkDL:~/util$ sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pubOK
 	
