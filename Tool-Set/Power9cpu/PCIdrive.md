@@ -103,6 +103,27 @@ Otherwise, check the driver version and perform a version upgrade.
 Explanation:   From  the  output  above,  we  can  see  that  the  graphics card  from
 Nvidia  is  not  installed. driver:  pick  driver  from  above  URL
 
+		WorkDL:/$ lspci
+
+	 	0000:00:00.0 PCI bridge: IBM Device 04c1  
+	 	0000:01:00.0 VGA compatible controller: NVIDIA Corporation Device 1f07 (rev a1)
+	 	0000:01:00.1 Audio device: NVIDIA Corporation Device 10f9 (rev a1)
+	 	0000:01:00.2 USB controller: NVIDIA Corporation Device 1ada (rev a1)
+	 	0000:01:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1adb (rev a1) 
+	 	0001:00:00.0 PCI bridge: IBM Device 04c1
+	 	0001:01:00.0 Non-Volatile memory controller: Realtek Semiconductor Co., Ltd. Device 5762 (rev 01)
+	 	0002:00:00.0 PCI bridge: IBM Device 04c1
+	 	0003:00:00.0 PCI bridge: IBM Device 04c1
+	 	0003:01:00.0 USB controller: Texas Instruments TUSB73x0 SuperSpeed USB 3.0 xHCI Host Controller (rev 02) 
+	 	0004:00:00.0 PCI bridge: IBM Device 04c1
+	 	0004:01:00.0 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme BCM5719 Gigabit Ethernet PCIe (rev 01)
+	 	0004:01:00.1 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme BCM5719 Gigabit Ethernet PCIe (rev 01)
+		0005:00:00.0 PCI bridge: IBM Device 04c1
+	 	0005:01:00.0 PCI bridge: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 04) 
+	 	0005:02:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 41) 
+
+
+
 Game  ready  Driver  vs  Studio  Driver If you are a gamer who prioritizes day of launch support 
 for the latest games,  patches,  and  DLCs,  choose  Game  Ready  Drivers.  If  you  are a  content
 creator  who  prioritizes  stability  and  quality  for  creative workflows  including  video 
