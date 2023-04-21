@@ -11,35 +11,38 @@
 	
 
 
- run nbody application  by GPU hardware 
+ # run nbody application  by GPU hardware 
+ 
+ nbody example is ditributed in samples folder of  CUDA SDK
 
 
-	/nbody$ ./nbody  -benchmark -hostmem
+		/nbody$ ./nbody  -benchmark -hostmem
 	
-	Run "nbody -benchmark [-numbodies=<numBodies>]" to measure performance.
-	-fullscreen   	(run n-body simulation in fullscreen mode)
-	-fp64         	(use double precision floating point values for simulation)
-	-hostmem      	(stores simulation data in host memory)
-	-benchmark    	(run benchmark to measure performance)
-	-numbodies=<N>	(number of bodies (>= 1) to run in simulation)
-	-device=<d>   	(where d=0,1,2.... for the CUDA device to use)
-	-numdevices=<i>   (where i=(number of CUDA devices > 0) to use for simulation)
-	-compare      	(compares simulation results running once on the default GPU and once on the CPU)
-	-cpu          	(run n-body simulation on the CPU)
-	-tipsy=<file.bin> (load a tipsy model file for simulation)
+	 		Run "nbody -benchmark [-numbodies=<numBodies>]" to measure performance.
+			-fullscreen   	(run n-body simulation in fullscreen mode)
+			-fp64         	(use double precision floating point values for simulation)
+			-hostmem      	(stores simulation data in host memory)
+			-benchmark    	(run benchmark to measure performance)
+			-numbodies=<N>	(number of bodies (>= 1) to run in simulation)
+			-device=<d>   	(where d=0,1,2.... for the CUDA device to use)
+			-numdevices=<i>   (where i=(number of CUDA devices > 0) to use for simulation)
+			-compare      	(compares simulation results running once on the default GPU and once on the CPU)
+			-cpu          	(run n-body simulation on the CPU)
+			-tipsy=<file.bin> (load a tipsy model file for simulation)
 	
-	NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
+NOTE: 
+The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
 	
-	> Windowed mode
-	> Simulation data stored in system memory
-	> Single precision floating point simulation
-	> 1 Devices used for simulation
-	GPU Device 0: "GeForce RTX 2070" with compute capability 7.5
+		> Windowed mode
+		> Simulation data stored in system memory
+		> Single precision floating point simulation
+		> 1 Devices used for simulation
+		GPU Device 0: "GeForce RTX 2070" with compute capability 7.5
 	
-	> Compute 7.5 CUDA device: [GeForce RTX 2070]
-	36864 bodies, total time for 10 iterations: 60.494 ms
-	= 224.644 billion interactions per second
-	= 4492.870 single-precision GFLOP/s at 20 flops per interaction
+		> Compute 7.5 CUDA device: [GeForce RTX 2070]
+		36864 bodies, total time for 10 iterations: 60.494 ms
+		= 224.644 billion interactions per second
+		= 4492.870 single-precision GFLOP/s at 20 flops per interaction
 
   
   
