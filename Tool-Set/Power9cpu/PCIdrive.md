@@ -93,6 +93,9 @@ Above shows that the driver for RTX 2070 truly is not installed yet.
 As a next step, safely proceed with the remaining installation steps. 
 Otherwise, check the driver version and perform a version upgrade.
 
+Driver URL [Click](https://www.nvidia.com/Download/index.aspx?lang=en-us ) 
+
+
 
         	jk@WorkDL:~$ lspci | grep -i nvidia
 		0000:01:00.0 VGA compatible controller: NVIDIA Corporation Device 1f07 (rev a1)
