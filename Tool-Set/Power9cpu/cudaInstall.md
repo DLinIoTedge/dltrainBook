@@ -1,76 +1,93 @@
 
+# Install CUDA SDK 
 
-        sudo sh cuda_10.1.105_418.39_linux.run
-	See log at /var/log/cuda-installer.log for details.
+## Step 1
+       		 sudo sh cuda_10.1.105_418.39_linux.run
+		 See log at /var/log/cuda-installer.log for details.
 	
-	# set PATH for cuda 10.1 installation
-	if [ -d "/usr/local/cuda-10.1/bin/" ]; then
-	export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
-	export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:
-		+:${LD_LIBRARY_PATH}}
-	Fi
+		# set PATH for cuda 10.1 installation
+		if [ -d "/usr/local/cuda-10.1/bin/" ]; then
+		export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+		export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:
+			+:${LD_LIBRARY_PATH}}
+		Fi
 	
-	reboot
+		reboot
   
+ ## Step 2
+ 
+NVIDIA System Management Interface (nvidia-smi) is a command line utility, based on top of 
+the NVIDIA Management Library (NVML), intended to aid in the management and monitoring 
+of NVIDIA GPU devices.  This utility allows administrators to query GPU device state and 
+with the appropriate privileges, permits administrators to modify GPU device state.
+[Click]( https://developer.nvidia.com/nvidia-system-management-interface ) for more 
+inforamtion on "nvidia-smi"
+
+  		jk@WorkDL:~/util$ nvidia-smi 
+
+ ## Step 3
+ 
+Get CUDA 10.2 from the following link.
+[ Click ](http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux_ppc64le.run  ) to 
+get following file or  use   wget < above url > 
+
+
+ ## Step 4
+ 
+Run by using sh command
+
+		sudo sh cuda_10.2.89_440.33.01_linux_ppc64le.run
   
+  ## Step 5
   
-  jk@WorkDL:~/util$ nvidia-smi 
+  Check NVIDIA CUDA Compiler  Version
+  
+        	 nvcc --version	
 	
-	// Get CUDA 10.2 from the following link.
+		// Check libcudnn version
+		/sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn:
 	
-	STR1="http://developer.download.nvidia.com/compute/cuda/10.2/Prod"
-	STR2="/local_installers/cuda_10.2.89_440.33.01_linux_ppc64le.run"
-	STR3=$STR1$STR2
-	wget STR3 
+		/sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnnLib
 	
-	// run by using sh
-	sudo sh cuda_10.2.89_440.33.01_linux_ppc64le.run
+		cudnn.so.7 -> libcudnn.so.7.6.2
+
+## Step 6
+
+  		jk@WorkDL:~/util$ sudo sh cuda_10.1.243_418.87.00_linux_ppc64le.run
+		[sudo] password for jk:
+  	
   
-  Check NVIDIA CUDA Compiler with 
-  
-        nvcc --version	
-	
-	// Check libcudnn version
-	/sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn:
-	
-	/sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn
-	Lib
-	
-	cudnn.so.7 -> libcudnn.so.7.6.2
-  
-  jk@WorkDL:~/util$ sudo sh cuda_10.1.243_418.87.00_linux_ppc64le.run
-	[sudo] password for jk:
-  
-  
-  	        Driver   Installed    
-		Toolkit  Installed   in  /usr/local/cuda-10.1/ 
-		Samples & Installed   in  /home/jk/ 
+  	       		Driver   Installed    
+			Toolkit  Installed   in  /usr/local/cuda-10.1/ 
+			Samples & Installed   in  /home/jk/ 
     
     
-During installation, it is important to  make sure that
+During installation, it is important to  make sure  the following
 
-PATH includes /usr/local/cuda-10.1/bin  
-D_LIBRARY_PATH includes /usr/local/cuda-10.1/lib64,
- or, add /usr/local/cuda-10.1/lib64 to /etc/ld.so.conf 
- and run ldconfig as root 
+		PATH includes /usr/local/cuda-10.1/bin  
+		D_LIBRARY_PATH includes /usr/local/cuda-10.1/lib64,
+		 or, add /usr/local/cuda-10.1/lib64 to /etc/ld.so.conf 
+		 and run ldconfig as root 
 
-    
-    To uninstall the CUDA Toolkit, 
-run cuda-uninstaller in /usr/local/cuda-10.1/bin 
+  ## Step 7 
+  
+   To uninstall the CUDA Toolkit, 
+   
+		run cuda-uninstaller in /usr/local/cuda-10.1/bin 
 
 To uninstall the NVIDIA Driver, 
-run nvidia-uninstall 
 
-For more detail, refer 
-CUDA_Installation_Guide_Linux.pdf  
-in 
-/usr/local/cuda-10.1/doc/pdf 
-for detailed information on setting up CUDA.
+		run nvidia-uninstall 
+
+## Support on Installtion
+For more detail, refer CUDA_Installation_Guide_Linux.pdf  
+in  /usr/local/cuda-10.1/doc/pdf  for detailed information on setting up CUDA.
 
 Logfile is  
-/var/log/cuda-installer.log 
+		/var/log/cuda-installer.log 
 
 
+# in Power 9 Machine
 
 CUDA C++ extends C++ by allowing the programmer to define C++ functions, called kernels, that,
 when called, are executed N times in parallel by N different CUDA threads,
@@ -78,7 +95,9 @@ as opposed to only once like regular C++ functions.
 
 Following is in  Power9  machine
 
-  jk@WorkDL:~/util$ sudo dpkg -i cuda.deb
+ ## Step 1
+ 
+        jk@WorkDL:~/util$ sudo dpkg -i cuda.deb
 	Selecting previously unselected package cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67.
 	(Reading database ... 86706 files and directories currently installed.)
 	Preparing to unpack cuda.deb ...
@@ -88,8 +107,9 @@ Following is in  Power9  machine
 	To install the key, run this command:
 	sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pub	
   
-  
-  k@WorkDL:~/util$ sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pubOK
+    ## Step 2
+    
+  	jk@WorkDL:~/util$ sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pubOK
 	
 	jk@WorkDL:~/util$ sudo apt-get update
 	Get:1 file:/var/cuda-repo-10-1-local-10.1.168-418.67  InRelease
@@ -107,8 +127,9 @@ Following is in  Power9  machine
 	Fetched 252 kB in 1s (175 kB/s)    
 	Reading package lists... Done
   
+  ## Step 3
   
-jk@WorkDL:~/util$ sudo apt-get install cuda
+	jk@WorkDL:~/util$ sudo apt-get install cuda
 	
 	jk@WorkDL:~/util$ whereis cuda
 	cuda: /usr/local/cuda
@@ -130,7 +151,9 @@ jk@WorkDL:~/util$ sudo apt-get install cuda
 	0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
 	///Reboot the system to load the NVIDIA drivers
 	jk@WorkDL:~/util$ reboot 
-	
+
+ ## Step 4
+ 
 	//Set up the development environment by modifying the PATH and LD_LIBRARY_PATH variables:
 	$ export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
 	$ export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64\
@@ -138,6 +161,8 @@ jk@WorkDL:~/util$ sudo apt-get install cuda
 	export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 	export 
 	LD_LIBRARY_PATH=/usr/local/cuda/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+## Step 5
 
   	jk@WorkDL:~$ whereis cuda
 	cuda: /usr/local/cuda
