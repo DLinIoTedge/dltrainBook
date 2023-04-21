@@ -1,6 +1,6 @@
                
                
-       # Get CPU Information        
+   # Get CPU Information        
                
                sudo apt install sofware -properties -common
                sudo add-aptrepository ppa:ubuntu-toolchain -r /test 
