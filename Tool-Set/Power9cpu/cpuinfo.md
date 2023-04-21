@@ -31,6 +31,7 @@
                sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 	
 	//sudo apt install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
+	
 	            sudo apt install  gcc-9 g++-9
 	
 	            cat /proc/cpuinfo
@@ -56,13 +57,13 @@
 	            physical id: 20
 	            bus info: cpu@0
 	            version: 2.2 (pvr 004e 1202)
-              serial: YA1935039090
+              	    serial: YA1935039090
 	            slot: UOPWR.A100049-Node0-Proc0
 	            size: 2154MHz
 	            capacity: 3800MHz
-            	capabilities: performance-monitor cpufreq
-            	configuration: threads=4    	*-cache:0
-            	description: L1 Cache (instruction)
+            	    capabilities: performance-monitor cpufreq
+            	    configuration: threads=4    	*-cache:0
+            	    description: L1 Cache (instruction)
 	            physical id: 0
 	
 	            size: 32KiB    	*-cache:1
@@ -73,11 +74,11 @@
 	            physical id: 2
 	            size: 512KiB    	*-cache:3
 	            description: L3 Cache (unified)
-            	physical id: 3
-            	size: 10MiB 	*-cpu:1
+            	    physical id: 3
+            	    size: 10MiB 	*-cpu:1
 	
 	
-            	cat /proc/scsi/scsi
+            	    cat /proc/scsi/scsi
 	            cat /proc/cpuinfo
 	            lspci
                 
