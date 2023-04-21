@@ -3,11 +3,8 @@ Install PowerAI in Conda Environment to use  GPU. Get “conda” for Power 9 ma
 
 [link]( https://www.anaconda.com/distribution/#linux )  is used to get   Python 3.7 version  for ppc64le.
 
-Download ppc64le version from the above Link.
-
-File name is  $ Anaconda3-2019.10-Linux-ppc64le.sh  $ and same is  downloaded from the above URL. 
-
-Use following commands to install “conda” 
+Download ppc64le version from the above Link.  File name is  " Anaconda3-2019.10-Linux-ppc64le.sh  "
+and same is  downloaded from the above URL. Use following commands to install “conda” 
 
 
 		bash Anaconda3-2019.10-Linux-ppc64le.sh
