@@ -1,13 +1,21 @@
 
-  /5_Simulations/nbody
-	/5_Simulations/nbody$ make
+ # Build nbody application  for GPU hardware 
+ 
+ Folder Location :   /5_Simulations/nbody/5_Simulations/nbody$ 
   
-  //usr/local/cuda-10.1/bin/nvcc -ccbin g++ -I../../common/inc  -m64	-ftz=true -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o bodysystemcuda.o -c bodysystemcuda.cu
-	/usr/local/cuda-10.1/bin/nvcc -ccbin g++ -I../../common/inc  -m64	-ftz=true -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o nbody.o -c nbody.cpp
-	/usr/local/cuda-10.1/bin/nvcc -ccbin g++ -I../../common/inc  -m64	-ftz=true -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o render_particles.o -c render_particles.cpp
-	/usr/local/cuda-10.1/bin/nvcc -ccbin g++   -m64  	-gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o nbody bodysystemcuda.o nbody.o render_particles.o  -L/usr/lib/nvidia-compute-utils-418 -lGL -lGLU -lglut
-	mkdir -p ../../bin/ppc64le/linux/release
-	cp nbody ../../bin/ppc64le/linux/release
+  		/5_Simulations/nbody/5_Simulations/nbody$ make
+  
+ 		/usr/local/cuda-10.1/bin/nvcc -ccbin g++ -I../../common/inc  -m64	-ftz=true -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o bodysystemcuda.o -c bodysystemcuda.cu
+	
+		/usr/local/cuda-10.1/bin/nvcc -ccbin g++ -I../../common/inc  -m64	-ftz=true -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o nbody.o -c nbody.cpp
+
+		/usr/local/cuda-10.1/bin/nvcc -ccbin g++ -I../../common/inc  -m64	-ftz=true -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o render_particles.o -c render_particles.cpp
+
+		/usr/local/cuda-10.1/bin/nvcc -ccbin g++   -m64  	-gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75 -o nbody bodysystemcuda.o nbody.o render_particles.o  -L/usr/lib/nvidia-compute-utils-418 -lGL -lGLU -lglut
+	
+		mkdir -p ../../bin/ppc64le/linux/release
+
+		cp nbody ../../bin/ppc64le/linux/release
 	
 
 
