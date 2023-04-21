@@ -87,7 +87,7 @@ Logfile is
 		/var/log/cuda-installer.log 
 
 
-# in Power 9 Machine
+# In Power 9 Machine
 
 CUDA C++ extends C++ by allowing the programmer to define C++ functions, called kernels, that,
 when called, are executed N times in parallel by N different CUDA threads,
@@ -97,81 +97,85 @@ Following is in  Power9  machine
 
  ## Step 1
  
-        jk@WorkDL:~/util$ sudo dpkg -i cuda.deb
-	Selecting previously unselected package cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67.
-	(Reading database ... 86706 files and directories currently installed.)
-	Preparing to unpack cuda.deb ...
-	Unpacking cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67 (1.0-1) ...
-	Setting up cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67 (1.0-1) ...
-	The public CUDA GPG key does not appear to be installed.
-	To install the key, run this command:
-	sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pub	
+       		 jk@WorkDL:~/util$ sudo dpkg -i cuda.deb
+		 
+Selecting previously unselected package cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67. <br>
+(Reading database ... 86706 files and directories currently installed.)  <br>
+Preparing to unpack cuda.deb ...  <br>
+Unpacking cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67 (1.0-1) ...  <br>
+Setting up cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67 (1.0-1) ...  <br>
+The public CUDA GPG key does not appear to be installed.  <br>
+To install the key, run this command:  <br>
+	
+		sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pub	
   
     ## Step 2
     
-  	jk@WorkDL:~/util$ sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pubOK
+  		jk@WorkDL:~/util$ sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pubOK
 	
-	jk@WorkDL:~/util$ sudo apt-get update
-	Get:1 file:/var/cuda-repo-10-1-local-10.1.168-418.67  InRelease
-	Ign:1 file:/var/cuda-repo-10-1-local-10.1.168-418.67  InRelease
-	Get:2 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Release [574 B]
-	Get:2 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Release [574 B]
-	Get:3 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Release.gpg [833 B]
-	Get:3 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Release.gpg [833 B]
-	Get:4 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Packages [24.2 kB]
-	Hit:5 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu bionic InRelease    
-	Hit:6 http://in.ports.ubuntu.com/ubuntu-ports bionic InRelease                   	 
-	Get:7 http://ports.ubuntu.com/ubuntu-ports bionic-security InRelease [88.7 kB]   	 
-	Get:8 http://in.ports.ubuntu.com/ubuntu-ports bionic-updates InRelease [88.7 kB]   
-	Get:9 http://in.ports.ubuntu.com/ubuntu-ports bionic-backports InRelease [74.6 kB]
-	Fetched 252 kB in 1s (175 kB/s)    
-	Reading package lists... Done
+		jk@WorkDL:~/util$ sudo apt-get update
+	
+			Get:1 file:/var/cuda-repo-10-1-local-10.1.168-418.67  InRelease
+			Ign:1 file:/var/cuda-repo-10-1-local-10.1.168-418.67  InRelease
+			Get:2 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Release [574 B]
+			Get:2 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Release [574 B]
+			Get:3 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Release.gpg [833 B]
+			Get:3 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Release.gpg [833 B]
+			Get:4 file:/var/cuda-repo-10-1-local-10.1.168-418.67  Packages [24.2 kB]
+			Hit:5 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu bionic InRelease    
+			Hit:6 http://in.ports.ubuntu.com/ubuntu-ports bionic InRelease                   	 
+			Get:7 http://ports.ubuntu.com/ubuntu-ports bionic-security InRelease [88.7 kB]   	 
+			Get:8 http://in.ports.ubuntu.com/ubuntu-ports bionic-updates InRelease [88.7 kB]   
+			Get:9 http://in.ports.ubuntu.com/ubuntu-ports bionic-backports InRelease [74.6 kB]
+			Fetched 252 kB in 1s (175 kB/s)    
+			Reading package lists... Done
   
   ## Step 3
   
-	jk@WorkDL:~/util$ sudo apt-get install cuda
+		jk@WorkDL:~/util$ sudo apt-get install cuda
+			
+		jk@WorkDL:~/util$ whereis cuda
+		cuda: /usr/local/cuda
 	
-	jk@WorkDL:~/util$ whereis cuda
-	cuda: /usr/local/cuda
+		
 	
-	jk@WorkDL:~/util$ nvcc --version
-	Command 'nvcc' not found, but can be installed with:
-	sudo apt install nvidia-cuda-toolkit
-	
-	jk@WorkDL:~/util$ cat /usr/local/cuda/version.txt
-	CUDA Version 10.1.168
+		jk@WorkDL:~/util$ cat /usr/local/cuda/version.txt
+		CUDA Version 10.1.168
 	
 	
-	k@WorkDL:~/util$ sudo apt-get install cuda-drivers
-	Reading package lists... Done
-	Building dependency tree  	 
-	Reading state information... Done
-	cuda-drivers is already the newest version (418.67-1).
-	cuda-drivers set to manually installed.
-	0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
-	///Reboot the system to load the NVIDIA drivers
-	jk@WorkDL:~/util$ reboot 
+		jk@WorkDL:~/util$ sudo apt-get install cuda-drivers
+			Reading package lists... Done
+			Building dependency tree  	 
+			Reading state information... Done
+			cuda-drivers is already the newest version (418.67-1).
+			cuda-drivers set to manually installed.
+			0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+
+Reboot the system to load the NVIDIA drivers
+		
+		jk@WorkDL:~/util$ reboot 
 
  ## Step 4
  
-	//Set up the development environment by modifying the PATH and LD_LIBRARY_PATH variables:
-	$ export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
-	$ export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64\
-	${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-	export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-	export 
-	LD_LIBRARY_PATH=/usr/local/cuda/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+ Set up the development environment by modifying the PATH and LD_LIBRARY_PATH variables:
+ 
+		$ export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+		$ export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64\
+		${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+		export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+		export 
+		LD_LIBRARY_PATH=/usr/local/cuda/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 ## Step 5
 
-  	jk@WorkDL:~$ whereis cuda
-	cuda: /usr/local/cuda
+  		jk@WorkDL:~$ whereis cuda
+		cuda: /usr/local/cuda
 	
-	jk@WorkDL:~$ export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-	jk@WorkDL:~$ export LD_LIBRARY_PATH=/usr/local/cuda/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-	jk@WorkDL:~$ cuda-install-samples-10.1.sh ~
-	Copying samples to /home/jk/NVIDIA_CUDA-10.1_Samples now...
-	Finished copying samples.	
+		jk@WorkDL:~$ export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+		jk@WorkDL:~$ export LD_LIBRARY_PATH=/usr/local/cuda/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+		jk@WorkDL:~$ cuda-install-samples-10.1.sh ~
+			Copying samples to /home/jk/NVIDIA_CUDA-10.1_Samples now...
+			Finished copying samples.	
   
   
   
