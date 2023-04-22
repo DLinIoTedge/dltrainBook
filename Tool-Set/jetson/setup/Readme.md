@@ -37,9 +37,27 @@ Mentioned video provide detail elcture on installation of Jetson Nano Developer 
  Make micro SDcard for jetson Nano   <br> 
  Write Image to the microSD Card
  
- Download OS Image [click](https://developer.nvidia.com/jetson-nano-sd-card-image )
+ Download OS Image [click](https://developer.nvidia.com/jetson-nano-sd-card-image ) <br>
  SD Car Foramt and  Write OS Image [click](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write )
  
+ ## 1.4 Powering Jetson Nano
+ 
+ [click](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetbot_animation_500x282_2.gif )
+ 
+1. Unfold the paper stand and place inside the developer kit box
+2. Set the developer kit on top of the paper stand. 
+3. Insert the microSD card (with system image already written to it) into the slot on the underside of the Jetson Nano module. 
+4. Power on your computer display and connect it. 
+5. Connect the USB keyboard and mouse.
+6. Connect your Micro-USB power supply (5V⎓2A). The Jetson Nano Developer Kit will power on and boot automatically.
+7. A green LED next to the Micro-USB connector will light as soon as the developer kit powers on. When you boot the first time, the Jetson Nano Developer Kit will take you through some initial setup, including:
+8. Review and accept NVIDIA Jetson software EULA
+9. Select system language, keyboard layout, and time zone 
+10. Create username, password, and computer name
+11. Log in
+
+
+
  
  
  
