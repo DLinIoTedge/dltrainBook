@@ -187,6 +187,377 @@ Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is anoth
        virtualenv jkDL2 
        source jkDL2/bin/activate
  
+      pip3 install numpy ( use this command to install numpy)
+
+There are a few more packages and development tools to install to ensure that we have a robust set-up for our programming environment:
+
+        sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+
+Once Python is set up, and pip and other tools are installed, we can set up a virtual environment for our development projects.
+
+        sudo apt-get install -y python3-venv
+
+
+venv module, part of the standard Python 3 library, so that we can create virtual environments
+
+        mkdir environments
+        cd environments
+        python3 -m venv jk_env // jk_env is created  ,u can give your name Vijay_env
+        ls_env
+        source environments/jk_env/bin/activate
+
+Creating 	sample program
+Use vi or any other editor and create “hello.py” , in that file just keep
+
+        print(" jk is keep working on innovation!")  // this is in hello.py 
+        
+        python hello.py
+
+Above will make program to work well
+
+          jk@amma:~/tmp/oct16/build$ sudo apt-get install cmake
+
+
+Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+
+        sudo killall apt apt-get
+        sudo rm /var/lib/dpkg/lock-frontend
+        sudo dpkg --configure -a
+        sudo poweroff 	 	 	
+        sudo apt-get install lsof
+        sudo apt-get install -y python3-pip
+        sudo apt-get install -y python3-venv
+	 	 	 	
+Use virtual environments: use virtual environments for your Python programming needs. You might be familiar with conda, but unfortunately it can’t be installed on ARM. Instead you can use the Python3-venv package that can be installed with:
+
+        sudo pip3 install virtualenv
+        virtualenv WorkDL2
+        source WorkDL2/bin/activate
+        sudo apt-get install cmake
+        sudo apt-get install git
+        git clone https://github.com/dusty-nv/jetson-inference
+        cd jetson-inference
+        git submodule update --init
+	 	 	 	
+        mkdir build
+        cd build
+        cmake ../
+        make
+        sudo make install
+        cd ~/jetson-inference/build/aarch64/bin
+        ./detectnet-console ~/dog.jpg out.jpg coco-dog
+
+Took dog pic from
+[click](https://blog.hackster.io/getting-started-with-the-nvidia-jetson-nano-developer-kit-43aa7c298797 )
+and placed in /home/siri/dog.jpg
+	 	 	 	
+            $ cd ~/jetson-inference/build/aarch64/bin
+            $ ./detectnet-console ~/dog.jpg out.jpg coco-dog
+
+ 	 	 	
+///DL SDK doc from NVIDIA [click](https://docs.nvidia.com/deeplearning/sdk/tensorrt-developer-guide/index.html#import_model_python )
+
+// hello world in TF RT [click](https://docs.nvidia.com/deeplearning/sdk/tensorrt-sample-support-guide/index.html#end_to_end_tensorflow_mnist )
+
+Python Matrices and NumPy Arrays [click](https://www.programiz.com/python-programming/matrix  )
+
+[click](https://stackoverflow.com/questions/28831854/how-do-i-add-python3-kernel-to-jupyter-ipython ) ipython
+
+
+          sudo pip3 install ipython>=5.0.0
+          :~/tmp/pub$ pip3 --version
+          pip 19.1.1 from /usr/local/lib/python3.4/dist-packages/pip (python 3.4)
+          /tmp/pub$ pip2 --version
+          pip 19.1.1 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
+
+
+//following worked well ,,,installed 3.5 version with ease
+
+          sudo apt-get install libssl-dev openssl
+          wget https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz 
+          sudo tar -xzvf Python-3.5.0.tgz
+          cd Python-3.5.0
+          ./configure
+          sudo make
+          sudo make install
+
+//following worked well
+          
+          jupyter-notebook
+
+//////////// issue on TensorRT
+[click](https://devtalk.nvidia.com/default/board/360/container-tensorrt/)
+
+[click](https://devtalk.nvidia.com/default/board/304/)
+
+
+//download tensorRT
+
+[click](https://developer.nvidia.com/tensorrt)
+
+TensorRT 5.0 Usage Survey
+[click](https://developer.nvidia.com/embedded/downloads#?search=Jetson%20Nano )
+
+TensorRT 5.1 GA ( general availability RC is release candidate)
+Tar File Install Packages For Linux Power
+
+TensorRT-5.1.3.6 for Ubuntu <br>
+installation of tensorrT <br>
+[click](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html ) 
+
+//model
+
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<eg:TensorRT-5.1.x.x/lib>
+
+//wrong
+
+         export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:</home/tmp/jetson/TensorRT-5.1.3.6/lib>
+
+//correct one
+
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tmp/jetson/TensorRT-5.1.3.6/lib
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tmp/jetson/TensorRT-5.1.2.2/lib
+        sudo pip3 install tensorrt-5.1.3.6-cp35-none-linux_ppc64le.whl
+        sudo pip3 install tensorrt-5.1.2.2-cp35-none-linux_x86_64.whl
+        sudo pip3 install uff-0.6.3-py2.py3-none-any.whl
+
+//issue
+
+        sudo pip3 install graphsurgeon-0.4.1-py2.py3-none-any.whl
+
+//working
+
+        sudo pip3 install graphsurgeon-0.4.0-py2.py3-none-any.whl
+
+//CUDA
+[click](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1404&target_type=clusterlocal )
+
+[click](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1404&target_type=runfilelocal )
+
+
+
+// upgrade from 3.4 to 3.5
+
+      sudo apt-get install python3.5
+      python3 --version
+
+I'm getting <br>
+Python 3.4.3 <br>
+didn't do anything wrong and things are not working as intended. Even after you have installed Python 3.6 from a PPA, the /usr/bin/python3 symlink on your Ubuntu 14.04 system still points to /usr/bin/python3.4, not /usr/bin/python3.6. Therefore, to invoke the Python 3.6 interpreter, you explicitly run python3.6.
+
+how to install jupyter notebook in ubuntu 14.04 <br>
+Python Prerequisites
+
+        sudo apt install python3-pip
+	      sudo apt install ipython3
+	      pip3 install jupyter
+	        Downloading ipywidgets-7.4.2-py2.py3-none-any.whl (111kB): 111kB downloaded
+	        Cleaning up...
+	        Exception:
+	        Traceback (most recent call last):
+        pip --version
+        pip 1.5.4 from /usr/lib/python2.7/dist-packages (python 2.7)
+
+        sudo pip install --upgrade pip
+          Not uninstalling pip at /usr/lib/python2.7/dist-packages, owned by OS
+
+//following worked
+
+        sudo -H pip install --upgrade pip
+        sudo pip3 install --upgrade pip
+
+// appear to be worked partly
+
+        sudo pip3 install --upgrade setuptools
+
+// again issues
+
+        pip3 install jupyter
+
+Installing collected packages:  <br>
+jupyter, jupyter-console, qtconsole, ipywidgets, notebook, nbconvert, ipykernel, jupyter-client, prompt-toolkit, pygments, ipython-genutils, jupyter-core, traitlets, widgetsnbextension, nbformat, jinja2, terminado, pyzmq, tornado, Send2Trash, prometheus-client, bleach, pandocfilters, defusedxml, entrypoints, testpath, mistune, python-dateutil, wcwidth, jsonschema, MarkupSafe, ptyprocess, webencodings, attrs, pyrsistent 
+Cleaning up...
+
+Setting up Jupyter with Python 3 on Ubuntu
+[click](https://datawookie.netlify.com/blog/2017/06/setting-up-jupyter-with-python-3-on-ubuntu/)
+
+// tried with sudo ,..but still not ok
+
+Installing  TensorFlosudo pip3 install jupyter <br>
+...You are using pip version 10.0.1, however version 19.1.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command
+
+        sudo -H pip install --upgrade pip --user
+
+How can I uninstall python 2.7 and reinstall 3.5 in Ubuntu 14.04?
+
+        sudo apt-get install python3-notebook jupyter-core python-ipykernel
+       
+       [click](https://askubuntu.com/questions/847263/install-jupyter-notebook-for-python-2-7 )
+
+
+///windows file
+Found Windows Boot Manager on /dev/sda1@/EFI/Microsoft/Boot/bootmgfw.efi <br>
+Adding boot menu entry for EFI firmware configuration
+
+        sudo apt-get update
+        sudo apt-get autoremove
+        sudo apt-get -y install python3-pip python3-dev
+        sudo -H pip3 install --upgrade pip
+        sudo apt-get -y install ipython3 ipython3-notebook
+        sudo -H pip3 install jupyter
+
+        sudo -H pip3 install jupyter --user
+
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+[click](https://github.com/jupyter/notebook/issues/2786 )
+command not found: 'jupyter <br>
+/usr/local/bin/pip3 <br>
+/usr/local/bin/jupyter
+
+
+      export PATH=$PATH:~/.local/bin
+        File "/tmp/pip-install-Ej0KVF/tornado/setup.py", line 146, in <module>
+      	raise ImportError("Tornado requires an up-to-date SSL module. This means "
+
+      sudo pip install 'Tornado>=4.0.0,<5.0.0'
+        matplotlib 1.3.1 requires nose, which is not installed.
+[click](https://github.com/googlesamples/assistant-sdk-python/issues/264 )
+Try using
+
+        sudo easy_install nose
+        sudo easy_install tornado
+        sudo pip install 'Tornado>=4.0.0,<5.0.0'
+        sudo -H pip install jupyter
+
+
+[click](https://github.com/Tony607/tf_jetson_nano )
+
+Run Keras/Tensorflow model on Jetson Nano [click](https://ehmatthes.github.io/pcc/chapter_01/osx_setup.html )
+
+To be able to run jupyter notebook from terminal, you need to make sure that ~/.local/bin is in your path.
+Do this by running export PATH=$PATH:~/.local/bin for your current session, or adding that line to the end of ~/.bashrc to make your changes last for future sessions (e.g. by using nano ~/.bashrc). If you edit ~/.bashrc you will need to log out and log back in to make see your changes take effect
+
+
+jupyter notebook //// now it worked .....// 11.07 PM <br>
+[click](https://github.com/Tony607/tf_jetson_nano )Run Keras/Tensorflow model on Jetson Nano
+
+        git clone https://github.com/Tony607/tf_jetson_nano
+        pip3 install -r requirements.txt
+        git clone https://github.com/Tony607/tf_jetson_nano.git
+        pip install numpy --upgrade
+        sudo pip install numpy --upgrade --ignore-installed
+
+        kernel2 or kerl 3 issue in Jypeter notebook
+        
+[click](https://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook )
+
+        sudo apt-get install python-dev python3-dev python-pip python3-pip
+        sudo python -m pip install virtualenv --user
+
+///worked
+
+        sudo apt install python-pip
+        sudo pip install absl-py
+        sudo pip install gast
+        sudo pip install grpcio
+        sudo pip install mock
+        sudo pip install tensorboard>=1.8.0
+        pip install numpy --upgrade
+
+///DL SDK doc from NVIDIA
+[click](https://docs.nvidia.com/deeplearning/sdk/tensorrt-developer-guide/index.html#import_model_python )
+
+// hello world in TF RT
+[click](https://docs.nvidia.com/deeplearning/sdk/tensorrt-sample-support-guide/index.html#end_to_end_tensorflow_mnist )
+
+Python Matrices and NumPy Arrays
+[click]( https://www.programiz.com/python-programming/matrix )
+
+[click](https://stackoverflow.com/questions/28831854/how-do-i-add-python3-kernel-to-jupyter-ipython )
+
+        sudo pip3 install ipython>=5.0.0
+        /tmp/pub$ pip3 --version
+        pip 19.1.1 from /usr/local/lib/python3.4/dist-packages/pip (python 3.4)
+        /tmp/pub$ pip2 --version
+        pip 19.1.1 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
+
+//following worked well ,,,installed 3.5 version with ease
+
+        sudo apt-get install libssl-dev openssl
+        wget https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz
+        sudo tar -xzvf Python-3.5.0.tgz
+        cd Python-3.5.0
+        ./configure
+        sudo make
+        sudo make install
+
+//following worked well
+
+        jupyter-notebook
+
+////// issue on TensorRT
+[click](https://devtalk.nvidia.com/default/board/360/container-tensorrt/ )
+
+[click](https://devtalk.nvidia.com/default/board/304/ )
+
+//download tensorRT
+[click](https://developer.nvidia.com/tensorrt )
+TensorRT 5.0 Usage Survey
+
+[click](https://developer.nvidia.com/embedded/downloads#?search=Jetson%20Nano  )
+TensorRT 5.1 GA ( general availability RC is release candidate)
+Tar File Install Packages For Linux Power
+
+TensorRT-5.1.3.6 for Ubuntu <br>
+installation of tensorrT
+[click](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html )
+
+//model
+
+      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<eg:TensorRT-5.1.x.x/lib>
+
+//wrong
+
+      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:</home/tmp/jetson/TensorRT-5.1.3.6/lib>
+
+//correct one
+
+      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tmp/jetson/TensorRT-5.1.3.6/lib
+      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tmp/jetson/TensorRT-5.1.2.2/lib
+      sudo pip3 install tensorrt-5.1.3.6-cp35-none-linux_ppc64le.whl
+      sudo pip3 install tensorrt-5.1.2.2-cp35-none-linux_x86_64.whl
+      sudo pip3 install uff-0.6.3-py2.py3-none-any.whl
+      
+//issue
+
+       sudo pip3 install graphsurgeon-0.4.1-py2.py3-none-any.whl
+       
+//working
+
+       sudo pip3 install graphsurgeon-0.4.0-py2.py3-none-any.whl
+
+
+        $ which jupyter
+        /usr/local/bin/jupyter
+        
+TensorRT, OpenCV <br>
+TensorFlow is one of the most popular deep learning frameworks today. NVIDIA® TensorRT™ is a deep learning platform that optimizes neural network models and speeds up inference across all kinds of GPU-accelerated platforms running in data centers, embedded and automotive devices. TensorFlow integrates nicely with TensorRT, which seems a natural fit, particularly as NVIDIA provides platforms well-suited to accelerate TensorFlow. This enables TensorFlow users to have extremely high inference performance and a near transparent workflow when using TensorRT.
+
+
+Adding TensorRT to the TensorFlow inference workflow involves an additional step, as shown in Figure 3. In this step (highlighted in green), TensorRT builds an optimized inference graph from a frozen TensorFlow graph.
+
+Throughout this article, we will use python 3. Let’s install TensorFlow and TensorRT on the device. You can find good instructions in the NVIDIA TensorFlow/TensorRT Models on Jetson repository. But first, you should install python3-dev and libfreetype6-dev packages. They may solve some problems with matplotlib installation:
+
+        sudo apt-get update
+        sudo apt-get upgrade
+        sudo apt-get install libfreetype6-dev python3-dev
+
+Also, we recommend installing the last version of TensorFlow, currently it is 1.10.1.
+
+
+After installing TensorRT we had a problem with the jupyter example. Since the example uses a ssd_inception_v2 model which tries to allocate a lot of GPU memory, the session run process gets killed by the system. To resolve this problem we changed the model to SSD Lite MobileNet v2 from TensorFlow Model ZOO. The model zoo is Google’s collection of pre-trained object detection models that have various levels of processing speed and accuracy.
 
 
 
