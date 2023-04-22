@@ -2,6 +2,9 @@
 # Build DLtrain for Ubuntu X86
 
 Workflow create DLtrain executable for Training in ubuntu  X86 machine.
+ 
+ Let cpuTrain be root folder for the following steps.
+ build folder created in cpuTrain folder for cmake 
 
 	mkdir build
 	cd mkdir
