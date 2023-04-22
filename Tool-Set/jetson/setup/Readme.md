@@ -29,5 +29,20 @@ As an example of a good power supply, NVIDIA has validated Adafruit’s 5V 2.5A 
 8. Internet Connection with Wired LAN
 
 ## 1.2 Reference
-[click](https://www.youtube.com/watch?v=Uvu6NNOvhg4 )
+[click](https://www.youtube.com/watch?v=Uvu6NNOvhg4 ) to view youtube video from Nvidia. 
+Mentioned video provide detail elcture on installation of Jetson Nano Developer kit.
+
+## 1.3 Installation
+
+ Make micro SDcard for jetson Nano   <br> 
+ Write Image to the microSD Card
+ 
+ Download OS Image [click](https://developer.nvidia.com/jetson-nano-sd-card-image )
+ SD Car Foramt and  Write OS Image [click](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write )
+ 
+ 
+ 
+ 
+
+
 
