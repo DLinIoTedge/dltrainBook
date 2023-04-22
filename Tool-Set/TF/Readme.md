@@ -22,6 +22,9 @@ Where WorkDL is name given to Virtual Environment
  following command is useful. 
  
         ./jj/model1$ virtualenv −p   /usr /bin /python2.7   WorkDL
+        
+         
+
 
 Or change the python interpreter globally  with an env variable in  /.bashrc 
 
@@ -57,7 +60,8 @@ Location of pip is obatined by using following command.
 
 List installed packages name.
              pip freeze > requirments.txt 
-
+             
+ 
 
 ## Install Tensorflow 2.0 
       
