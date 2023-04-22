@@ -118,11 +118,76 @@ introduction of JetPack 4.3 ( ( L4T 32.3.1) brings with it a new tool, Jetson-IO
         JETSON_JETPACK="4.4" ;;  and above…
 
 
+## 1.7 Connect with Internet
+
+Wired LAN   and Wireless connect also possible.
+
+## 1.8  SSH / RDP
+
+![image](https://user-images.githubusercontent.com/58679469/233797214-9d1740e9-b6f7-4017-afda-9695667a36cf.png)
+
+SSH is good for user to login and work in Jetson Nano.  Since Console option is available directly, it is good enough to have SSH. In case some user want to try with RDP then they can try it out
+ Easiest way is probably going to be running an RDP server called xrdp. Installation is a lot simpler than setting up VNC.
+ 
+        $ sudo apt-get install xrdp
+
+ After installation has completed, you should go ahead and reboot the Jetson Nano board. Once the reboot has completed you can check installation of xrdp was successful by using the command nmap from your laptop.
+ 
+        $ nmap jetson
+        
+ RDP server is running despite us currently being at the login screen on the physical machine. While RDP is a proprietary protocol, Microsoft do provide viewers for most platforms for free, including the Mac, which is available in the Mac App Store and install it.
+ 
 
 
+## 1.9 Install git
+
+        sudo apt-get install git
+
+
+## 1.10 nvcc
+
+The claim is that the microSD image of 64Bit Ubuntu Linux that NVIDIA provides for this computer has all the NVIDIA libraries and utilities you need all pre-installed. The programming guide made it clear that if you need to use the NVIDIA C compiler nvcc to compile your work. But if I typed nvcc at a command prompt, I just got an error that this command wasn’t found. A bit of Googling revealed that everything is installed, but it did it before installation created your user, so you need to add the locations to some PATHS. Adding:
+
+      export PATH=${PATH}:/usr/local/cuda/bin        
+      export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda/lib64
+   
+To my .bashrc file got everything working. It also shows where cuda is installed. This is handy since it includes a large collection of samples.
+
+ ![image](https://user-images.githubusercontent.com/58679469/233797391-56587bc0-84db-42fc-a919-68c8862c3f27.png)
+
  
+ Compiling the deviceQuery sample 
  
+ ![image](https://user-images.githubusercontent.com/58679469/233797413-bc9bb2a5-e6b5-484f-87c1-ab5caa55afc6.png)
+
+![image](https://user-images.githubusercontent.com/58679469/233797425-c91fd55e-08d7-42fc-a34e-75f8f46f3c26.png)
+
+![image](https://user-images.githubusercontent.com/58679469/233797465-08af4289-1c82-4e2a-8586-cf667548e367.png)
+
+## 1.11 Install cmake 3.14
+
+      jk@amma:~/tmp/oct16/build$ sudo apt-get install cmake
+      
+Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+
+      jk@amma:~/tmp/oct16/build$ sudo kill all apt apt-get
+      sudo rm /var/lib/dpkg/lock-frontend 
+      sudo dpkg --configure -a 
+      sudo poweroff
+      sssh jk@192.168.1.4
+      sudo apt-get install cmake
+
+## 1.12 Python installation
+
+
+       sudo apt-get install lsof  
+       sudo apt-get install -y python3-pip 
+       sudo apt-get  install -y python3-venv 
+       sudo pip3 install virtualenv  
+       virtualenv jkDL2 
+       source jkDL2/bin/activate
  
+
 
 
 
