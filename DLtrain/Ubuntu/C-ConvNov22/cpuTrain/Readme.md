@@ -1,5 +1,7 @@
 
-# Build DLtrain for Ubuntu X86
+# Build DLtrain for Ubuntu X86 
+
+## Excutable is used to train DL Networks
 
 Workflow create DLtrain executable for Training in ubuntu  X86 machine.
  
