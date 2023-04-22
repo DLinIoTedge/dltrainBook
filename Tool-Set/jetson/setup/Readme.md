@@ -560,5 +560,74 @@ Also, we recommend installing the last version of TensorFlow, currently it is 1.
 After installing TensorRT we had a problem with the jupyter example. Since the example uses a ssd_inception_v2 model which tries to allocate a lot of GPU memory, the session run process gets killed by the system. To resolve this problem we changed the model to SSD Lite MobileNet v2 from TensorFlow Model ZOO. The model zoo is Google’s collection of pre-trained object detection models that have various levels of processing speed and accuracy.
 
 
+## 1.13 Kernel Update
+
+How to build NVIDIA Jetson Nano kernel
+[click](https://developer.ridgerun.com/wiki/index.php?title=Jetson_Nano/Development/Building_the_Kernel_from_Source )
+
+Installing SPIdev Kernel Module <br>
+The Linux driver provides a user interface for accessing SPI to userspace processes and applications. Although SPIdev is not compiled into the L4T kernel by default, it can be compiled and loaded as a kernel module. This is able to be done from onboard the Jetson without recompiling the entire kernel or can be cross-compiled from x86 host if desired
+
+[click](https://elinux.org/Jetson/TX1_SPI#Loopback_Testing )
+
+	sudo cat /sys/kernel/debug/tegra_gpio
+	Name:Bank:Port CNF OE OUT IN INT_STA INT_ENB INT_LVL
+	A: 0:0 64 40 40 04 00 00 000000
+	B: 0:1 f0 00 00 00 00 00 000000
+	C: 0:2 1f 00 00 00 00 00 000000
+	D: 0:3 00 00 00 00 00 00 000000
+	E: 1:0 40 00 00 00 00 00 000000
+	F: 1:1 00 00 00 00 00 00 000000
+	G: 1:2 0c 00 00 04 00 00 000000
+	H: 1:3 fd 99 00 60 00 00 000000
+	I: 2:0 07 05 00 02 00 00 000000
+	J: 2:1 f0 00 00 00 00 00 000000
+	K: 2:2 00 00 00 00 00 00 000000
+	L: 2:3 00 00 00 00 00 00 000000
+	M: 3:0 00 00 00 00 00 00 000000
+	N: 3:1 00 00 00 00 00 00 000000
+	O: 3:2 00 00 00 00 00 00 000000
+	P: 3:3 00 00 00 00 00 00 000000
+	Q: 4:0 00 00 00 00 00 00 000000
+	R: 4:1 00 00 00 00 00 00 000000
+	S: 4:2 a0 80 00 00 00 00 000000
+	T: 4:3 01 01 00 00 00 00 000000
+	U: 5:0 00 00 00 00 00 00 000000
+	V: 5:1 03 00 00 02 00 00 000000
+	W: 5:2 00 00 00 00 00 00 000000
+	X: 5:3 78 08 08 70 00 60 606000
+	Y: 6:0 06 00 00 02 00 00 000000
+	Z: 6:1 0f 08 08 04 00 06 020600
+	AA: 6:2 00 00 00 00 00 00 000000
+	BB: 6:3 01 00 00 00 00 00 000000
+	CC: 7:0 12 00 00 12 00 12 121200
+	DD: 7:1 01 00 00 00 00 00 000000
+	EE: 7:2 00 00 00 00 00 00 000000
+	FF: 7:3 00 00 00 00 00 00 000000
+	jk@amma:~$
+	
+	cat /boot/extlinux/extlinux.conf TIMEOUT 30
+
+	DEFAULT primary
+
+	MENU TITLE p3450-porg eMMC boot options
+
+	LABEL primary
+	MENU LABEL primary kernel
+	LINUX /boot/Image
+	INITRD /boot/initrd
+	APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk0p1 rw rootwait
+
+	jk@amma:~$
+	Downloading Kernel Sources
+
+	wget --no-check-certificate 'https://developer.nvidia.com/embedded/dlc/l4t-sources-24-2-1' -O sources_r24.2.1.tbz2 tar -xvf sources_r24.2.1.tbz2
+	cd sources
+	tar -xvf kernel_src.tbz2
+	Updating the Kernel Config
+	cd kernel
+	zcat /proc/config.gz > .config
+	make prepare // had an issue and not done
+
 
 
