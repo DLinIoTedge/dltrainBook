@@ -640,7 +640,7 @@ First time you run a model you may assume that the code has hung and it’s not 
 	  git submodule update --init
 	  mkdir build  
  	  cd build 
-    	  cmake ../ 
+	  cmake ../ 
 	  make  
   	  sudo make install  
 	  cd ~/jetson-inference/build/aarch64/bin 
