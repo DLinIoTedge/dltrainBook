@@ -629,5 +629,28 @@ The Linux driver provides a user interface for accessing SPI to userspace proces
 	zcat /proc/config.gz > .config
 	make prepare // had an issue and not done
 
+## 1.14  Quick Demo
+
+demo applications built we can run our first model. If you go ahead and change directory to the build directory, you can run the included detectnet-console demo application. This accepts an image as input, and outputs a list of coordinates of the detected bounding boxes. You’ll need to specify a pre-trained model as the third argument.
+
+First time you run a model you may assume that the code has hung and it’s not working. I know I did, because it’s more than “a few minutes.”  
+
+	  git clone https://github.com/dusty-nv/jetson-inference
+	  cd jetson-inference
+	  git submodule update --init
+	  mkdir build  
+ 	  cd build 
+    	  cmake ../ 
+	  make  
+  	  sudo make install  
+	  cd ~/jetson-inference/build/aarch64/bin 
+	 ./detectnet-console ~/dog.jpg out.jpg coco-dog
+
+Hello World
+
+ The inference portion of Hello AI World - which includes coding your own image classification application for C++ or Python, object detection, and live camera demos - can be run on your Jetson in roughly two hours or less
+ [click](https://github.com/dusty-nv/jetson-inference/blob/master/README.md )
+ 
+
 
 
