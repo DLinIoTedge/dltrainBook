@@ -188,6 +188,50 @@ upgrade  python  from   3.4 to 3.5
               sudo   apt    install    ipython3
               pip3    install   jupyter
 
+# JupyterLab
+
+How to bring up Python 3 enabled  JupyterLab 
+    
+   
+## JupyterLab in Windows 10 Machine 
+     Use the [Link ](https://mycartablog.com/2019/07/09/from-zero-to-jupyterlab-pro-on-windows-10/)  
+     to install Jupyter-lab on your Windows 10 Machine
+  
+## JupyterLab via Ananaconda Environment in Windows 10 Machine 
+      Setting up JupyterLab with virtual environments on Windows 10. 
+      Use Ananaconda website for the Windows distribution and download the Python 3.8 installer
+  
+ 1. Step 1 Download Anaconda [Link](https://www.anaconda.com/products/distribution#Downloads)
+ 2. Step 2 Install Anaconda
+ 3. Step 3 Set Chrome as web browser for JupyterLab 
+ 4. Step 4  Install nb_condas_kernels
+ 5. Step 5  Edit the Conda configuration file to create environments with default packages
+ 6. Step 6  Create the desired environments 
+ 7. Step 7  Start JupyterLab  <br>
+
+ ## JupyterLab in  Ubuntu Machine
+    
+    Use pip inside virtual environment to install juypterlab
+
+               pip install  jupyterlab
+
+Use following command to run jupyterlab
+
+	       jupyter lab
+
+
+## JupyterLab with Latex in Ubuntu Machine
+      
+How to bring up Python 3 enabled jupyterlab-latex
+
+
+              sudo   pip3   install jupyterlab latex
+
+How to use Latex in JupyterLab?
+
+              tmp$jupyter   nbconvert  −−to   pdf   myfile.jpynb
+
+Above command generates myfile.pdf file.
 
 
 # TensorFlow via Docker
@@ -284,26 +328,5 @@ Good to run TF in docker by using default tag: latest
                  
 
 
-10. How to bring up Python 3 enabled  JupyterLab 
-  
-      Setting up JupyterLab with virtual environments on Windows 10
-  
-      Step 1 – Download Anaconda . [Link](https://www.anaconda.com/products/distribution#Downloads) 
-         Go to the Ananaconda website for the Windows distribution and download the Python 3.8 installer
-         
-      Step 2 – Install Anaconda  <br>
-      Step 3 – Set Chrome as web browser for JupyterLab  <br>
-      Step 4 – Install nb_condas_kernels  <br>
-      Step 5 – Edit the Conda configuration file to create environments with default packages  <br>
-      Step 6 – Create the desired environments  <br>
-      Step 7 – Start JupyterLab  <br>
-
-  Use the [Link   ](https://mycartablog.com/2019/07/09/from-zero-to-jupyterlab-pro-on-windows-10/)  to install Jupyter-lab on your Windows 10 Machine
-  
- 7. How to bring up Python 3 enabled jupyterlab-latex
- 
- How to bring up Python 3 enabled jupyterlab - latex ?
-
-              sudo   pip3   install jupyterlab latex
 
  
