@@ -42,7 +42,7 @@ Mentioned video provide detail elcture on installation of Jetson Nano Developer 
  
  ## 1.4 Powering Jetson Nano
  
- [click](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetbot_animation_500x282_2.gif )
+ [click](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetbot_animation_500x282_2.gif ) to view conenction details of Developer kit
  
 1. Unfold the paper stand and place inside the developer kit box
 2. Set the developer kit on top of the paper stand. 
@@ -55,6 +55,68 @@ Mentioned video provide detail elcture on installation of Jetson Nano Developer 
 9. Select system language, keyboard layout, and time zone 
 10. Create username, password, and computer name
 11. Log in
+
+## 1.5 JetPack Version 4.3
+
+Installing Jetpack <br>
+First, let’s install the NVIDIA JetPack. NVIDIA JetPack SDK is the most comprehensive solution for building AI applications. Use the JetPack installer to flash your Jetson Developer Kit with the latest OS image, install developer tools for both host PC and the Developer Kit, and install libraries and APIs, samples, and documentation needed to jumpstart your development environment. The most recent version at the time of writing this article is JetPack 4.1.1.
+
+For the most part, installation is easy. From an Ubuntu 16.04 or Ubuntu 18.04 PC host computer, you simply download JetPack from the NVIDIA JetPack web page(you’ll have to sign in with your developer account to download JetPack) and follow the instructions in the setup guide.
+
+      jk@amma:~/util$ git clone https://github.com/jetsonhacks/jetsonUtilities.git </br>
+      Cloning into 'jetsonUtilities'... 
+      remote: Enumerating objects: 84, done. 
+      remote: Total 84 (delta 0), reused 0 (delta 0), pack-reused 84
+      Unpacking objects: 100% (84/84), done. 
+    
+      jk@amma:~/util$ cd jetsonUtilities 
+      jk@amma:~/util/jetsonUtilities$ python jetsonInfo.py  
+      NVIDIA Jetson TX1
+      L4T 32.1.0 [ JetPack 4.2 ] 
+      Ubuntu 18.04.2 LTS 
+      Kernel Version: 4.9.140-tegra 
+      CUDA 10.0.166 
+      JetPack 4.3 is good for input/output but 4.2 is  detected as a version on board.
+
+
+## 1.6 I/O : GPIO , SPI,  I2C, I2S  etc 
+
+introduction of JetPack 4.3 ( ( L4T 32.3.1) brings with it a new tool, Jetson-IO. All of the Jetson developer kits include a 40-pin GPIO expansion header. Many of the pins can be used either as General Purpose I/O (GPIO) or Special Function I/O (SFIO). SFIO are functions such as I2C, I2S, SPI, and so on
+
+[click](https://www.jetsonhacks.com/2020/05/04/spi-on-jetson-using-jetson-io/ )  to information on Jetson Nano I/O
+
+[click](https://github.com/JetsonHacksNano/SPI-Playground ) to get information from JetsonHacksNano 
+
+        cat /etc/nv_tegra_release
+        dmesg |grep SPI
+
+        "32.4.3") JETSON_JETPACK="4.4" ;;
+      	"32.4.2") JETSON_JETPACK="4.4 DP" ;;
+    	  "32.3.1") JETSON_JETPACK="4.3" ;;
+    	  "32.2.3") JETSON_JETPACK="4.2.3" ;;
+    	  "32.2.1") JETSON_JETPACK="4.2.2" ;;
+      	"32.2.0" | "32.2") JETSON_JETPACK="4.2.1" ;;
+    	  "32.1.0" | "32.1") JETSON_JETPACK="4.2" ;;
+    	  "31.1.0" | "31.1") JETSON_JETPACK="4.1.1" ;;
+    	  "31.0.2") JETSON_JETPACK="4.1" ;;
+    	  "31.0.1") JETSON_JETPACK="4.0" ;;
+    	  "28.2.1") JETSON_JETPACK="3.3 | 3.2.1" ;;
+    	  "28.2.0" | "28.2") JETSON_JETPACK="3.2" ;;
+    	  "28.1.0" | "28.1") JETSON_JETPACK="3.1" ;;
+    	  "27.1.0" | "27.1") JETSON_JETPACK="3.0" ;;
+    	  "24.2.1") JETSON_JETPACK="3.0 | 2.3.1" ;;
+    	  "24.2.0" | "24.2") JETSON_JETPACK="2.3" ;;
+    	  "24.1.0" | "24.1") JETSON_JETPACK="2.2.1 | 2.2" ;;
+    	  "23.2.0" | "23.2") JETSON_JETPACK="2.1" ;;
+    	  "23.1.0" | "23.1") JETSON_JETPACK="2.0" ;;
+    	  "21.5.0" | "21.5") JETSON_JETPACK="2.3.1 | 2.3" ;;
+    	  "21.4.0" | "21.4") JETSON_JETPACK="2.2 | 2.1 | 2.0 | 1.2 DP" ;;
+    	  "21.3.0" | "21.3") JETSON_JETPACK="1.1 DP" ;;
+    	  "21.2.0" | "21.2") JETSON_JETPACK="1.0 DP" ;;
+    	  *) JETSON_JETPACK="UNKNOWN" ;;
+
+        JETSON_JETPACK="4.4" ;;  and above…
+
 
 
 
