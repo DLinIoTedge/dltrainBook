@@ -1,6 +1,12 @@
 
 # 1. Train CNN
 
+
+ 
+ ![image](https://user-images.githubusercontent.com/58679469/233830064-68e4ec90-9c44-4c73-92bc-09f232e49ef8.png)
+
+ 
+ 
 ## 1.1 Data Set with Label
 Dataset of pairs of (x,y) is given and fixed.  Where x is input and y is score at output ( or label )
 
@@ -22,10 +28,7 @@ Dataset of pairs of (x,y) is given and fixed.  Where x is input and y is score a
  ### 1.5.1  Analytic Gradient
  
 
- 
- ![image](https://user-images.githubusercontent.com/58679469/233830064-68e4ec90-9c44-4c73-92bc-09f232e49ef8.png)
 
- 
  
 
 
