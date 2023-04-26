@@ -1,5 +1,16 @@
 
 
+
+
+# Fashion MNIST Data Set
+
+		https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz
+		https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-images-idx3-ubyte.gz
+		https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-labels-idx1-ubyte.gz 
+		https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-images-idx3-ubyte.gz
+
+	
+
 # fashion mnist dataset from URL base
   
 		      fashion_mnist = keras.datasets.fashion_mnist 
