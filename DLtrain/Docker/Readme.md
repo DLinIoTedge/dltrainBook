@@ -6,7 +6,7 @@ Although Docker has been a very popular technology for some time, until recently
 
 
 
-# Create Docker Image of DL Networks
+# Create Docker Image of DLtrain
 
 1. How to create a docker file ?
 2. How to build docker image ?
