@@ -1,4 +1,11 @@
 
+# USe tcpdup to understand Flow
+
+	  sudo tcpdump
+	  [sudo] password for abcdl:
+	  tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+	  listening on enp2s0, link-type EN10MB (Ethernet), capture size 262144 bytes	
+	
 # use tcpdump as filter
 
 
