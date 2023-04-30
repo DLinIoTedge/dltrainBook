@@ -1,5 +1,18 @@
 
 
+
+# Use tcpdump to read  wlp3s0  and write in to pcap file
+
+		sudo tcpdump -w jkmachine.pcap -c 4 -i wlp3s0
+		tcpdump: listening on wlp3s0, link-type EN10MB (Ethernet), capture size 262144 bytes
+		4 packets captured
+		28 packets received by filter
+		0 packets dropped by kernel
+
+		ls -l 
+		4 -rw-r--r-- 1 root	root    	2314 Jan 20 14:47 jkmachine.pcap	
+
+
 # Use tcpdump to read jk1.pcap file.
 
 write into file 
