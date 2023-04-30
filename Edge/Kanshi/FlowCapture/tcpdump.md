@@ -14,4 +14,16 @@ write into file
 	      15:03:20.106087 IP jk.55694 > 113.43.149.34.bc.googleusercontent.com.https: Flags [P.], seq 1:25, ack 1, win 501, options [nop,nop,TS val 603575679 ecr 2822279953], length 24
       	15:03:20.107332 IP jk.55694 > 113.43.149.34.bc.googleusercontent.com.https: Flags [F.], seq 25, ack 1, win 501, options [nop,nop,TS val 603575682 ecr 2822279953], length 0
 	      15:03:20.113917 IP 113.43.149.34.bc.googleusercontent.com.https > jk.55694: Flags [R], seq 4259849445, win 0, length 0
-	      15:03:20.115940 IP 113.43.149.34.bc.googleusercontent.com.https > jk.55694: Flags [R], seq 4259849445, win 0, length 0	
+	      15:03:20.115940 IP 113.43.149.34.bc.googleusercontent.com.https > jk.55694: Flags [R], seq 4259849445, win 0, length 0
+	      
+	      
+	      
+	      
+	      
+		sudo tcpdump -r jkmachine.pcap
+			reading from file jkmachine.pcap, link-type EN10MB (Ethernet)
+			14:47:54.496965 ARP, Request who-has 192.168.1.7 tell _gateway, length 28
+			14:47:55.009322 IP jk.35166 > maa05s28-in-f14.1e100.net.443: UDP, length 1357
+			14:47:55.011909 IP jk.35166 > maa05s28-in-f14.1e100.net.443: UDP, length 660
+			14:47:55.015166 IP jk.35166 > maa05s28-in-f14.1e100.net.443: UDP, length 41
+
