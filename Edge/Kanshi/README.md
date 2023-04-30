@@ -464,13 +464,13 @@ To simulate a network configuration change
 
 Following links 2a, ab, ac and 2e provides methods and process to train a given Deep learning Model by using Data set
 
-2a:  Train in Colab   [Link to Google](https://www.jkuse.com/home/jkevents/baranovichi/train-dl-model/colab)
+2a:  Train in Colab   [Link to Google](https://github.com/DLinIoTedge/dltrainBook/tree/jk/Tool-Set/UseColab)
 
-2b:  Train in  Ubuntu 18.04  [Link to Google](https://www.jkuse.com/home/jkevents/baranovichi/train-dl-model/tf-on-prime-cpu)
+2b:  Train in  Ubuntu 18.04  [Link to Google](https://www.jkuse.com/dltrain/train-dl-networks/dltrain-for-dl)
 
- 2c:  Train in  Power 9 CPU [Link to Google](https://www.jkuse.com/home/jkevents/baranovichi/train-dl-model/build-dltrain-in-power-9)
+ 2c:  Train in  Power 9 CPU [Link to Google](https://github.com/DLinIoTedge/dltrainBook/tree/jk/DLtrain/Power9)
  
- 2e:  Train in  Jetson Nano GPU [Link to Google](https://www.jkuse.com/home/jkevents/baranovichi/train-dl-model/build-dltrain-for-jetson-nano)
+ 2e:  Train in  Jetson Nano GPU [Link to Google](https://github.com/DLinIoTedge/dltrainBook/tree/jk/DLtrain/Jetson-Nano)
  
 
 
