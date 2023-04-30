@@ -1,4 +1,43 @@
 
+# use tcpdump as filter
+
+
+		sudo tcpdump -c 4 -i wlp3s0
+		[sudo] password for abcd:
+		tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+		listening on wlp3s0, link-type EN10MB (Ethernet), capture size 262144 bytes
+		14:35:45.896296 IP maa05s10-in-f10.1e100.net.443 > jk.56704: UDP, length 120
+		14:35:45.896347 IP maa05s10-in-f10.1e100.net.443 > jk.56704: UDP, length 120
+		14:35:45.896924 IP jk.56704 > maa05s10-in-f10.1e100.net.443: UDP, length 34
+		14:35:45.898248 IP jk.59417 > aes-static-100.47.22.125.airtel.in.domain: 39044+ PTR? 11.1.168.192.in-addr.arpa. (43)
+		4 packets captured
+		24 packets received by filter
+		14 packets dropped by kernel
+	
+ -i = Interface <br>
+-w = Write to a file <br>
+-r = Read a file <br>
+-c = count for packet capture <br>
+src= source <br>
+dst= destination <br>
+port = application port number for packet capture <br>
+	
+	
+		sudo tcpdump -A -c 4 -i wlp3s0
+		tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+		listening on wlp3s0, link-type EN10MB (Ethernet), capture size 262144 bytes
+		14:40:37.156937 ARP, Request who-has _gateway tell jk, length 28
+		...........H................
+		14:40:37.159494 IP jk.50658 > aes-static-100.47.22.125.airtel.in.domain: 32931+ PTR? 1.1.168.192.in-addr.arpa. (42)
+		E..F..@.@.......}./d...5.2nq.............1.1.168.192.in-addr.arpa.....
+		14:40:37.169633 ARP, Reply _gateway is-at 78:32:1b:41:df:fb (oui Unknown), length 28
+		........x2.A.........H......
+		14:40:37.172348 IP aes-static-100.47.22.125.airtel.in.domain > jk.50658: 32931 NXDomain 0/1/0 (119)
+		E...i.@.....}./d.....5....dN.............1.1.168.192.in-addr.arpa................A.prisoner.iana.org.
+		hostmaster.root-servers.D.....    :....<.    :..    :.
+		4 packets captured
+		6 packets received by filter
+		0 packets dropped by kernel	
 
 # use tcpdump as a filter
 
