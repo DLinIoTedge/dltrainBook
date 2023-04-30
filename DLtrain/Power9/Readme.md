@@ -1,15 +1,7 @@
-# Deep Learning Accelerator
-IBM Watson Machine Learning Accelerator for Enterprise AI: Watson Machine Learning Accelerator, a new piece of Watson Machine Learning, makes deep learning and machine learning more accessible to your staff, and brings the benefits of AI into your business. It combines popular open source deep learning frameworks, efficient AI development tools, and accelerated IBM® Power Systems™ servers. 
-
-Customer can deploy a fully optimized and supported AI platform that delivers blazing performance, proven dependability and resilience. Watson Machine Learning Accelerator is a complete environment for data science as a service, enabling your organization to bring AI applications into production. Enables rapid deployment : Includes most popular deep learning frameworks, including all required dependencies and files, precompiled and ready to deploy. The entire AI suite has been validated and optimized to run reliably on accelerated Power servers. Incorporates the most popular deep learning frameworks. Watson Machine Learning Accelerator gives access to Power-optimized versions of all of the most popular deep learning frameworks currently available, including TensorFlow, Caffe, and PyTorch. 
-
-Watson Machine Learning Accelerator runs on IBM Power accelerated servers HPC, a platform that runs not only your deep learning but also a wide variety of HPC and High Performance Data Analytics workloads. Leverages unique capabilities of accelerated Power servers, delivering performance unattainable on commodity servers, Provides for hyper-parameter search and optimization, and elastic training to allocate the resources needed to optimize performance; and Distributed deep Learning provides for rapid insights at massive scale. Large model support facilitates the use of system memory with little to no performance impact, yielding significantly larger and more accurate deep learning models.
-
-
 
 # TalosTM II  
 Above machine is having IBM Power 9 CPU  and  had  Ubuntu 18.04 OS. <br>
-alosTM II   is used to build DLtrain and also train Deep Learning Networks by using DLtrain.
+TalosTM II   is used to build DLtrain and also train Deep Learning Networks by using DLtrain.
 
 # gcc in Power 9 CPU
 
