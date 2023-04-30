@@ -39,7 +39,7 @@ Use all files of  3 in MNSIT data set for inference. Where <filename> is having 
             DLtrain jjnet infer <filename>   
  
 
-    ./bin/DLtrain jjnet infer img.raw
+  
     cd  C++NNFast
     rm -rf build
     mkdir build
