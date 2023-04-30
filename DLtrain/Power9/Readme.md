@@ -1,5 +1,5 @@
 
-# TalosTM II  
+# TalosTM II , IBM Power 9 Servers
 Above machine is having IBM Power 9 CPU  and  had  Ubuntu 18.04 OS. <br>
 TalosTM II   is used to build DLtrain and also train Deep Learning Networks by using DLtrain.
 
