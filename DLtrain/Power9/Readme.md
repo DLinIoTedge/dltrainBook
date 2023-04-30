@@ -51,10 +51,24 @@ Use all files of  3 in MNSIT data set for inference. Where <filename> is having 
 conf file is located in in  Dltrain root folder <br>
 edit conf file <br>
 eonf file is having Deep Learning Network model parameters <br>
+    
+DLtrain is used in the following to  train a given NN model in a conf file and also by using MNIST data set.
+
+            bin/DLtrain  jjnet train  o   // overwrite existing network' o not zero
+           bin/DLtrain jjnet train  //No overwrite existing network'
+
+Inferencing is done by using  the following steps. 
+
+          bin/DLtrain jjnet infer   // for data set for inference
+          bin/DLtrain  jjnet infer 3  // only all 3 from data set
+
+          bin/DLtrain  jjnet infer filename  // only raw ...768 bytes... binary value
+          bin/DLtrain  jjnet infer img.raw
 
 
-    ./bin/DLtrain conf train
-    java -jar  toPhone/SndModel.jar
+
+         ./bin/DLtrain conf train
+          java -jar  toPhone/SndModel.jar
 
 Following is used  to update Deep learning network Android Phone.
     
