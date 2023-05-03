@@ -83,4 +83,4 @@ In the above example the folder Images would contain images-ubyte and labels-uby
 Trained DL Network is saved in NewNetwork.dat
 
 
- 
+ # 3. Save Model in PyTorch AI Platform
