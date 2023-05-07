@@ -6,9 +6,11 @@
 
 Board is using
 
-. Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
-. microSD card
-. Power adapter 12V @ 2A AC/DC converter compatible with the 96Boards specification
+1. Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
+2. microSD card
+3. Power adapter 12V @ 2A AC/DC converter compatible with the 96Boards specification
+
+
 
 
 
