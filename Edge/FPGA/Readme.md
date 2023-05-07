@@ -12,6 +12,43 @@ Board is using
 
 
 
+ ## 1.2 Install SDx
+ 
+   //SDx installation  (  Ubuntu 18.04 on x86 machine )
+   
+         ./xsetup
+         
+   //Choose devices  SDSoc = Zynq 7000  ultrascale+ + MPsoc 30 day trial
+
+  // Install  Board Defined Files 
+
+         unzip bdf-master.zip
+         $ cp -a ./bdf-master/.
+         /tools/Xilinx/Vivado/2018.3/data/boards/board_files
+
+   //Avnet Board Definition Files (BDF) is obtained from URL [link](https://github.com/Avnet/bdf) 
+   
+       
+
+// Unzip Avnet Technical Training Notes 
+/U96AI_student_20191028/U96AI/2018_3/Lab_instructions/
+
+U96AI_2018_3_lab_0_v2.pdf
+U96AI_2018_3_lab_1_v2.pdf
+
+U96AI_2018_3_lab_6_v2.pdf
+
+// Install DNKK .
+
+  // Installing DNNDK on the native linux machine
+  // how to install the Deep Neural Network Development Kit (DNNDK v3.0) 
+
+  // From the following URL, get gz file
+
+\end{lstlisting}
+
+	FPGA:\quad
+\qrcode[height=1in]{https://www.xilinx.com/products/design-tools/ai-inference/ai-developer-hub.html#edgeXlnx_dnndk_v3.0_190624.tar.gz} 
 
 
  
