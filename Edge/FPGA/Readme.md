@@ -1,6 +1,6 @@
 
 
-#  1. Dreploy in Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
+#  1. Deploy in Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
 
 ## 1.1 Getting Started with Ultra96 V2
 
