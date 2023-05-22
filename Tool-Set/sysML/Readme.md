@@ -29,7 +29,7 @@
 
 [tutorials]( https://gaphor.org/tutorials)
 
-[Get Start }(https://docs.gaphor.org/en/latest/getting_started.html )
+[Get Start ](https://docs.gaphor.org/en/latest/getting_started.html )
        
 
        Model Browser
