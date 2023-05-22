@@ -25,10 +25,12 @@
 
       pip install jupyterlab
 
-      https://gaphor.org/tutorials
+     
 
-      // Get Start
-      https://docs.gaphor.org/en/latest/getting_started.html  
+[tutorials]( https://gaphor.org/tutorials)
+
+[Get Start }(https://docs.gaphor.org/en/latest/getting_started.html )
+       
 
        Model Browser
        Diagram Element Toolbox
@@ -67,8 +69,9 @@
       
 Ref
 
-https://packaging.python.org/en/latest/tutorials/installing-packages/#creating-virtual-environments
-  
+[1 ]   env [link](https://packaging.python.org/en/latest/tutorials/installing-packages/#creating-virtual-environments
+  )
+
    ##  Using Gaphor
   
   
