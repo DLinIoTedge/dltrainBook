@@ -500,7 +500,7 @@ Following links 2a, ab, ac and 2e provides methods and process to train a given 
 <p> Training platform is different from deployment platform. Same provides obstruction to carry trained network in to limited capability deployment edge. Mostly there is a need to cut down Model size or optimise weights of each node in Model. This mentioned optimisation of Model size of node weight may not be there if deployment happens in cloud side of infrastructure.   </p>
  </div>
  
-[Link to Google](https://www.jkuse.com/home/jkevents/baranovichi/inference/flask-micro-service)
+[Link to Google](https://www.jkuse.com/dltrain/deploy-dl-networks/cloud-native-service/flask-micro-service)
 
 
 # 9. Kanshi Assistant Design
