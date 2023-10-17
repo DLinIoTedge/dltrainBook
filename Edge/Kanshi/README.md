@@ -281,6 +281,10 @@ QRadar analyzes your flow data for applications, flow direction, and superflows.
 # 4. Mathematical Model
 
  [ Introduction](https://www.jkuse.com/dltrain/mathematical-theory) 
+
+Build a model for Normal state. For example use data of TCP/IP flow  in Enterprise  Network   to model Normal state 
+Measured state is Captured Flow 
+
  
 ## 4.1 Restricted Boltzmann Machines
 
@@ -290,24 +294,11 @@ QRadar analyzes your flow data for applications, flow direction, and superflows.
 
 
 
-Boltzmann machine:  Each undirected edge represents dependency. In this example there are 3 hidden units and 4 visible units. 
-
-This is a restricted Boltzmann machine.
-
-Restricted Boltzmann Machines are probabilistic. As opposed to assigning discrete values the model assigns probabilities. At each point in time the RBM is in a certain state. The state refers to the values of neurons in the visible and hidden layers v and h.
-
-
 
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/58679469/150721809-68974f08-992c-4a26-ae39-67401350a75a.png">
 </p>
 
-
-<div align="justify"> 
-<p> This is the point where Restricted Boltzmann Machines meets Physics for the second time. The joint distribution is known in Physics as the Boltzmann Distribution which gives the probability that a particle can be observed in the state with the energy E. As in Physics we assign a probability to observe a state of v and h, that depends on the overall energy of the model. Unfortunately it is very difficult to calculate the joint probability due to the huge number of possible combination of v and h in the partition function Z. Much easier is the calculation of the conditional probabilities of state h given the state v and conditional probabilities of state v given the state h... .....and so on. the essential is here, energy-based probability  </p>
-<p> 
-Reconstruction is different from regression or classification in that it estimates the probability distribution of the original input instead of associating a continuous/discrete value to an input example.  </p>
- </div>
 
 
 
