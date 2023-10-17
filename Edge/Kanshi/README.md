@@ -95,6 +95,53 @@ The Cloud Security Alliance (CSA) Cloud Controls Matrix (CCM) is discussed in th
 <p>   MITRE ATT&CK® : 
 The MITRE ATT&CK® knowledge base is explored deeper in the offensive and defensive pieces of this program. It contains adversary tactics and techniques that are utilized as the foundational development of specific threat models and methodologies.
  </div>
+
+ 
+
+   
+## 1.1 Trend in Industry
+ 
+ <p> MIT Technology Review  01.24.22.  [Ref 7]  </p>
+<blockquote >
+ <p><cite> Escalating actions: Russia has sent more than 100,000 soldiers to the nation's border with Ukraine. While no physical invasion has taken place yet, cyber operations are already underway. Earlier this month, hackers defaced dozens of government websites in Ukraine, a technically simple but attention-grabbing act that generated global headlines. More quietly, they also placed destructive malware inside Ukrainian government agencies. It’s not clear yet who is responsible, but Russia is the leading suspect    </p>
+</blockquote>  
+
+
+ <div align="justify"> 
+ <p> 
+ Throughout 2021, we observed low  sophistication threat actors learn that they  could create big impacts in the operational  technology (OT) space—perhaps even bigger than they intended. Actors will continue to  explore the OT space in 2022 and increasingly use ransomware in their attacks. This targeting  will occur because of the need to keep OT environments fully operational, especially when the systems are part of critical infrastructure. Attacks against critical OT environments can cause serious disruption and even threaten human lives, thereby increasing the pressure for organizations to pay a ransom. To compound the issue, many of these OT devices are not built with security at the forefront of the design, and we’re currently seeing a massive uptick in the number of vulnerabilities being identified in OT environments
+
+   </p>
+    </div>
+    
+ <details>
+           <summary> Post Graduate (from MIT)  Certificate in Cybersecurity </summary> 
+<p>  Introduction to Cybersecurity Risk Management </p> 
+<p>  Secure Systems Administration </p> 
+<p>  Cybersecurity Foundation Concepts </p> 
+<p>  Secure Network Administration </p> 
+<p>  Federal Government Role: Law, Operations, and Standards </p> 
+<p>  Cloud Security </p> 
+<p>  Threats and Vulnerabilities </p> 
+<p>  Preparing for a Job in Cybersecurity Operations </p> 
+<p>  Cybersecurity for Critical Urban Infrastructure </p> 
+<p>  Introduction to Offensive Cybersecurity </p> 
+<p>  Identity and Access Management (IAM) Concepts </p> 
+<p>  Penetration Testing Part 1 </p> 
+<p>  IAM Layers and Technology </p> 
+<p>  Penetration Testing Part 2 </p> 
+<p> Preparing for a Job in Cybersecurity Risk Management </p> 
+<p>  Social Engineering </p> 
+<p>  Introduction to Defensive Cybersecurity </p> 
+<p>  Artificial Intelligence </p> 
+<p> Cryptography </p> 
+<p> Policy and Privacy, Regulation, and Data Governance </p> 
+<p> Security Operations Center (SOC) </p> 
+<p>  OT and IoT Risk </p> 
+<p> Incident Response (IR) </p> 
+<p>  Preparing for a Job in Offensive Cybersecurity Operations </p> 
+   </details>
+   
     
 # 2. Problem Definition 
 
@@ -379,8 +426,7 @@ Following links 2a, ab, ac and 2e provides methods and process to train a given 
 
 IBM Watson Assistant helps user to  overcome the steep learning curve and frustrating jargon other virtual agent products use. It’s now easier than ever to design AI chatbots without complex decision trees or any kind of coding required. Watson Assistant now allows you, the one closest to the customer, to build better virtual agents your customers will actually want to use.
 
-
-  Wake up Kanshi is using Text or voice or both. Design Wake Word Listener and Design Wake Word Model are possible method to wake up Kanshi assistant In the following voice based method is given. 
+Wake up Kanshi is using Text or voice or both. Design Wake Word Listener and Design Wake Word Model are possible method to wake up Kanshi assistant In the following voice based method is given. 
   
   Use Voice to Wake up Kanshi
    - Use Speech Recognition  to get Text
@@ -389,9 +435,6 @@ IBM Watson Assistant helps user to  overcome the steep learning curve and frustr
    - use Speech Synthesis to displaay message to user.
   
   Conversation  ability  of Kanshi requires to have , Indents, Entities, Dialog and search skill
-
-
-
 
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/58679469/151119111-c454f20c-0d3b-4c66-b63b-e0559a33a176.png">
@@ -411,26 +454,11 @@ IBM Watson Assistant helps user to  overcome the steep learning curve and frustr
    <li> Security : Watson Assistant provides large, complex and data-sensitive organizations with the security and scalability capabilities you need to safeguard against misuse of customer data and support your virtual agent during peak times. </li>
 </ul>
 
-
-
-## Watson Assistant: Intelligent virtual agent
+## 9.1 Watson Assistant: Intelligent virtual agent
 
  IBM [Watson™ Assistant](https://cloud.ibm.com/docs/assistant) and walk you through the process of creating your assistant.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 10. Kanshi Assistant Deployment
+## 9.2 Kanshi Assistant Deployment
 
 This topic reviews the basic steps and concepts that are involved to make your assistant available to customers. For more information about the different steps, see the following topics:
 
@@ -450,7 +478,7 @@ To deploy an assistant to customers, a channel integration must be added. By def
  
 
 
-## Voice-enabled Android chatbot
+## 9.3 Voice-enabled Android chatbot
 
 Tutorial in [Watson](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-android-watson-chatbot )  provide the process of defining intents and entities and building a dialog flow for your chatbot to respond to customer queries. You will learn how to enable Speech to Text and Text to Speech services for easy interaction with the Android app.
 
@@ -459,7 +487,7 @@ Tutorial in [Watson](https://cloud.ibm.com/docs/solution-tutorials?topic=solutio
 
 
 
-# 11. Reference 
+# 10. Reference 
 
 1. https://cloud.ibm.com/registration?target=/developer/watson/launch-tool/conversation&hideTours=true&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_Conversation-_-Watson_Developer_Website&cm_mmca1=000027BD 
 2. https://www.ibm.com/products/watson-assistant/artificial-intelligence  AI chatbot that’s easy to use, Natural language AI that understands human conversation and improves the customer experience
@@ -474,50 +502,6 @@ Tutorial in [Watson](https://cloud.ibm.com/docs/solution-tutorials?topic=solutio
 
 
 
-
-   
-# 12. Trend in Industry
- 
- <p> MIT Technology Review  01.24.22.  [Ref 7]  </p>
-<blockquote >
- <p><cite> Escalating actions: Russia has sent more than 100,000 soldiers to the nation's border with Ukraine. While no physical invasion has taken place yet, cyber operations are already underway. Earlier this month, hackers defaced dozens of government websites in Ukraine, a technically simple but attention-grabbing act that generated global headlines. More quietly, they also placed destructive malware inside Ukrainian government agencies. It’s not clear yet who is responsible, but Russia is the leading suspect    </p>
-</blockquote>  
-
-
- <div align="justify"> 
- <p> 
- Throughout 2021, we observed low  sophistication threat actors learn that they  could create big impacts in the operational  technology (OT) space—perhaps even bigger than they intended. Actors will continue to  explore the OT space in 2022 and increasingly use ransomware in their attacks. This targeting  will occur because of the need to keep OT environments fully operational, especially when the systems are part of critical infrastructure. Attacks against critical OT environments can cause serious disruption and even threaten human lives, thereby increasing the pressure for organizations to pay a ransom. To compound the issue, many of these OT devices are not built with security at the forefront of the design, and we’re currently seeing a massive uptick in the number of vulnerabilities being identified in OT environments
-
-   </p>
-    </div>
-    
- <details>
-           <summary> Post Graduate (from MIT)  Certificate in Cybersecurity </summary> 
-<p>  Introduction to Cybersecurity Risk Management </p> 
-<p>  Secure Systems Administration </p> 
-<p>  Cybersecurity Foundation Concepts </p> 
-<p>  Secure Network Administration </p> 
-<p>  Federal Government Role: Law, Operations, and Standards </p> 
-<p>  Cloud Security </p> 
-<p>  Threats and Vulnerabilities </p> 
-<p>  Preparing for a Job in Cybersecurity Operations </p> 
-<p>  Cybersecurity for Critical Urban Infrastructure </p> 
-<p>  Introduction to Offensive Cybersecurity </p> 
-<p>  Identity and Access Management (IAM) Concepts </p> 
-<p>  Penetration Testing Part 1 </p> 
-<p>  IAM Layers and Technology </p> 
-<p>  Penetration Testing Part 2 </p> 
-<p> Preparing for a Job in Cybersecurity Risk Management </p> 
-<p>  Social Engineering </p> 
-<p>  Introduction to Defensive Cybersecurity </p> 
-<p>  Artificial Intelligence </p> 
-<p> Cryptography </p> 
-<p> Policy and Privacy, Regulation, and Data Governance </p> 
-<p> Security Operations Center (SOC) </p> 
-<p>  OT and IoT Risk </p> 
-<p> Incident Response (IR) </p> 
-<p>  Preparing for a Job in Offensive Cybersecurity Operations </p> 
-   </details>
 
   
 ![formula](https://render.githubusercontent.com/render/math?math=e^{i\pi}=-1)
