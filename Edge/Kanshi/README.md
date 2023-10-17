@@ -378,9 +378,6 @@ Following links 2a, ab, ac and 2e provides methods and process to train a given 
  
  
 
-![NetworkSecurityLab(4)](https://user-images.githubusercontent.com/58679469/150686584-18f43ef8-22f9-4664-8c13-a7345a1b0000.jpg)
-
-
 # 8. Inference by using  Deep Learning Model
 
 <div align="justify"> 
