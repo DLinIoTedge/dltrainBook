@@ -380,12 +380,7 @@ Following links 2a, ab, ac and 2e provides methods and process to train a given 
 IBM Watson Assistant helps user to  overcome the steep learning curve and frustrating jargon other virtual agent products use. It’s now easier than ever to design AI chatbots without complex decision trees or any kind of coding required. Watson Assistant now allows you, the one closest to the customer, to build better virtual agents your customers will actually want to use.
 
 
- Kanshi Assistant Design include
-
-  Wake up Kanshi
-    Use Text to Wake up Kanshi
-      Design Wake Word Listener
-      Design Wake Word Model  
+  Wake up Kanshi is using Text or voice or both. Design Wake Word Listener and Design Wake Word Model are possible method to wake up Kanshi assistant In the following voice based method is given. 
   
   Use Voice to Wake up Kanshi
    - Use Speech Recognition  to get Text
