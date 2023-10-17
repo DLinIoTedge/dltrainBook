@@ -64,10 +64,6 @@ In Boltzmann machine, each un-directed edge represents dependency. Above example
 <p>  Autonomous monitoring systems require “capturing IP packets “ in neal time and infer safety level of enterprise network,  Digital Assistant with AI provides a method to monitor a given enterprise IP network.   </p>
  </div>
 
- 
-
-![vv4](https://user-images.githubusercontent.com/58679469/150686392-ab116404-3be5-4d41-b347-e30a8ebe09d3.png)
-
 <div align="justify"> 
 <p> Above mentioned Assistant is designed to have conversations with Human user.  To have effective and efficient conversion, a design is expected to include “ Intents”  that are very useful for Assistant to narrow down questions and synthesise answers in a given time frame.  “Entities “ expected to helpAssistant to understand conversion from Human at other end.  For example, Port can be intent and entities can be Port is blocked, Port is opened etc. Essentially, there can be manu entities have association with one Intent.   Dialog is useful part for Human being to have conversation with a given Assistant and find out information from Network Monitoring Task.  </p>
  </div>
@@ -109,11 +105,6 @@ The MITRE ATT&CK® knowledge base is explored deeper in the offensive and defens
 <p>  Packet sniffing provides IP packets for analysis.  Often, mentioned analysis is expected to happen in near real time.   IBM Watson Assistant provides a tool set to design “கண்காணிப்பு Monitoring  Assistant '', in a short period of time and deploy it in cloud or in on-premise infrastructure.  </p>
  </div>
  
-
-
-
-![v5](https://user-images.githubusercontent.com/58679469/150686405-8ccc22ac-616a-49d8-95d4-24df45d4ec12.png)
-
 
 <div align="justify"> 
 <p> Kanshi Assistant is required to perform  deep learning model based inference on one side and continue to have a meaningful conversation with Human being. IB< Watson Assistant provides infrastructure for design and development of Kanshi Assistant.  Moreover, experts in network security can handle the above mentioned design and development of Kanshi Assistant.  In fact, during development, No limitations, no complications, no code required to build Kanshi Assistant.  </p>
