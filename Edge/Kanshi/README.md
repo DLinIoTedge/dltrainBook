@@ -373,41 +373,29 @@ Following links 2a, ab, ac and 2e provides methods and process to train a given 
 [Deployment](https://www.jkuse.com/dltrain/deploy-dl-networks/cloud-native-service/flask-micro-service)
 
 
-# 9. Kanshi Assistant Design
 
-## 9.1 Wake up Kanshi
-  ### 9.1.1 Use Text to Wake up Kanshi
+
+# 9. Kanshi Assistant Development 
+
+IBM Watson Assistant helps user to  overcome the steep learning curve and frustrating jargon other virtual agent products use. It’s now easier than ever to design AI chatbots without complex decision trees or any kind of coding required. Watson Assistant now allows you, the one closest to the customer, to build better virtual agents your customers will actually want to use.
+
+
+ Kanshi Assistant Design include
+
+  Wake up Kanshi
+    Use Text to Wake up Kanshi
+      Design Wake Word Listener
+      Design Wake Word Model  
   
-   - Design Wake Word Listener
-   - Design Wake Word Model  
-  
-  ### 9.1.2 Use Voice to Wake up Kanshi
-  
-   
+  Use Voice to Wake up Kanshi
    - Use Speech Recognition  to get Text
    - Use Tect handle Dialog Flow
    - Use NLP for Dialog Flow
    - use Speech Synthesis to displaay message to user.
-   
-## 9.2   Dialog Skill for Kanshi
+  
+  Conversation  ability  of Kanshi requires to have , Indents, Entities, Dialog and search skill
 
 
- ### 9.2.1 Indents design
- 
- ### 9.2.2 Entities  design
- 
-  ### 9.2.2 Dialog   design
-
-
-
-
-
-
-## 9.3  Search  Skill for Kanshi
-
-# 10. Kanshi Assistant Development 
-
-IBM Watson Assistant helps user to  overcome the steep learning curve and frustrating jargon other virtual agent products use. It’s now easier than ever to design AI chatbots without complex decision trees or any kind of coding required. Watson Assistant now allows you, the one closest to the customer, to build better virtual agents your customers will actually want to use.
 
 
 <p align="center">
@@ -447,7 +435,7 @@ https://cloud.ibm.com/docs/assistant
 
 
 
-# 11. Kanshi Assistant Deployment
+# 10. Kanshi Assistant Deployment
 
 This topic reviews the basic steps and concepts that are involved to make your assistant available to customers. For more information about the different steps, see the following topics:
 
@@ -476,7 +464,7 @@ https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-android-w
 
 
 
-# 12. Reference 
+# 11. Reference 
 
 1. https://cloud.ibm.com/registration?target=/developer/watson/launch-tool/conversation&hideTours=true&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_Conversation-_-Watson_Developer_Website&cm_mmca1=000027BD 
 2. https://www.ibm.com/products/watson-assistant/artificial-intelligence  AI chatbot that’s easy to use, Natural language AI that understands human conversation and improves the customer experience
@@ -493,7 +481,7 @@ https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-android-w
 
 
    
-# 13. Trend in Industry
+# 12. Trend in Industry
  
  <p> MIT Technology Review  01.24.22.  [Ref 7]  </p>
 <blockquote >
