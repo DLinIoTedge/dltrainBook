@@ -449,11 +449,11 @@ IBM Watson Assistant helps yuser to  overcome the steep learning curve and frust
 
 ## Watson Assistant: Intelligent virtual agent
 
-In this short tutorial, we introduce IBM Watson™ Assistant and walk you through the process of creating your first assistant.
+ IBM Watson™ Assistant and walk you through the process of creating your assistant.
 
 https://cloud.ibm.com/docs/assistant
 
-![image](https://user-images.githubusercontent.com/58679469/151116967-0e9941e4-cb57-446a-b001-6311097e3d9a.png)
+
 
 
 
