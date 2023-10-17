@@ -96,9 +96,7 @@ The Cloud Security Alliance (CSA) Cloud Controls Matrix (CCM) is discussed in th
 <p>   MITRE ATT&CK® : 
 The MITRE ATT&CK® knowledge base is explored deeper in the offensive and defensive pieces of this program. It contains adversary tactics and techniques that are utilized as the foundational development of specific threat models and methodologies.
  </div>
-  
-  ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Assessment (Quiz of 15 MCQ)
-  
+    
 # 2. Problem Definition 
 
 <div align="justify"> 
@@ -488,9 +486,9 @@ https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-android-w
 
 1. https://cloud.ibm.com/registration?target=/developer/watson/launch-tool/conversation&hideTours=true&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_Conversation-_-Watson_Developer_Website&cm_mmca1=000027BD 
 2. https://www.ibm.com/products/watson-assistant/artificial-intelligence  AI chatbot that’s easy to use, Natural language AI that understands human conversation and improves the customer experience
-3.  https://towardsdatascience.com/how-to-build-a-custom-dataset-for-tensorflow-1fe3967544d8 Hanling PCAP file stream
+3.  https://towardsdatascience.com/how-to-build-a-custom-dataset-for-tensorflow-1fe3967544d8 Handling PCAP file stream
 4.  https://jupyter4edu.github.io/jupyter-edu-book/getting-going.html github classroom 
-5.  https://www.jkuse.com/home/physics-in-dl/boltzmann-machine  RBM from ww.jkuse.com
+5.  https://www.jkuse.com/dltrain/mathematical-theory/restricted-boltzmann-machine  RBM 
 6.  https://www.jkuse.com/home/jkevents/baranovichi/train-dl-model/colab IoT and Security 
 7.  https://www.technologyreview.com/2022/01/21/1043980/how-a-russian-cyberwar-in-ukraine-could-ripple-out-globally/?truid=&utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=01-24-2022&mc_cid=df41641f1f&mc_eid=f3a31df9fd  MIT news
 8.  https://github.com/TLmaK0/gravizo  gravizo
