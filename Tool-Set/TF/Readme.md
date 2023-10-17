@@ -328,9 +328,9 @@ Good to run TF in docker by using default tag: latest
                  
 # Reference
 
-[1] https://jupyter4edu.github.io/jupyter-edu-book/getting-going.html github classroom
-[2] https://gist.github.com/VictorNS69/1c952045825eac1b5e4d9fc84ad9d384 latex in github
-[3] https://github.com/TLmaK0/gravizo  gravizo
+	[1] https://jupyter4edu.github.io/jupyter-edu-book/getting-going.html github classroom
+	[2] https://gist.github.com/VictorNS69/1c952045825eac1b5e4d9fc84ad9d384 latex in github
+	[3] https://github.com/TLmaK0/gravizo  gravizo
 
 
 
