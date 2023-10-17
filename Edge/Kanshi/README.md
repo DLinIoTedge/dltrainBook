@@ -278,63 +278,10 @@ QRadar analyzes your flow data for applications, flow direction, and superflows.
 
 
 
-# 4. Mathematical Model 
+# 4. Mathematical Model
 
-
-
- Find a  model of a given binary data? </br> 
+ [ Introduction](https://www.jkuse.com/dltrain/mathematical-theory) 
  
-What can be  done with model that emerged from binary data? </br>
-How probability is assigned  to each binary vector ? </br>
-how this is connected to the weights of Boltzmann Machine?
-
-
-<div align="justify"> 
- <p>
- Maxwell Boltzmann statistics is applicable to identical,distinguishable particle of any type spin.The molecule of gas are particle of this type. </p>
-<p>
-Particles which are regulated by Maxwell-Boltzmann Statistics have to be distinguishable each other and one energy state can be occupied by two or more particles. Distinguishable means that if we have 2 particles, let say A and B, also two states, 1 and 2, and we put A to state 1 and B to state 2, it will be different with the distribution A to state 2 and B to state 1. It means that A and B are distinct 
-</p>
- </div>
-
-Boltzmann Machine models set of Binary Vectors  </br>
-
-  <img src="https://render.githubusercontent.com/render/math?math=f(E)=A e^{- \frac{E}{kT}}">
-  
-How to use Boltzmann machine to detect unusual behaviour of Complex Systems?.
-
-Build a model for Normal state. </br>
-For example use data of TCP/IP flow  in Enterprise  Network   to model Normal state 
-
-Measured state is Captured Flow 
-
-![image](https://user-images.githubusercontent.com/58679469/150720790-06437eee-0d69-4565-bf28-27e7123f4f4d.png)
-
-
-Find out  this state is part of normal state or something new, in case new, then this abnormal detection need to be notified to concerned subscribers.
-
-<div align="justify"> 
-<p> Measurements of any kind, in any experiment, are always subject to uncertainties or errors, as they are  more often called. Measurement process is, in fact, a random process described by an abstract probability distribution whose parameters contain the information  desired. The results of a measurement are then samples from this distribution which allow an estimate of the theoretical parameters. In this view, measurement errors can be seen then as sampling errors.
-  </p>
- </div>
-
-
-![image](https://user-images.githubusercontent.com/58679469/150721619-b67ae977-e55d-4f39-994c-c60d87382577.png)
-
-
-<div align="justify"> 
-<p>  Probability mass function (PMF) is a function that gives the probability that a discrete random variable is exactly equal to some value </p>
-<p> A probability mass function differs from a probability density function (PDF) in that the latter is associated with continuous rather than discrete random variables. A PDF must be integrated over an interval to yield a probability.
-  </p>
- <p>  
-The probability distribution of a random variable is a function that takes the sample space as input and returns probabilities: in other words, it maps possible outcomes to their probabilities. </p>
-<p>  "Posterior", in this context, means after taking into account the relevant evidence related to the particular case being examined. The posterior probability distribution is the probability distribution of an unknown quantity, treated as a random variable, conditional on the evidence obtained from an experiment or survey
- </p>
- <p> 
-Poisson sampling is a sampling process where each element of the population is subjected to an independent Bernoulli trial which determines whether the element becomes part of the sample  </p>
-<p> Poisson distribution expresses the probability of a given number of events occurring in a fixed interval of time   </p>
- </div>
-
 ## 4.1 Restricted Boltzmann Machines
 
 <p align="center">
