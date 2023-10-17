@@ -285,32 +285,6 @@ QRadar analyzes your flow data for applications, flow direction, and superflows.
 Build a model for Normal state. For example use data of TCP/IP flow  in Enterprise  Network   to model Normal state 
 Measured state is Captured Flow 
 
- 
-## 4.1 Restricted Boltzmann Machines
-
-
-
-
-<p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/58679469/150721809-68974f08-992c-4a26-ae39-67401350a75a.png">
-</p>
-
-
-
-
-
-
-![v9](https://user-images.githubusercontent.com/58679469/150686429-1e6be85d-d9fc-4d70-8b89-55f7433b1748.png)
-
-
-
-
-
-
-
-
-
-
  ## 4.2  Quantitative Risk assessment 
 
 
