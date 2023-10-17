@@ -6,7 +6,6 @@ Deep Learning in  Network  monitoring ( கண்காணிப்பு )
 </blockquote>
   
          Prerequisites: . IT infrastructure,  IT security fundamentals,  Linux, TCP/IP networking
-         Duration : 2 week  Instructorled course with Online content.
          Lab environment: Course uses the github, JupyterLab, Scapy and few more tool set.
                  
          
