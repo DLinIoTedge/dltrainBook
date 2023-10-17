@@ -361,10 +361,8 @@ To simulate a network configuration change
 
 # 7. Train Deep Learning Model
 
-
  
 [Training DL Networks](https://www.jkuse.com/home/jkevents/baranovichi)
-
 
 Following links 2a, ab, ac and 2e provides methods and process to train a given Deep learning Model by using Data set
 
@@ -376,7 +374,7 @@ Following links 2a, ab, ac and 2e provides methods and process to train a given 
  
  2e:  Train in  Jetson Nano GPU [Link to Google](https://github.com/DLinIoTedge/dltrainBook/tree/jk/DLtrain/Jetson-Nano)
  
- 
+
 
 # 8. Inference by using  Deep Learning Model
 
