@@ -405,12 +405,7 @@ Following links 2a, ab, ac and 2e provides methods and process to train a given 
 
 ## 9.3  Search  Skill for Kanshi
 
-
-
-[![](https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5TYW5zaGktPj4gQ0VPOiBIZWxsbyBSZWRkeSwgaG93IGFyZSB5b3U_XG5sb29wIEhlYWx0aGNoZWNrXG4gICAgQ0VPLT4-Q0VPOiBGaWdodCBhZ2FpbnN0IGh5cG9jaG9uZHJpYVxuZW5kXG5Ob3RlIHJpZ2h0IG9mICBDRU86IFJhdGlvbmFsIHRob3VnaHRzIVxuQ0VPLS0-PkhSOiBHcmVhdCFcbkNFTy0-PiBQdXNwaGE6IEhvdyBhYm91dCB5b3U_XG5QdXNwaGEtLT4-Q0VPOiBKb2xseSBnb29kISIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5TYW5zaGktPj4gQ0VPOiBIZWxsbyBSZWRkeSwgaG93IGFyZSB5b3U_XG5sb29wIEhlYWx0aGNoZWNrXG4gICAgQ0VPLT4-Q0VPOiBGaWdodCBhZ2FpbnN0IGh5cG9jaG9uZHJpYVxuZW5kXG5Ob3RlIHJpZ2h0IG9mICBDRU86IFJhdGlvbmFsIHRob3VnaHRzIVxuQ0VPLS0-PkhSOiBHcmVhdCFcbkNFTy0-PiBQdXNwaGE6IEhvdyBhYm91dCB5b3U_XG5QdXNwaGEtLT4-Q0VPOiBKb2xseSBnb29kISIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
-
 # 10. Kanshi Assistant Development 
-
 
 IBM Watson Assistant helps yuser to  overcome the steep learning curve and frustrating jargon other virtual agent products use. It’s now easier than ever to design AI chatbots without complex decision trees or any kind of coding required. Watson Assistant now allows you, the one closest to the customer, to build better virtual agents your customers will actually want to use.
 
