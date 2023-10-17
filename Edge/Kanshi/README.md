@@ -492,11 +492,10 @@ https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-android-w
 6.  https://www.jkuse.com/dltrain/tool-set/colab IoT and Security 
 7.  https://www.technologyreview.com/2022/01/21/1043980/how-a-russian-cyberwar-in-ukraine-could-ripple-out-globally/?truid=&utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=01-24-2022&mc_cid=df41641f1f&mc_eid=f3a31df9fd  MIT news
 8.  https://github.com/TLmaK0/gravizo  gravizo
-9.  https://g.gravizo.com/  Gravizo - Your Graphviz, UMLGraph or PlantUML for your README
-10.  https://gist.github.com/VictorNS69/1c952045825eac1b5e4d9fc84ad9d384 latex in github
-11.  https://medium.com/geekculture/network-intrusion-detection-using-deep-learning-bcc91e9b999d  Network Intrusion Detection using Deep Learning
-12.  https://github.com/abhinav-bhardwaj/Network-Intrusion-Detection-Using-Machine-Learning/blob/master/Data_Preprocessing_NSL_KDD.ipynb  Data Preprocessing
-13.  https://www.communicationstoday.co.in/1402809-cyber-security-incidents-were-reported-by-cert-in-in-2021/?utm_source=newsletter&utm_medium=email&utm_campaign=March4  1402809 cyber security incidents reported in India
+9.  https://gist.github.com/VictorNS69/1c952045825eac1b5e4d9fc84ad9d384 latex in github
+10.  https://medium.com/geekculture/network-intrusion-detection-using-deep-learning-bcc91e9b999d  Network Intrusion Detection using Deep Learning
+11.  https://github.com/abhinav-bhardwaj/Network-Intrusion-Detection-Using-Machine-Learning/blob/master/Data_Preprocessing_NSL_KDD.ipynb  Data Preprocessing
+12.  https://www.communicationstoday.co.in/1402809-cyber-security-incidents-were-reported-by-cert-in-in-2021/?utm_source=newsletter&utm_medium=email&utm_campaign=March4  1402809 cyber security incidents reported in India
 
 
 
