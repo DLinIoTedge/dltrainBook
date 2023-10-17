@@ -288,10 +288,6 @@ Measured state is Captured Flow
  
 ## 4.1 Restricted Boltzmann Machines
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/58679469/150721702-1f34218d-a4ac-49cc-83d7-3802fb65dbc7.png">
-</p>
-
 
 
 
