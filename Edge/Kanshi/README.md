@@ -285,7 +285,7 @@ QRadar analyzes your flow data for applications, flow direction, and superflows.
 Build a model for Normal state. For example use data of TCP/IP flow  in Enterprise  Network   to model Normal state 
 Measured state is Captured Flow 
 
- ## 4.2  Quantitative Risk assessment 
+ ## 4.1  Quantitative Risk assessment 
 
 
 <div align="justify"> 
@@ -311,7 +311,7 @@ The main reason for this is complexity in the identification and assigning of va
 
 
  
- ## 4.3  Qualitative Risk assessment 
+ ## 4.2  Qualitative Risk assessment 
  <div align="justify"> 
  <p> 
  The inclusion of qualitative scales is especially useful when quantitative data for estimation of probabilities are lacking and experts are reluctant to express their opinions quantitatively. In reliability and risk analysis such situation occurs when for example human and organizational root causes of systems are modeled explicitly. Such causes are often not quantifiable due to limitations in the state of the art and lack of proper quantitative metrics
