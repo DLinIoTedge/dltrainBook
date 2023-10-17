@@ -407,7 +407,7 @@ Following links 2a, ab, ac and 2e provides methods and process to train a given 
 
 # 10. Kanshi Assistant Development 
 
-IBM Watson Assistant helps yuser to  overcome the steep learning curve and frustrating jargon other virtual agent products use. It’s now easier than ever to design AI chatbots without complex decision trees or any kind of coding required. Watson Assistant now allows you, the one closest to the customer, to build better virtual agents your customers will actually want to use.
+IBM Watson Assistant helps user to  overcome the steep learning curve and frustrating jargon other virtual agent products use. It’s now easier than ever to design AI chatbots without complex decision trees or any kind of coding required. Watson Assistant now allows you, the one closest to the customer, to build better virtual agents your customers will actually want to use.
 
 
 <p align="center">
