@@ -76,7 +76,8 @@ addition is done in cpu device.
  ##  3.1  addincpu.cpp
   g++ is used to run above given c++ file in cpu. 
  
-        g++ addincpu.cpp -o add <
+        g++ addincpu.cpp -o add 
+	
         ./add  
         
         hi...Max error: 0 
@@ -85,8 +86,10 @@ addition is done in cpu device.
 export PATH=/usr/local/cuda-10.2/bin:$PATH <br>
 Above provides access to nvcc which is tool to create excutable in gpu <br>
 
-    nvcc addincpu.cpp -o add <br>
+    nvcc addincpu.cpp -o add 
+    
     ./add  <br>
+    
      hi...Max error: 0 <br>
 
  
@@ -99,7 +102,9 @@ Above provides access to nvcc which is tool to create excutable in gpu <br>
   nvcc is used to create executable file from .cu file
   
       nvcc addingpu.cu -o add 
+      
       ./add  
+      
       hi...Max error: 0 
  
   Perform profile  of given CUDA code by using  nvprof tool from NVIDIA. 
