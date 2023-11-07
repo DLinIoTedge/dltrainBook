@@ -20,7 +20,7 @@ float sumAndMulAdd(int n, float *x, float *y,)
 {
   float sum1 = 0.0;
   for (int i = 0; i < n; i++)
-      sum1 =   sum1 + (x[i]  + y[i]);
+      sum1 =   sum1 + (x[i]  * y[i]);
 
   return sum1;
 }
