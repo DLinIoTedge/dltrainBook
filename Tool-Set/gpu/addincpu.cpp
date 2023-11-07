@@ -8,6 +8,24 @@ void add(int n, float *x, float *y)
       y[i] = x[i] + y[i];
 }
 
+// function to add the elements of two arrays
+void addAndMul(int n, float *x, float *y, float *z, float a, float b)
+{
+  for (int i = 0; i < n; i++)
+      z[i] =  (a*x[i] ) +  ( b*y[i]);
+}
+
+// function to add the elements of two arrays
+float sumAndMulAdd(int n, float *x, float *y,)
+{
+  float sum1 = 0.0;
+  for (int i = 0; i < n; i++)
+      sum1 =   sum1 + (x[i]  + y[i]);
+
+  return sum1;
+}
+
+
 int main(void)
 {
   int N = 1<<20; // 1M elements
