@@ -306,7 +306,7 @@ make  (  gnu  make  4.1  is  used)  is  used  to  build  applications.
 
 
   
- # 5. Handling CUDA core in Jetson Nano
+ # 5. Handling CUDA core in GPU
  
 How to run TensorFlow Object Detection model on Jetson Nano?
 
@@ -322,11 +322,6 @@ What are Freezing Tensorflow models?
 
 About loss functions, regularization and joint losses : multinomial logistic, cross entropy, square errors, euclidian, hinge, Crammer and Singer, one versus all, squared hinge, absolute value, infogain, L1 / L2 - Frobenius / L2,1 norms, connectionist temporal classification loss Loss Functions and Optimization Algorithms. 
 
-[Loss functions 1](http://christopher5106.github.io/deep/learning/2016/09/16/about-loss-functions-multinomial-logistic-logarithm-cross-entropy-square-errors-euclidian-absolute-frobenius-hinge.html)
-
-
-[Loss function in Optimization](https://medium.com/data-science-group-iitr/loss-functions-and-optimization-algorithms-demystified-bb92daff331c)
-
 [CUDA Tool Kit 12.1](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1404&target_type=clusterlocal)
 
 [ CUDA download](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1404&target_type=runfilelocal)
@@ -339,6 +334,8 @@ About loss functions, regularization and joint losses : multinomial logistic, cr
  
   # Reference
   1. [Click](https://developer.nvidia.com/blog/even-easier-introduction-cuda/  )  An Even Easier Introduction to CUDA 
-  2. [Click](https://docs.nvidia.com/cuda/cuda−c−programming−guide/index.html)  CUDA Toolkit Documentation  
-  3. [Click](https://nichijou.co/cudaRandom/ ) CUDA C++ Best Practices Guide 
+  2. [Click](https://docs.nvidia.com/cuda/)  CUDA Toolkit Documentation  
+  3. [Click](https://nichijou.co/cudaRandom/ ) CUDA C++ Best Practices Guide
+  4. [Loss function in Optimization](https://medium.com/data-science-group-iitr/loss-functions-and-optimization-algorithms-demystified-bb92daff331c)
+  5. [Loss functions 1](http://christopher5106.github.io/deep/learning/2016/09/16/about-loss-functions-multinomial-logistic-logarithm-cross-entropy-square-errors-euclidian-absolute-frobenius-hinge.html)
 
