@@ -338,9 +338,7 @@ About loss functions, regularization and joint losses : multinomial logistic, cr
 
  
   # Reference
-  1. [Click](https://developer.nvidia.com/blog/even-easier-introduction-cuda/  )  
-  2. [Click](https://docs.nvidia.com/cuda/cuda−c−programming−guide/index.html#hardware−implementation )  
-  3. [Click](https://docs.nvidia.com/cuda/cuda−for−tegra−appnote/index.html  )
-  4. [Click](https://docs.nvidia.com/cuda/cuda−c−best−practices−guide/index.html ) CUDA  C++  Programming  Guide 
-  5. [Click](https://nichijou.co/cudaRandom/ ) CUDA C++ Best Practices Guide 
-  6. [Click](https://docs.nvidia.com/cuda/cuda−c−programming−guide/index.html) 
+  1. [Click](https://developer.nvidia.com/blog/even-easier-introduction-cuda/  )  An Even Easier Introduction to CUDA 
+  2. [Click](https://docs.nvidia.com/cuda/cuda−c−programming−guide/index.html)  CUDA Toolkit Documentation  
+  3. [Click](https://nichijou.co/cudaRandom/ ) CUDA C++ Best Practices Guide 
+
