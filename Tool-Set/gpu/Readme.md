@@ -173,7 +173,17 @@ Perform profile  of given CUDA code by using  nvprof tool from NVIDIA.
        |---------------|------- |-------- |-------|--------|--------|--------|------------------------ | 
        |GPU activities:|100.00% | 7.0370  |    1  |7.0370ms|7.0370ms|7.0370ms|add(int, float*, float*) | 
 
-  
+
+   Notr : nvprof might  have issues in some jetson xavier NX devices ( wlong with Jetpack ). 
+   Following might help to over come challenges in using nvprof
+
+   	sudo /usr/local/cuda/bin/nvprof ./<your excutable file name>
+
+   For example
+
+	sudo /usr/local/cuda/bin/nvprof ./add
+
+   
   ## 3.2.2  addT
   Kernel function addT is used to perform vector addition in gpu.  <br>
   addT<<<2, 32>>>(N, x, y);  is using 2 blocks and blockSize is 32 threads   <br>
