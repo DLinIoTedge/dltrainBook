@@ -35,6 +35,9 @@ in case above link do not work then following link can be used to get Data-Set
 
   
     DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d use absolute_path to images 
+
+     DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d  Images/
+     
     DLtrainv1  -m train -s NewNetwork.dat -c network_prop.txt -n 2000 -e 30 -d C:\dev\test\Images\
     
 ### Inference by using  NN / CNN   
