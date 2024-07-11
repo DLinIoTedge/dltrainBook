@@ -3,9 +3,9 @@
 ## for Windows
 ( CNN version which is designed to run in Windows Machine)
 
-./DLtrain -m train -s NewNetwork.dat -c model.txt -n 2000 -e 30 -d Images/
+   ./DLtrain -m train -s NewNetwork.dat -c model.txt -n 2000 -e 30 -d Images/
 
-./DLtrain -m infer -s NewNetwork.dat -c model.txt  -f img.raw
+   ./DLtrain -m infer -s NewNetwork.dat -c model.txt  -f img.raw
 
 
 # Required Files
