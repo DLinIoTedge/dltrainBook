@@ -26,9 +26,10 @@ Before starting, ensure the following:
 
 ---
 
+
+
 ## 1.2 Convert the TensorFlow Model
 Convert your TensorFlow model to an FPGA-compatible format using the **OpenVINO Model Optimizer**:
-
 ```bash
 mo_tf.py --input_model tensorflow_model.pb --output_dir optimized_model --data_type FP16
 
