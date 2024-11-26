@@ -1,5 +1,15 @@
 #  1. Deploy in in INTEL FPGA by using ONNX model
+
+ # Sample Code ( Y = Ax +b  to  GPU )
   trt.py file is having sample code to deploy ONNX in FPGA
+
+ # 1.2 Deploying a TensorFlow Model in Intel FPGA via ONNX Model Graph
+
+Deploying a TensorFlow model on Intel FPGA requires converting the model into an optimized format that FPGAs can process efficiently. The Open Neural Network Exchange (ONNX) format serves as a bridge, enabling TensorFlow models to be transformed into an intermediate representation suitable for hardware-specific optimization. By leveraging ONNX's interoperability and Intel's OpenVINO toolkit, developers can seamlessly deploy AI workloads on Intel FPGA, enabling high-performance and low-latency inference.
+
+The process begins with exporting a TensorFlow model into ONNX format using libraries such as tf2onnx. The exported ONNX model graph is then passed through Intel's OpenVINO Model Optimizer, which optimizes the graph by pruning unnecessary layers, quantizing weights, and converting operations into an Intermediate Representation (IR). This IR format is FPGA-compatible, enabling inference on edge devices with minimal latency. Once optimized, the FPGA plugin in OpenVINO facilitates execution by mapping the model's computational graph onto the FPGA fabric for parallel processing.
+
+Intel's FPGA SDK for OpenCL further supports deploying customized workloads by compiling the ONNX model into a bitstream that programs the FPGA hardware. This combination of ONNX, OpenVINO, and FPGA-specific toolchains allows developers to efficiently offload complex AI workloads to the FPGA, achieving performance improvements for applications such as real-time image recognition, anomaly detection, and sensor fusion. By using this pipeline, developers ensure scalability, energy efficiency, and the ability to meet the demanding requirements of modern AI systems.
   
 #  2. Deploy in Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
 
