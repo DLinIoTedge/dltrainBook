@@ -12,7 +12,7 @@ The process begins with exporting a TensorFlow model into ONNX format using libr
 
 Intel's FPGA SDK for OpenCL further supports deploying customized workloads by compiling the ONNX model into a bitstream that programs the FPGA hardware. This combination of ONNX, OpenVINO, and FPGA-specific toolchains allows developers to efficiently offload complex AI workloads to the FPGA, achieving performance improvements for applications such as real-time image recognition, anomaly detection, and sensor fusion. By using this pipeline, developers ensure scalability, energy efficiency, and the ability to meet the demanding requirements of modern AI systems.
 
-## 1. Prepare the Environment
+## 1.1 Prepare the Environment
 Before starting, ensure the following:
 - **Intel FPGA Board**: Supported models include Stratix, Arria, or Cyclone series.
 - **Intel Toolkits Installed**:
@@ -26,7 +26,13 @@ Before starting, ensure the following:
 
 ---
 
-## 3. Install Intel FPGA Toolchain
+## 1.2 Convert the TensorFlow Model
+Convert your TensorFlow model to an FPGA-compatible format using the **OpenVINO Model Optimizer**:
+
+```bash
+mo_tf.py --input_model tensorflow_model.pb --output_dir optimized_model --data_type FP16
+
+## 1.3 Install Intel FPGA Toolchain
 To program the FPGA, install the required toolchains.
 
 ### Download and Install oneAPI Toolkit
@@ -37,7 +43,7 @@ wget https://software.intel.com/content/dam/develop/external/us/en/prodtools/one
 unzip IntelOneAPIInstallerLinux.zip
 ./install.sh
 
-## 4. Program the FPGA
+## 1.4 Program the FPGA
 To execute the optimized model on Intel FPGA, compile the OpenCL kernel using the following command:
 
 ```bash
@@ -45,7 +51,7 @@ aoc model.aocx
 
 ---
 
-## 5. Deploy and Run the Model
+## 1.5 Deploy and Run the Model
 Once the model is optimized, deploy and run it using the **OpenVINO Inference Engine** on the Intel FPGA.
 
 ### Python Example:
@@ -69,7 +75,7 @@ print("Inference Result:", result)
 
 ---
 
-## 6. Evaluate and Optimize Performance
+## 1.6 Evaluate and Optimize Performance
 After deploying the model, it's important to evaluate and optimize its performance for maximum efficiency. Intel provides tools specifically designed for this purpose:
 
 ### Recommended Tools:
@@ -88,7 +94,7 @@ After deploying the model, it's important to evaluate and optimize its performan
 
 ---
 
-## 7. Verify the Output
+## 1.7 Verify the Output
 Once the model is deployed, verify its accuracy and performance by validating the output against expected results.
 
 ### Key Steps for Verification:
