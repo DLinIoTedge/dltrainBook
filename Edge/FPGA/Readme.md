@@ -13,11 +13,7 @@ The process begins with exporting a TensorFlow model into ONNX format using libr
 Intel's FPGA SDK for OpenCL further supports deploying customized workloads by compiling the ONNX model into a bitstream that programs the FPGA hardware. This combination of ONNX, OpenVINO, and FPGA-specific toolchains allows developers to efficiently offload complex AI workloads to the FPGA, achieving performance improvements for applications such as real-time image recognition, anomaly detection, and sensor fusion. By using this pipeline, developers ensure scalability, energy efficiency, and the ability to meet the demanding requirements of modern AI systems.
 
 
-## 2. Convert the TensorFlow Model
-Convert your TensorFlow model to an FPGA-compatible format using the **OpenVINO Model Optimizer**:
 
-```bash
-mo_tf.py --input_model tensorflow_model.pb --output_dir optimized_model --data_type FP16
   
 #  2. Deploy in Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
 
