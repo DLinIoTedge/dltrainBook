@@ -25,8 +25,13 @@ Before starting, ensure the following:
 - Your trained TensorFlow model (`.pb` format).
 
 ---
+## 1.2 Convert the TensorFlow Model
+Convert your TensorFlow model to an FPGA-compatible format using the 
+**OpenVINO Model Optimizer**
 
-
+```bash
+mo_tf.py --input_model tensorflow_model.pb --output_dir optimized_model --data_type FP16
+---
 
 
 
@@ -40,7 +45,7 @@ Use the following commands to download and install the Intel oneAPI toolkit:
 wget https://software.intel.com/content/dam/develop/external/us/en/prodtools/oneapi/installer/IntelOneAPIInstallerLinux.zip
 unzip IntelOneAPIInstallerLinux.zip
 ./install.sh
-
+---
 ## 1.4 Program the FPGA
 To execute the optimized model on Intel FPGA, compile the OpenCL kernel using the following command:
 
