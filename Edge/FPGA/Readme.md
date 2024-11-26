@@ -31,7 +31,6 @@ Convert your TensorFlow model to an FPGA-compatible format using the **OpenVINO 
 
 ```bash
 mo_tf.py --input_model tensorflow_model.pb --output_dir optimized_model --data_type FP16
-```bash
 
 ## 1.3 Install Intel FPGA Toolchain
 To program the FPGA, install the required toolchains.
