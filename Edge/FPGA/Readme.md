@@ -1,6 +1,6 @@
 #  1. Deploy in in INTEL FPGA by using ONNX model
 
- # Sample Code ( Y = Ax +b  to  GPU )
+ # 1.1 Sample Code ( Y = Ax +b  to  GPU )
   trt.py file is having sample code to deploy ONNX in FPGA
 
  # 1.2 Deploying a TensorFlow Model in Intel FPGA via ONNX Model Graph
