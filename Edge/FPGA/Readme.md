@@ -1,6 +1,7 @@
-
-
-#  1. Deploy in Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
+#  1. Deploy in in INTEL FPGA by using ONNX model
+  trt.py file is having sample code to deploy ONNX in FPGA
+  
+#  2. Deploy in Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
 
 
 
