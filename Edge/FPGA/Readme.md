@@ -1,15 +1,132 @@
 #  1. Deploy in in INTEL FPGA by using ONNX model
 
- # 1.1 Sample Code ( Y = Ax +b  to  GPU )
+ Sample Code ( Y = Ax +b  to  GPU )
+ 
   trt.py file is having sample code to deploy ONNX in FPGA
 
- # 1.2 Deploying a TensorFlow Model in Intel FPGA via ONNX Model Graph
+ Deploying a TensorFlow Model in Intel FPGA via ONNX Model Graph
 
 Deploying a TensorFlow model on Intel FPGA requires converting the model into an optimized format that FPGAs can process efficiently. The Open Neural Network Exchange (ONNX) format serves as a bridge, enabling TensorFlow models to be transformed into an intermediate representation suitable for hardware-specific optimization. By leveraging ONNX's interoperability and Intel's OpenVINO toolkit, developers can seamlessly deploy AI workloads on Intel FPGA, enabling high-performance and low-latency inference.
 
 The process begins with exporting a TensorFlow model into ONNX format using libraries such as tf2onnx. The exported ONNX model graph is then passed through Intel's OpenVINO Model Optimizer, which optimizes the graph by pruning unnecessary layers, quantizing weights, and converting operations into an Intermediate Representation (IR). This IR format is FPGA-compatible, enabling inference on edge devices with minimal latency. Once optimized, the FPGA plugin in OpenVINO facilitates execution by mapping the model's computational graph onto the FPGA fabric for parallel processing.
 
 Intel's FPGA SDK for OpenCL further supports deploying customized workloads by compiling the ONNX model into a bitstream that programs the FPGA hardware. This combination of ONNX, OpenVINO, and FPGA-specific toolchains allows developers to efficiently offload complex AI workloads to the FPGA, achieving performance improvements for applications such as real-time image recognition, anomaly detection, and sensor fusion. By using this pipeline, developers ensure scalability, energy efficiency, and the ability to meet the demanding requirements of modern AI systems.
+
+## 1. Prepare the Environment
+Before starting, ensure the following:
+- **Intel FPGA Board**: Supported models include Stratix, Arria, or Cyclone series.
+- **Intel Toolkits Installed**:
+  - Intel oneAPI Toolkit
+  - OpenVINO Toolkit
+- **Python Libraries**:
+  - `numpy`
+  - `tensorflow`
+  - `openvino`
+- Your trained TensorFlow model (`.pb` format).
+
+---
+
+## 3. Install Intel FPGA Toolchain
+To program the FPGA, install the required toolchains.
+
+### Download and Install oneAPI Toolkit
+Use the following commands to download and install the Intel oneAPI toolkit:
+
+```bash
+wget https://software.intel.com/content/dam/develop/external/us/en/prodtools/oneapi/installer/IntelOneAPIInstallerLinux.zip
+unzip IntelOneAPIInstallerLinux.zip
+./install.sh
+
+## 4. Program the FPGA
+To execute the optimized model on Intel FPGA, compile the OpenCL kernel using the following command:
+
+```bash
+aoc model.aocx
+
+---
+
+## 5. Deploy and Run the Model
+Once the model is optimized, deploy and run it using the **OpenVINO Inference Engine** on the Intel FPGA.
+
+### Python Example:
+Use the following Python code to load and execute the model:
+
+```python
+from openvino.inference_engine import IECore
+
+# Initialize the Inference Engine
+ie = IECore()
+
+# Load the network
+net = ie.read_network(model="fpga_model.xml", weights="fpga_model.bin")
+exec_net = ie.load_network(network=net, device_name="FPGA")
+
+# Input data and inference
+input_data = ... # Prepare your input data here
+result = exec_net.infer(inputs={input_name: input_data})
+
+print("Inference Result:", result)
+
+---
+
+## 6. Evaluate and Optimize Performance
+After deploying the model, it's important to evaluate and optimize its performance for maximum efficiency. Intel provides tools specifically designed for this purpose:
+
+### Recommended Tools:
+1. **[Intel VTune Profiler](https://software.intel.com/content/www/us/en/develop/tools/vtune.html)**  
+   Use VTune Profiler to analyze performance metrics such as latency, throughput, and hardware utilization.
+
+2. **[Intel Advisor](https://software.intel.com/content/www/us/en/develop/tools/advisor.html)**  
+   Intel Advisor helps identify optimization opportunities for model execution, including vectorization and memory access patterns.
+
+### Key Steps:
+- Run profiling tools while the model is executing on the FPGA.
+- Identify performance bottlenecks (e.g., memory bandwidth, compute unit utilization).
+- Optimize the OpenCL kernel or adjust model parameters based on the insights.
+
+---
+
+---
+
+## 7. Verify the Output
+Once the model is deployed, verify its accuracy and performance by validating the output against expected results.
+
+### Key Steps for Verification:
+1. **Input Preprocessing**: Ensure the input data is correctly formatted and preprocessed to match the model's requirements.
+2. **Data Pipeline Accuracy**: Check for consistency in the input data flow from preprocessing to inference.
+3. **Output Validation**: Compare the model's predictions or outputs against known expected values or benchmarks.
+
+### Debugging Tips:
+- If results are inconsistent, revisit the model optimization process to ensure no critical information was lost during conversion.
+- Check the OpenCL kernel for compatibility issues or inefficiencies.
+- Validate each step in the pipeline to isolate potential errors.
+
+By following these steps, you can ensure the deployed model performs accurately and meets the desired application requirements.
+
+------
+
+## Resources
+For more information and further guidance, explore the following resources:
+
+- [Intel oneAPI Toolkit](https://software.intel.com/content/www/us/en/develop/tools/oneapi.html)  
+  The oneAPI toolkit is a comprehensive set of tools to program Intel FPGAs and other hardware for accelerated computing.
+
+- [Intel OpenVINO Toolkit](https://software.intel.com/content/www/us/en/develop/tools/openvino.html)  
+  OpenVINO Toolkit helps optimize deep learning models for Intel hardware, including FPGAs, CPUs, and VPUs.
+
+- [Intel FPGA SDK for OpenCL](https://www.intel.com/content/www/us/en/programmable/solutions/fpga/overview.html)  
+  Provides the necessary SDK to use OpenCL on Intel FPGAs and compile OpenCL code into a format suitable for FPGA execution.
+
+- [TensorFlow Official Site](https://www.tensorflow.org/)  
+  The official site for TensorFlow, an open-source platform for machine learning, where you can learn about and access tools for training models.
+
+---
+
+## 2. Convert the TensorFlow Model
+Convert your TensorFlow model to an FPGA-compatible format using the **OpenVINO Model Optimizer**:
+
+```bash
+mo_tf.py --input_model tensorflow_model.pb --output_dir optimized_model --data_type FP16
   
 #  2. Deploy in Xilinx Zynq UltraScale+ MPSoC ZU3EG A484
 
