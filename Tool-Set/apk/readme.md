@@ -46,7 +46,7 @@ my-key-alias: The alias you will use to refer to your key.
 You will be prompted to enter details such as keystore password and key password. Make sure to note these down.
 
 
-Step 2: Store the Keystore File
+###  Step 2: Store the Keystore File
 
 After generating the release-key.jks, move it to your project folder:
 
@@ -56,7 +56,7 @@ HelloWorldApp/release-key.jks
 
 ---
 
-Build the Release APK
+###  Build the Release APK
 
 Step 1: Configure build.gradle for Signing
 
@@ -92,7 +92,7 @@ android {
     }
 }
 
-Step 2: Add Keystore to gradle.properties
+###  Step 2: Add Keystore to gradle.properties
 
 Create or edit the gradle.properties file in the root directory of your project to enable AndroidX and Jetifier. Add the following lines:
 
@@ -110,7 +110,7 @@ This command will create a signed release APK in the app/build/outputs/apk/relea
 
 ---
 
-How to Use and Build the APK
+###  How to Use and Build the APK
 
 1. Ensure Keystore is in the Correct Folder: Make sure the release-key.jks file is located in the root folder of your project (HelloWorldApp/release-key.jks).
 
@@ -132,6 +132,6 @@ HelloWorldApp/app/build/outputs/apk/release/app-release.apk
 
 ---
 
-Conclusion
+###  Conclusion
 
 By following the above steps, you will be able to create a signed APK for your Android project. Make sure to store your release-key.jks file securely and never commit it to version control systems like Git.
