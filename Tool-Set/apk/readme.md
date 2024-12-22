@@ -63,21 +63,20 @@ To build the release version of your APK, you need to sign it with a keystore. T
 
 Use the `keytool` command to generate the **release-key.jks** file. Run the following command in your terminal:
 
-```bash
-keytool -genkeypair -v -keystore release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-key-alias
+  keytool -genkeypair -v -keystore release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-key-alias
 
 release-key.jks: The name of the keystore file (you can change it).
 
 my-key-alias: The alias you will use to refer to your key.
 
-You will be prompted to enter details such as keystore password and key password. Make sure to note these down.
+User will be prompted to enter details such as keystore password and key password. Make sure to note these down.
 
 
 ###  Step 2: Store the Keystore File
 
 After generating the release-key.jks, move it to your project folder:
 
-HelloWorldApp/release-key.jks
+  HelloWorldApp/release-key.jks
 
 
 
@@ -94,14 +93,14 @@ In the app/build.gradle file, under the android block, add the signing configura
 
 Create or edit the gradle.properties file in the root directory of your project to enable AndroidX and Jetifier. Add the following lines:
 
-android.useAndroidX=true
-android.enableJetifier=true
+  android.useAndroidX=true
+  android.enableJetifier=true
 
 Step 3: Build the APK
 
 To build the APK in release mode, use the following Gradle command:
-
-./gradlew assembleRelease
+  
+  gradle assembleRelease
 
 This command will create a signed release APK in the app/build/outputs/apk/release/ directory.
 
@@ -118,17 +117,12 @@ This command will create a signed release APK in the app/build/outputs/apk/relea
 
 3. Build the APK: Run the following Gradle command to build the release APK:
 
-./gradlew assembleRelease
+  gradle assembleRelease
 
 
 4. Locate the APK: Once the build is successful, your release APK will be located in:
 
 HelloWorldApp/app/build/outputs/apk/release/app-release.apk
-
-
-
-
-
 
 ###  Conclusion
 
