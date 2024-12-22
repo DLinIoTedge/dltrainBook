@@ -63,7 +63,7 @@ To build the release version of your APK, you need to sign it with a keystore. T
 
 Use the `keytool` command to generate the **release-key.jks** file. Run the following command in your terminal:
 
-  keytool -genkeypair -v -keystore release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-key-alias
+      keytool -genkeypair -v -keystore release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-key-alias
 
 release-key.jks: The name of the keystore file (you can change it).
 
