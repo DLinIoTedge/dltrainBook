@@ -54,14 +54,14 @@ HelloWorldApp/release-key.jks
 
 
 
----
+
 
 ###  Build the Release APK
 
 Step 1: Configure build.gradle for Signing
 
 In the app/build.gradle file, under the android block, add the signing configuration:
-
+---
 android {
     namespace "com.helloworld"
     compileSdk 33
