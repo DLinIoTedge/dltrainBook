@@ -93,14 +93,14 @@ In the app/build.gradle file, under the android block, add the signing configura
 
 Create or edit the gradle.properties file in the root directory of your project to enable AndroidX and Jetifier. Add the following lines:
 
-  android.useAndroidX=true
-  android.enableJetifier=true
+      android.useAndroidX=true
+      android.enableJetifier=true
 
 Step 3: Build the APK
 
 To build the APK in release mode, use the following Gradle command:
   
-  gradle assembleRelease
+      gradle assembleRelease
 
 This command will create a signed release APK in the app/build/outputs/apk/release/ directory.
 
@@ -117,7 +117,7 @@ This command will create a signed release APK in the app/build/outputs/apk/relea
 
 3. Build the APK: Run the following Gradle command to build the release APK:
 
-  gradle assembleRelease
+        gradle assembleRelease
 
 
 4. Locate the APK: Once the build is successful, your release APK will be located in:
