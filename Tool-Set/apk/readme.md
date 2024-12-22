@@ -8,13 +8,40 @@
 
 ---
 
-## Project File Structure
+# Project File Structure
 
-Below is the file structure of the **HelloWorldApp** project:
+Here is the structure of the **HelloWorldApp** project:
 
-HelloWorldApp/ │ ├── build.gradle               # Root level Gradle build file ├── gradle.properties          # Project Gradle properties ├── gradle/wrapper/            # Gradle wrapper files ├── app/                       # Main app folder │   ├── build.gradle           # App-level Gradle build file │   ├── src/main/              # Main source directory │   │   ├── AndroidManifest.xml  # Manifest file │   │   ├── java/               # Java source files │   │   │   └── com/helloworld/ │   │   │       └── MainActivity.java # Main activity Java file │   │   ├── res/                # Resources │   │   │   ├── layout/         # Layouts (e.g., activity_main.xml) │   │   │   └── mipmap/         # App icon │   │   └── values/             # Strings, styles ├── release-key.jks            # Keystore file (not included in repo) └── README.md                  # Project description
-
-### Key Folders and Files
+- **HelloWorldApp/** (Root folder of the project)
+  - **build.gradle**  
+    - Root level Gradle build file that configures the entire project.
+  - **gradle.properties**  
+    - Gradle properties file for project-wide settings.
+  - **gradle/wrapper/**  
+    - Contains Gradle wrapper files to manage Gradle versions.
+  
+- **app/** (Main app folder containing the Android application)
+  - **build.gradle**  
+    - App-level Gradle build file that configures the app.
+  - **src/main/** (Main source directory for the app)
+    - **AndroidManifest.xml**  
+      - The manifest file that defines essential app configuration.
+    - **java/**  
+      - Contains the Java source files for the app.
+        - **com/helloworld/**  
+          - **MainActivity.java**  
+            - The main activity file where app logic starts.
+    - **res/**  
+      - Contains resources like layouts, icons, etc.
+        - **layout/**  
+          - Contains layout files like `activity_main.xml`.
+        - **mipmap/**  
+          - Contains app icon files like `ic_launcher`.
+        - **values/**  
+          - Contains XML files for strings, colors, styles, etc.
+  
+- **release-key.jks**  
+  - Keystore file used to sign the APK in release mode. (Not included in the repo)
 
 1. **`HelloWorldApp/`**: Root folder of your project. Contains the `build.gradle` file for project-level settings and dependencies.
 2. **`gradle/wrapper/`**: Contains Gradle wrapper files to ensure you are using the correct version of Gradle.
@@ -28,7 +55,7 @@ HelloWorldApp/ │ ├── build.gradle               # Root level Gradle buil
 
 ---
 
-## KeyStore Setup
+# KeyStore Setup
 
 To build the release version of your APK, you need to sign it with a keystore. This involves creating a **.jks (Java Keystore)** file that contains your private key for signing the APK.
 
@@ -61,36 +88,7 @@ HelloWorldApp/release-key.jks
 Step 1: Configure build.gradle for Signing
 
 In the app/build.gradle file, under the android block, add the signing configuration:
----
-android {
-    namespace "com.helloworld"
-    compileSdk 33
 
-    defaultConfig {
-        applicationId "com.helloworld"
-        minSdk 21
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
-    }
-
-    signingConfigs {
-        release {
-            storeFile file("release-key.jks")          // Keystore file
-            storePassword "raja4545"                    // Keystore password
-            keyAlias "my-key-alias"                     // Key alias
-            keyPassword "raja4545"                      // Key password
-        }
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release       // Set signing config to 'release'
-        }
-    }
-}
 
 ###  Step 2: Add Keystore to gradle.properties
 
@@ -108,7 +106,7 @@ To build the APK in release mode, use the following Gradle command:
 This command will create a signed release APK in the app/build/outputs/apk/release/ directory.
 
 
----
+
 
 ###  How to Use and Build the APK
 
@@ -130,7 +128,7 @@ HelloWorldApp/app/build/outputs/apk/release/app-release.apk
 
 
 
----
+
 
 ###  Conclusion
 
