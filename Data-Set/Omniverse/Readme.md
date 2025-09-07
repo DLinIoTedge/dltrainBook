@@ -44,7 +44,7 @@ Documentation
 
 - [Nucleus Server Installation Guide](https://docs.omniverse.nvidia.com/nucleus/latest/enterprise/installation/install-ove-nucleus.html)  
 
----
+
 
  Notes
 
@@ -52,7 +52,7 @@ Documentation
 - Use the **Nucleus Server Installation Guide** for proper setup of enterprise workflows.  
 - Nucleus acts as the **collaboration and data-sharing backbone** for Omniverse — install and configure it first before adding Create, View, or Isaac Sim.  
 
----
+
    
 
 5. Run `omniverse-launcher` and configure a Nucleus server locally  
