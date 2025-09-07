@@ -25,32 +25,29 @@ You can run **NVIDIA Omniverse** on a local Ubuntu workstation with PCIe RTX car
    *(most Omniverse services are containerized).*  
 
 3. Install NVIDIA Container Toolkit  
-   *(to give Docker GPU access).*  
+   *(to give Docker GPU access).*
+   
+4. Download and Install Omniverse Components  
 
-4. Download and install Omniverse components  
-   (e.g., **Nucleus, Create, View**) from **NVIDIA Omniverse Launcher**  
-   or via direct `.deb` installers.
+You can install components such as **Nucleus, Create, View** either:  
+- From the **NVIDIA Omniverse Launcher**, or  
+- Via direct `.deb` installers.  
 
+---
 
+VIDIA Omniverse Enterprise SDK & Nucleus
 
- NVIDIA Omniverse Enterprise SDK & Nucleus
-
- Downloads
-
+Downloads
 - [Omniverse Enterprise SDK (Kit) – NGC](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/omniverse/collections/kit)  
 - [Omniverse Enterprise Nucleus – NGC](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/omniverse/collections/enterprise-nucleus)  
 
 Documentation
-
 - [Nucleus Server Installation Guide](https://docs.omniverse.nvidia.com/nucleus/latest/enterprise/installation/install-ove-nucleus.html)  
 
-
-
- Notes
-
+Notes
 - The **Omniverse Enterprise SDK** can be downloaded directly from **NVIDIA NGC**.  
 - Use the **Nucleus Server Installation Guide** for proper setup of enterprise workflows.  
-- Nucleus acts as the **collaboration and data-sharing backbone** for Omniverse — install and configure it first before adding Create, View, or Isaac Sim.  
+- **Nucleus** acts as the **collaboration and data-sharing backbone** for Omniverse — install and configure it first before adding **Create, View, or Isaac Sim**.
 
 
    
