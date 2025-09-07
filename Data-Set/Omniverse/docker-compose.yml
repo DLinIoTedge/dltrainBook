@@ -1,0 +1,31 @@
+networks:
+  ai-net:
+    external: true  # Use the existing network
+
+services:
+  ollama:
+    container_name: ollama-gpu
+    image: ollama/ollama
+    runtime: nvidia
+    environment:
+      - N_CTX=4096
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: ["gpu"]
+              count: all
+    volumes:
+      - ollama_models:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+    networks:
+      - ai-net
+
+volumes:
+  ollama_models:
+
