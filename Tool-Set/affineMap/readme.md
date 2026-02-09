@@ -22,7 +22,7 @@ Key ideas:
 For N samples and C classes:
 
 $$
-Y = \text{one_hot}(\text{labels}) \in \mathbb{R}^{N \times C}
+Y = \text{one hot}(\text{labels}) \in \mathbb{R}^{N \times C}
 $$
 
 ### Linear readout
