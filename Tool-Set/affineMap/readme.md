@@ -1,10 +1,10 @@
  
 
-````markdown
-# Geometric Classification via Affine Subspace Lifting
-**S. Jayakumar Ph.D
 
----
+# Geometric Classification via Affine Subspace Lifting
+
+. Jayakumar Ph.D
+
 
 ## Overview
 
@@ -19,11 +19,11 @@ Key ideas:
 
 ### One-hot encoding of labels
 
-For $N$ samples and $C$ classes:
+For N samples and C classes:
 
-$$
+\[
 Y = \text{one_hot}(\text{labels}) \in \mathbb{R}^{N \times C}
-$$
+\]
 
 ### Linear readout
 
