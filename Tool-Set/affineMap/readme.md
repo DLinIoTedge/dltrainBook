@@ -2,8 +2,7 @@
 
 ````markdown
 # Geometric Classification via Affine Subspace Lifting
-
-**Author:** S. Jayakumar Ph.D
+**S. Jayakumar Ph.D
 
 ---
 
@@ -17,23 +16,6 @@ Key ideas:
 - Linear readouts or nearest-affine-subspace methods can classify samples directly.  
 
 ---
-
-## 1. Installation
-
-```bash
-# Clone this repository
-git clone https://github.com/yourusername/affine-classification.git
-cd affine-classification
-
-# Make sure you have Python >= 3.7 and numpy installed
-pip install numpy
-````
-
----
-
- 
-
-## 2. Mathematical Formulation
 
 ### One-hot encoding of labels
 
