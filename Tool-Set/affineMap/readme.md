@@ -3,10 +3,10 @@
 
 # Geometric Classification via Affine Subspace Lifting
 
-. Jayakumar Ph.D
+Jayakumar Ph.D
 
 
-## Overview
+ 
 
 This repository demonstrates **classification using affine subspace lifting**. Instead of using iterative, energy-intensive backpropagation in neural networks, we leverage **linear algebra and geometry** to perform classification efficiently.  
 
@@ -21,9 +21,9 @@ Key ideas:
 
 For N samples and C classes:
 
-\[
+$$
 Y = \text{one_hot}(\text{labels}) \in \mathbb{R}^{N \times C}
-\]
+$$
 
 ### Linear readout
 
@@ -74,7 +74,7 @@ $$
 
 ---
 
-## 3. Summary
+ 
 
 * Each class is embedded in a **distinct affine subspace** via $\phi(x)$.
 * **Linear readouts** are sufficient to predict class labels.
