@@ -31,33 +31,9 @@ pip install numpy
 
 ---
 
-## 2. Usage
+ 
 
-```python
-import numpy as np
-from data_classify import DataClassify  # your Python file
-
-# Create synthetic data
-np.random.seed(0)
-X0 = np.random.randn(50,3) + np.array([3,0,0])
-X1 = np.random.randn(50,3) + np.array([0,3,0])
-X2 = np.random.randn(50,3) + np.array([0,0,3])
-X = np.vstack([X0, X1, X2])
-labels = np.array([0]*50 + [1]*50 + [2]*50)
-
-# Instantiate classifier
-clf = DataClassify(X, labels, n_classes=3)
-clf.fit_input_linear()
-clf.fit_lifted_linear()
-clf.fit_affine_subspaces(rank=2)
-
-# Perform stress test
-clf.stress_test_affine_geometry(n_trials=5, eps=0.05, margin_thresh=0.01)
-```
-
----
-
-## 3. Mathematical Formulation
+## 2. Mathematical Formulation
 
 ### One-hot encoding of labels
 
@@ -116,7 +92,7 @@ $$
 
 ---
 
-## 4. Summary
+## 3. Summary
 
 * Each class is embedded in a **distinct affine subspace** via $\phi(x)$.
 * **Linear readouts** are sufficient to predict class labels.
@@ -126,22 +102,12 @@ $$
 This approach leverages **geometry and linear algebra** for **simple, interpretable, and efficient classification**.
 
 ---
-
-## 5. License
-
-This repository is released under the MIT License.
+ 
 
 ```
 
 ---
-
-###  Features of this Markdown `README.md`:
-1. **Title, author, and horizontal lines**.  
-2. **Installation and usage instructions** with Python code blocks.  
-3. **Mathematical formulas** in LaTeX math mode (`$$ ... $$` for display math).  
-4. **Step-by-step summary** emphasizing efficiency vs backpropagation.  
-5. Ready to **paste directly in GitHub**, which renders LaTeX nicely in Markdown.  
-
+ 
 ---
 
  
