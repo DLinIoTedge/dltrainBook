@@ -1,0 +1,462 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAddJune11 M55_HP Verification Report</title>
+
+<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAddJune11 M55_HP Verification Report</title>
+
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    margin: 20px;
+    color: #1a1a1a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+.header{
+    background:linear-gradient(135deg,#A31F34,#C13A4D);
+    color:white;
+    padding:40px;
+}
+
+.header h1{
+    margin:0;
+    font-size:34px;
+}
+
+.header p{
+    margin-top:10px;
+    opacity:0.95;
+}
+
+/* Header */
+h1 {
+    background: #002b5c;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Section Card */
+.section {
+    background: #ffffff;
+    border-left: 5px solid #2b6cb0;
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.section h2 {
+    color: #002b5c;
+    margin-top: 0;
+}
+
+/* Code Box (MIT style readable dark) */
+.codebox {
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+/* Output Box (light MIT style) */
+.outputbox {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: Consolas, monospace;
+    white-space: pre-wrap;
+    color: #111827;
+}
+
+/* PASS style */
+.pass {
+    color: #15803d;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.success {
+    background: #ecfdf5;
+    border: 1px solid #10b981;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Lists */
+ul {
+    line-height: 1.8;
+}
+
+/* Pre blocks */
+pre {
+    background: #0b1220;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    white-space: pre;
+    color: #e2e8f0;
+}
+</style>
+
+ 
+
+</head>
+<body>
+
+<div class="header">
+    <h1>VAddJune11 M55_HP Bring-up and Execution Verification</h1> 
+</div>
+
+<div class="container">
+
+
+
+
+
+
+
+<div class="section">
+<h2>Objective</h2>
+<p>
+Verify that the VAdd application is correctly built, downloaded,
+and executed on the M55_HP core.
+</p>
+</div>
+
+<div class="section">
+<h2>1. Build Generation</h2>
+
+<div class="codebox">
+csolution convert VAddJune11.csolution.yml
+csolution list contexts VAddJune11.csolution.yml
+cbuild VAddJune11.csolution.yml --context VAddJune11.Debug+AE822FA0E5597LS0
+</div>
+
+<p><b>Result:</b> Project converted, contexts generated, and build executed successfully.</p>
+
+The build generation process for the VAddJune11 project begins by converting the CMSIS solution file using csolution convert, which prepares the project structure for the build system. After conversion, available build contexts are listed using csolution list contexts to identify valid configuration and target combinations. Finally, the project is compiled with cbuild, specifying the exact build context VAddJune11.Debug+AE822FA0E5597LS0, which ensures the correct device configuration and toolchain settings are applied. Once these steps complete successfully, the system generates the final executable outputs, confirming that the project has been built without errors.
+
+</div>
+
+<div class="section">
+<h2>2. Reset Handler Verification</h2>
+
+<div class="codebox">
+arm-none-eabi-nm vaddjune11.elf | grep Reset
+</div>
+
+<div class="outputbox">
+802007c0 T Reset_Handler
+802007d2 T Reset_Handler_C
+</div>
+
+<p>
+<b>Observation:</b> Reset_Handler located at
+<span style="color:blue"><b>0x802007C0</b></span>,
+confirming proper M55_HP linkage.
+</p>
+
+</div>
+
+<div class="section">
+<h2>3. Variable Address Verification</h2>
+
+<div class="codebox">
+arm-none-eabi-nm vaddjune11.elf | grep " done\|result\|v3"
+</div>
+
+<div class="outputbox">
+20000050 D done
+20000ae8 B v3
+</div>
+
+<div class="codebox">
+arm-none-eabi-nm vaddjune11.elf | grep " done\|v1\|v2\|v3"
+</div>
+
+<div class="outputbox">
+20000050 D done
+20000054 D v1
+20000064 D v2
+20000ae8 B v3
+</div>
+
+<ul>
+<li><b>done</b> = 0x20000050</li>
+<li><b>v1</b> = 0x20000054</li>
+<li><b>v2</b> = 0x20000064</li>
+<li><b>v3</b> = 0x20000AE8</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>4. Application Source</h2>
+
+<div class="codebox">
+#include &lt;stdint.h&gt;
+
+volatile uint32_t done = 0x12345678;
+
+volatile int32_t v1[4] = {1,2,3,4};
+volatile int32_t v2[4] = {10,20,30,40};
+volatile int32_t v3[4];
+
+int main(void)
+{
+    for (int i = 0; i &lt; 4; i++)
+    {
+        v3[i] = v1[i] + v2[i];
+    }
+
+    done = 0xABCDEF55;
+
+    while (1)
+    {
+    }
+}
+</div>
+
+<p>
+<b>Expected Result:</b>
+</p>
+
+<div class="outputbox">
+v3 = {11,22,33,44}
+done = 0xABCDEF55
+</div>
+
+</div>
+
+<div class="section">
+<h2>5. GDB Execution Verification</h2>
+
+<h3>Terminal 1</h3>
+
+<div class="codebox">
+JLinkGDBServer -device AE822FA0E5597LS0_M55_HP -if JTAG -speed 4000
+</div>
+
+<h3>Terminal 2</h3>
+
+<div class="codebox">
+gdb-multiarch vaddjune11.elf
+
+target remote localhost:2331
+monitor reset
+load
+continue
+</div>
+
+<p>After execution press Ctrl+C</p>
+
+<div class="codebox">
+p v3[0]
+p v3[1]
+p v3[2]
+p v3[3]
+p done
+</div>
+
+<div class="outputbox">
+(gdb) p v3[0]
+$1 = 11
+
+(gdb) p v3[1]
+$2 = 22
+
+(gdb) p v3[2]
+$3 = 33
+
+(gdb) p v3[3]
+$4 = 44
+
+(gdb) p done
+$5 = 2882400085
+</div>
+
+<p>
+Decimal conversion:
+<span style="color:green">
+<b>2882400085 = 0xABCDEF55</b>
+</span>
+</p>
+
+</div>
+
+<div class="section success">
+ 
+
+<p class="pass">PASS ✓</p>
+
+<ul>
+<li>Reset_Handler executed successfully</li>
+<li>Startup code executed correctly</li>
+<li>main() executed successfully</li>
+<li>Vector addition completed successfully</li>
+<li>done updated to 0xABCDEF55</li>
+<li>M55_HP application running correctly</li>
+</ul>
+
+<h3>Final Results</h3>
+
+<div class="outputbox">
+v3[0] = 11
+v3[1] = 22
+v3[2] = 33
+v3[3] = 44
+
+done = 0xABCDEF55
+</div>
+
+<p>
+ 
+The file <span style="color:blue"><b>vaddjune11.elf</b></span>
+has been successfully downloaded, executed, and verified on the
+<b>M55_HP</b> core using GDB.
+</p>
+
+</div>
+
+ 
+
+
+<div class="section success">
+<h2>0. CMSIS Solution Configuration (VAddJune11.csolution.yml)</h2>
+
+<p>
+The project is built using CMSIS-Toolbox and targets the
+<b>AE822FA0E5597LS0 M55_HP</b> core.
+</p>
+
+<div class="codebox">
+# VAddJune11.csolution.yml
+
+solution:
+  created-for: CMSIS-Toolbox@2.6.0
+
+  cdefault:
+
+  select-compiler:
+    - compiler: AC6
+    - compiler: GCC
+    - compiler: IAR
+    - compiler: CLANG
+
+  packs:
+    - pack: AlifSemiconductor::Ensemble@2.0.0
+    - pack: ARM::CMSIS@6.0.0
+    - pack: ARM::CMSIS-Compiler@^2.0.0
+
+  target-types:
+    - type: AE822FA0E5597LS0
+      board: DevKit-E8:Gen 1
+      device: AE822FA0E5597LS0
+
+  build-types:
+    - type: Debug
+      debug: on
+      optimize: none
+
+    - type: Release
+      debug: off
+      optimize: balanced
+
+  projects:
+    - project: M55_HP/vaddjune11.cproject.yml
+
+  compiler: GCC
+</div>
+
+<h3>Configuration Summary</h3>
+
+<div class="outputbox">
+Solution File   : VAddJune11.csolution.yml
+Target Device   : AE822FA0E5597LS0
+Board           : DevKit-E8 Gen1
+CPU             : M55_HP
+Compiler        : GCC
+CMSIS Version   : 6.0.0
+Ensemble Pack   : 2.0.0
+
+Build Contexts:
+    Debug
+    Release
+
+Project:
+    M55_HP/vaddjune11.cproject.yml
+</div>
+
+<p>
+This solution configuration was used to generate the build files,
+compile the application, and produce the executable
+<b>vaddjune11.elf</b> that was successfully verified on the
+<b>M55_HP</b> processor.
+</p>
+
+</div>
+
+<div class="section success">
+<div class="codebox">
+# vaddjune11.cproject.yml  A project translates into one executable or library.
+project:
+  device: :M55_HP
+
+  groups:
+    - group: Source Files
+      files:
+        - file: ./main.c
+        - file: ./app_utils.h
+
+  # List components to use for your application.
+  # A software component is a re-usable unit that may be configurable.
+  components:
+    - component: AlifSemiconductor::Device:SOC Peripherals:GPIO
+    - component: ARM::CMSIS:CORE
+    - component: AlifSemiconductor::Device:SOC Peripherals:PINCONF
+    - component: AlifSemiconductor::Device:Startup
+    - component: AlifSemiconductor::BSP:DevKit Config&DevKit-e8
+    - component: AlifSemiconductor::BSP:Board Config
+    - component: AlifSemiconductor::Services:Retarget IO:STDOUT
+    - component: AlifSemiconductor::Services:Secure Enclave:Initialization Helper&Source
+    - component: AlifSemiconductor::Services:Secure Enclave:core&Source
+    - component: AlifSemiconductor::Device:SOC Peripherals:MHU
+    - component: CMSIS Driver:USART
+    - component: CMSIS-Compiler:CORE
+    - component: CMSIS-Compiler:STDOUT:Custom
+  # List executable file formats to be generated.
+  output:
+    type:
+      - elf
+      - bin
+</div>
+  
+</div>
+ 
+</body>
+</html>
+ 
+
